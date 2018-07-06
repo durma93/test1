@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_copy"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/menu_shortcuts" />
+
+            <include layout="@layout/help_manual" />
+
+            <include layout="@layout/condition_on_road_manual" />
+
+            <include layout="@layout/loyalty_manual" />
+
+            <include layout="@layout/network_manual" />
+
+            <include layout="@layout/info_manual" />
+
+            <include layout="@layout/amso_manual" />
+
+            <include layout="@layout/safety_manual" />
+
+            <include layout="@layout/my_car_manual" />
+
+            <include layout="@layout/parking_manual" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/amss_name"
+            android:textColor="@color/background_end"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/app_ver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:gravity="center"
+            android:text="@string/verzija_aplikacije_text"
+            android:textColor="@color/background_end"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/lmg_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_ver"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:onClick="goToLMG"
+            android:text="@string/lmg_group_text"
+            android:textColor="@color/background_end"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <include layout="@layout/bannerbar" />
+
+</LinearLayout>

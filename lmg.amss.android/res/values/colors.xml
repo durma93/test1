@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_start">#058AE9</color>
+    <color name="background_end">#1150A5</color>
+    <color name="titlebar_background_start">#F6DB2C</color>
+    <color name="titlebar_background_end">#E5C705</color>
+    <color name="button_background_start">#058AE9</color>
+    <color name="button_background_end">#1150A5</color>
+    <color name="contrast">#FFDB00</color>
+    <color name="border">#00CCFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#33CC00</color>
+    <color name="gray">#777777</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="hipster_blue">#3EB9FF</color>
+    <color name="actionbar_separator">#1A4988</color>
+    <color name="actionbar_title">#FFFFFF</color>
+    <color name="actionbar_search">#000000</color>
+    <color name="actionbar_background_start">#1A4988</color>
+    <color name="actionbar_background_end">#0F59AE</color>
+    <color name="actionbar_background_item_pressed_start">#058AE9</color>
+    <color name="actionbar_background_item_pressed_end">#1150A5</color>
+    <color name="blue_end">#123564</color>
+    <color name="blue_start">#2059A2</color>
+	<color name="blue_text">#243762</color>
+
+    <color name="blue_text_main">#273e66</color>
+
+
+    <!-- Updated design -->
+
+    <color name="heading_text">#0f3c68</color>
+    <color name="text">#939599</color>
+    <color name="yellow">#f9dc30</color>
+    <color name="blue">#273e66</color>
+    <color name="light_gray_v2">#eaeaea</color>
+
+</resources>

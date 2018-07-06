@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_membeshipid_text"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:text="@string/login_membership_card_seria_text"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/memeber_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/member_card_seria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/memeber_id"
+            android:layout_toRightOf="@+id/textView3"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:onClick="ChangeUser"
+        android:text="@string/login_changeuser_button_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</LinearLayout>

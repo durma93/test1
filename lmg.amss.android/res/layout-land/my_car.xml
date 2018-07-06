@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:id="@+id/my_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/my_car_basic_info_upper_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/tw1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_manufacturer_text"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/manufacturer_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/tw2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_model_text"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/tw3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_kilometraza_text"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kilometers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray" />
+
+                    <Button
+                        android:id="@+id/basicInfoChangeBt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button"
+                        android:onClick="basicInfoChange"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_car_button_text"
+                        android:textColor="@android:color/white" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/my_car_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_car"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/heading_sevis"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/my_car_servis_label"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:id="@+id/servis_tableRow1"
+                    android:layout_width="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/servis_date_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_date"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/servis_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/servis_tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/servis_amount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_amount"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/servis_amount_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/servis_tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/servis_price_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_price"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/servis_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/servis_tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray" />
+
+                    <Button
+                        android:id="@+id/servisDetailsChangeBt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button"
+                        android:onClick="servisDetailsChange"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_car_button_text"
+                        android:textColor="@android:color/white" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/my_car_gas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_car_info"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/heading_gas"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/my_car_gas_button"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:id="@+id/gas_tableRow1"
+                    android:layout_width="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/gas_date_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_date"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gas_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/gas_tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/gas_amount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_amount"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gas_amount_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/gas_tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:id="@+id/gas_price_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="@string/my_car_servis_price"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gas_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/gas_tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/gray" />
+
+                    <Button
+                        android:id="@+id/gasDetailsChangeBt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button"
+                        android:onClick="gasDetailsChange"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_car_button_text"
+                        android:textColor="@android:color/white" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

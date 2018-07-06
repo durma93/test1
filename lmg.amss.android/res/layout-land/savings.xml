@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            tools:ignore="SelectableText" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/poslovnice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button"
+        android:onClick="StartWebViewActivity"
+        android:padding="10dp"
+        android:text="@string/loyalty_search_button"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

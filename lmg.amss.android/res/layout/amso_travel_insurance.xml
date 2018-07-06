@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+
+    <include layout="@layout/back_button" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/typeOfRate_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#273e66"
+                android:textSize="12sp"
+                android:text="@string/amso_travel_insurance_vrsta_tarife"
+                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/typeOfRate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/spinner_backround"
+                    android:minHeight="40dp"
+                    android:prompt="@string/amso_travel_insurance_vrsta_tarife" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/age_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/amso_travel_insurance_starost"
+                android:textColor="#273e66"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/age"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/spinner_backround"
+                    android:minHeight="40dp"
+                    android:prompt="@string/amso_travel_insurance_starost" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:id="@+id/choose_date"
+                    style="@style/NewButton"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="showDatePickerDialog"
+                    android:text="@string/amso_travel_insurance_datepicker_bt"
+                    android:textColor="#273e66" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/duration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/gray_border"
+                android:hint="@string/amso_travel_insurance_period_pokrica"
+                android:inputType="number"
+                android:minHeight="40dp"
+                android:paddingLeft="16dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cover_period_days_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/amso_travel_insurance_period_pokrica"
+                android:textColor="#273e66"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/cover_period_days"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/spinner_backround"
+                android:minHeight="40dp"
+                android:prompt="@string/amso_travel_insurance_period_pokrica"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/cover_period_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/amso_travel_insurance_trajanje_osiguranja"
+                android:textColor="#273e66"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+
+            <Spinner
+                android:id="@+id/cover_period"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/spinner_backround"
+                android:minHeight="40dp"
+                android:prompt="@string/amso_travel_insurance_trajanje_osiguranja"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/danger_level_info"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/danger_level_txt"
+                    android:background="@drawable/blue_border_blue_filled"
+                    android:onClick="ShowInfo"
+                    android:text="i"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/danger_level_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/danger_level_info"
+                    android:layout_alignBottom="@+id/danger_level_info"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/amso_travel_insurance_razred_opasnosti"
+                    android:textColor="#273e66"
+                    android:textSize="12sp" />
+                />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/danger_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/spinner_backround"
+                    android:minHeight="40dp"
+                    android:prompt="@string/amso_travel_insurance_razred_opasnosti" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/participation_txt"
+                android:text="@string/amso_travel_insurance_ucese"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#273e66"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/participation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_backround"
+                    android:minHeight="40dp"
+                    android:prompt="@string/amso_travel_insurance_ucese" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/trip_purpose_txt"
+                android:text="@string/amso_travel_insurance_svrha_putovanja"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#273e66"
+                android:textSize="12sp" />
+            '
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/trip_purpose"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/spinner_backround"
+                    android:minHeight="40dp"
+                    android:prompt="@string/amso_travel_insurance_svrha_putovanja" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:id="@+id/calculate"
+                    style="@style/NewButton"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="Calculate"
+                    android:text="@string/info_tolls_calculate_button_text"
+                    android:textColor="#273e66" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#273e66">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/footer_logo" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/footer_call_center" />
+    </RelativeLayout>
+
+</LinearLayout>

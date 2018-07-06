@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/plate_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/regPlate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:paddingLeft="16dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/parking_unesite_registraciju_hint" />
+
+        <Spinner
+            android:id="@+id/city_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:paddingLeft="16dp"
+            android:visibility="gone"
+            android:background="@drawable/edit_text_background"
+            android:entries="@array/cities_list" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/plate_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="1.0" >
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogCancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/cancel_dialog_button" />
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogOk"
+            android:layout_width="60dip"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ok_dialog_button"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

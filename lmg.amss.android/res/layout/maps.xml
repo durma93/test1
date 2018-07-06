@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"  >
+
+     <include layout="@layout/titlebar" 
+        android:scaleType="fitXY"/>
+    
+    <com.google.android.maps.MapView
+       
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:apiKey="AIzaSyAB_BB0BXmAdjc9A1JkbuatQs5PzfUoidE"
+        android:clickable="true"
+        android:enabled="true" />
+
+     <include layout="@layout/bannerbar" />
+
+</LinearLayout>

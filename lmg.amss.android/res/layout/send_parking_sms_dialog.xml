@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/plate_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/call_help_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/parking_title"
+            android:textSize="24sp"
+            android:textColor="@color/yellow" />
+        <TextView
+            android:id="@+id/parking_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/plate_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="1.0" >
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogCancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/cancel_dialog_button" />
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogOk"
+            android:layout_width="60dip"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ok_dialog_button"
+            />
+    </LinearLayout>
+</RelativeLayout>

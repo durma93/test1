@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/titlebar_background_end"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_header_padlock" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/header_comments" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/header_info" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/action_bar_naslov"
+            style="@style/Text"
+            android:autoLink="all"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/menu_with_shortcuts"
+            android:textColor="@color/actionbar_background_end" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/menu_text"
+        style="@style/Text"
+        android:autoLink="all"
+        android:text="@string/menu_text" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_header_padlock" />
+
+        <TextView
+            android:id="@+id/txt1"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/menu_paddlock_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/header_comments" />
+
+        <TextView
+            android:id="@+id/txt2"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/menu_news_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/header_info" />
+
+        <TextView
+            android:id="@+id/txt3"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/menu_info_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt4"
+        style="@style/Text"
+        android:autoLink="all"
+        android:text="@string/menu_text_long" />
+
+</LinearLayout>

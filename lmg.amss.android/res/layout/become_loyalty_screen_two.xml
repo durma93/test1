@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_copy"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/old_member_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/become_loyalty_old_member_text" />
+
+        <CheckBox
+            android:id="@+id/old_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/membership"
+        android:layout_width="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/serial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="@string/become_loyalty_izaberite_seriju_text"/>
+
+        <Spinner
+            android:id="@+id/serial"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/membership_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/become_loyalty_unesite_broj_kartice_text"
+            android:maxLength="8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/become_loyalty_osnovni_podaci_text" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:scrollbars="none"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/individual"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_name_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_surname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_prezime_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_jmbg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_jmbg_text"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/company"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/edit_company_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_company_name_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_member_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_company_person_name_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_member_surname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_company_person_surname_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_pib"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/become_loyalty_company_pib_text"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:padding="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/next"
+        style="@style/Button"
+        android:onClick="GoNext"
+        android:layout_margin="10dp"
+        android:text="@string/become_loyalty_next_button_text" />
+
+</LinearLayout>

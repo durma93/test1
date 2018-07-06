@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+    <include layout="@layout/back_button" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="none"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+            <Spinner
+                android:id="@+id/spinnerCityFrom"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_backround"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:prompt="@string/info_tolls_calculate_cityfrom_prompt"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+            <Spinner
+                android:id="@+id/spinnerCityTo"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_backround"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:prompt="@string/info_tolls_calculate_cityto_prompt"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:onClick="Calculate"
+                android:textSize="18sp"
+                android:background="@drawable/primary_button"
+                android:textColor="@color/heading_text"
+                android:text="@string/info_tolls_calculate_button_text"
+                style="@style/Button" />
+
+            <TextView
+                android:id="@+id/distance"
+                style="@style/Text"
+                android:padding="5dp"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

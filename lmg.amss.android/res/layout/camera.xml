@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_gravity="top" android:background="@color/light_gray"
+    android:gravity="top">
+    
+    <ImageView
+        android:id="@+id/camera_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_placeholder" android:background="@color/common_signin_btn_light_text_focused"
+        android:adjustViewBounds="true" 
+        android:scaleType="fitXY" />
+
+    <TextView 
+        android:id="@+id/camera_title"
+        android:layout_width="match_parent" android:background="@color/blue_end"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp" />
+    
+</LinearLayout>

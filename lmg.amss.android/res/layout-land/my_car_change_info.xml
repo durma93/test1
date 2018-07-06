@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="15dp"
+        android:layout_weight="1" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/my_car_manufacturer_text"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_manufacurer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:hint="@string/my_car_obavezno_text" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/my_car_model_text"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_model"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:hint="@string/my_car_obavezno_text" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/my_car_godiste_text"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_godiste"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:hint="@string/my_car_obavezno_text"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/my_car_kilometraza_text"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_kilometraza"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:inputType="number" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/hipster_blue"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dip"
+            android:layout_height="48dp"
+            android:layout_margin="1dp"
+            android:layout_weight=".5"
+            android:background="@drawable/button_selector"
+            android:onClick="Cancel"
+            android:text="@string/my_car_cancel_button_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="0dip"
+            android:layout_height="48dp"
+            android:layout_margin="1dp"
+            android:layout_weight=".5"
+            android:background="@drawable/button_selector"
+            android:onClick="ConfirmButton"
+            android:text="@string/my_car_keep_button_text"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <include layout="@layout/bannerbar" />
+
+</LinearLayout>

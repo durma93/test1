@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_gravity="fill_vertical|center_horizontal"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+    <include layout="@layout/headerbar" />
+<!--     <include layout="@layout/amso_header" /> -->
+
+    <LinearLayout
+        android:id="@+id/layoutNetworkOptions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/spinnerRegions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:prompt="@string/amso_network_regions_prompt" />
+
+        <Spinner
+            android:id="@+id/spinnerMunicipalities"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:prompt="@string/amso_network_municipalities_prompt" />
+
+        <GridView
+            android:id="@+id/gridVewNetworkOptions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:numColumns="2" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+</LinearLayout>

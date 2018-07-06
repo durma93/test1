@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/become_loyalty_kontakt_podaci_text" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/individual"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/edit_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_adresa_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_postalCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_postanski_broj__text"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_place"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_mesto_text"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_telephone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_telefon_text"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_mobile_telephone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_mobilni_telefon_text"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/edit_e_mail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/become_loyalty_email_text"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:padding="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/next"
+        style="@style/Button"
+        android:onClick="GoNext"
+        android:text="@string/become_loyalty_next_button_text" />
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:src="@drawable/backbutton_background"
+            android:layout_marginTop="2dp"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_before_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:textColor="@color/text"
+                android:visibility="gone"
+                tools:ignore="SelectableText" />
+
+            <TextView
+                android:id="@+id/text_before_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:textColor="@color/text"
+                android:visibility="gone"
+                tools:ignore="SelectableText" />
+
+            <TextView
+                android:id="@+id/text_before_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:textColor="@color/text"
+                android:visibility="gone"
+                tools:ignore="SelectableText" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:textColor="@color/text"
+                tools:ignore="SelectableText" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/poslovnice"
+        style="@style/Button"
+        android:layout_margin="10dp"
+        android:background="@drawable/blue_border_blue_filled"
+        android:textSize="16sp"
+        android:text="@string/text_button_offices_text"
+        android:visibility="gone" />
+</LinearLayout>

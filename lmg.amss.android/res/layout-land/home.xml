@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="fill_vertical|center_horizontal"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ImageView
+        android:id="@+id/imageBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/walpaper_land"
+        tools:ignore="ContentDescription" />
+
+    <include layout="@layout/bannerbar" />
+
+</LinearLayout>

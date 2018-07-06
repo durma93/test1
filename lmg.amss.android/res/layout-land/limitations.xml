@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/limit_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:weightSum="5" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.1" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.9" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:id="@+id/road_city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:padding="1dp"
+                                android:src="@drawable/road_city" />
+
+                            <ImageView
+                                android:id="@+id/road_non_city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_toRightOf="@+id/road_city"
+                                android:padding="1dp"
+                                android:src="@drawable/road_non_city" />
+
+                            <ImageView
+                                android:id="@+id/autoput"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_toRightOf="@+id/road_non_city"
+                                android:padding="1dp"
+                                android:src="@drawable/autoput" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" 
+                            android:padding="2dp">
+
+                            <ImageView
+                                android:id="@+id/hitna"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@+id/alkohol"
+                                android:layout_toRightOf="@+id/policija"
+                                android:padding="1dp"
+                                android:src="@drawable/hitna_pomoc" />
+
+                            <ImageView
+                                android:id="@+id/policija"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_below="@+id/alkohol"
+                                android:padding="1dp"
+                                android:src="@drawable/policija" />
+
+                            <ImageView
+                                android:id="@+id/alkohol"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:padding="1dp"
+                                android:src="@drawable/alkohol" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

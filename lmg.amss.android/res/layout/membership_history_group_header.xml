@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView style="HistoryGroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:id="@+id/membership_history_group_titke"
+        android:layout_marginBottom="15dip" />
+    
+</LinearLayout>

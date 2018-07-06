@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sms_icon"/>
+            <TextView
+                android:id="@+id/call_help_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:paddingTop="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Šaljem na 1987"
+                android:textSize="24sp"
+
+                android:textColor="@color/yellow" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/call_help_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/callhelp_dialog_header"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/longitude_latitiude"
+        android:layout_below="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="1.0" >
+
+            <TextView
+                android:id="@+id/call_help_longitude_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/callhelp_dialog_latitude_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textCallHelpDialogLatitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="1.0" >
+
+            <TextView
+                android:id="@+id/call_help_latitude_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/callhelp_dialog_longitude_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textCallHelpDialogLongitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitude_latitiude"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:id="@+id/send_sms_membership_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/send_sms_membership_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/callhelp_membership_text"
+                android:textColor="@color/yellow" />
+
+            <TextView
+                android:id="@+id/textCallHelpMembershipId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/yellow"
+                 />
+        </LinearLayout>
+        
+        <EditText
+            android:id="@+id/editSendSmsVehicleVendor"
+            android:layout_height="45dp"
+            android:layout_width="fill_parent"
+            android:hint="@string/sendsms_marka_vozila"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:paddingLeft="16dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_background"/>
+        
+        <EditText
+            android:id="@+id/editSendSmsVehicleColor"
+            android:layout_height="45dp"
+            android:layout_width="fill_parent"
+            android:hint="@string/sendsms_boja_vozila"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:paddingLeft="16dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_background"/>
+            
+        <EditText
+            android:id="@+id/editSendSmsRegistration"
+            android:layout_height="45dp"
+            android:layout_width="fill_parent"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:paddingLeft="16dp"
+            android:hint="@string/sendsms_registracija"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_background"/>
+            
+        <Spinner
+            android:id="@+id/spinnerSendSmsIntervention"
+            android:layout_height="45dp"
+            android:layout_width="fill_parent"
+            android:layout_margin="5dp"
+            android:paddingLeft="16dp"
+            android:textColor="@color/white"
+            android:entries="@array/interventions_list"
+            android:background="@drawable/white_border_gray_filled"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="1.0" >
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogCancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/cancel_dialog_button" />
+
+        <ImageView
+            android:id="@+id/buttonCallHelpDialogOk"
+            android:layout_width="60dip"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ok_dialog_button"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

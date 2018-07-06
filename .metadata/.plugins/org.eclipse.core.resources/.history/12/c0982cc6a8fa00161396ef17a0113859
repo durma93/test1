@@ -1,0 +1,305 @@
+package rs.org.amss.shell;
+
+import java.io.Serializable;
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
+import com.markupartist.android.widget.ActionBar.IntentAction;
+
+import rs.org.amss.core.Constants;
+import rs.org.amss.core.LayoutManager;
+import rs.org.amss.core.MemoryManager;
+import rs.org.amss.core.Variables;
+import rs.org.amss.model.GetFonts;
+import rs.org.amss.view.ChangeSMSTextDialog;
+import rs.org.amss.view.DatePickerDialog;
+import rs.org.amss.view.ExitDialog;
+import rs.org.amss.view.NotificationDialog;
+import rs.org.amss.view.ParkingDialog;
+import net.lmggroup.utility.ActivityHelper;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class BaseActivity extends FragmentActivity {
+
+	protected ProgressDialog progressDialog;
+	protected ActivityHelper activityManager;
+	protected MemoryManager memoryManager;
+	protected LayoutManager layoutManager;
+	protected ActionBar actionBar;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		activityManager = new ActivityHelper(this);
+		memoryManager = new MemoryManager(this);
+		layoutManager = new LayoutManager(this);
+		super.onCreate(savedInstanceState);
+	}
+
+	public void showMain(View view) {
+		activityManager.startActivityWithFlag(MainActivity.class, Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	}
+
+	public void showSettings(View view){
+		activityManager.startActivity(HeaderInfoActivity.class);
+	}
+
+	public void showSignIn(View view){
+		if (Variables.user != null && Variables.user.getMembershipId() > 0)
+			activityManager.startActivity(LoginActivatedActivity.class);
+		else
+			activityManager.startActivity(LoginActivity.class);
+	}
+
+	public void showSafetyScreen1(View view){
+		activityManager.startActivity(SafetyActivity.class);
+	}
+
+	public void showSafetyScreen2(View view){
+		activityManager.startActivity(SafetyActivity2.class);
+	}
+
+	public void showParkingActivity(View view){
+		activityManager.startActivity(ParkingActivity.class);
+	}
+	public void showNews(View view){
+		activityManager.startActivity(NewsActivity.class);
+	}
+
+	public ActionBar getActionBar(){
+		if (actionBar == null){
+			View actionBarView = findViewById(R.id.actionbar);
+			if (actionBarView != null)
+				actionBar = (ActionBar)actionBarView;
+		}
+		return actionBar;
+	}	
+
+	public void setTitle(){
+		if (getActionBar() != null)
+			actionBar.setTitle(getTitle());
+	}
+
+	public void setTitle(String title){
+		if (getActionBar() != null)
+			actionBar.setTitle(title);
+	}
+
+	public void setTitle(int titleId){
+		if (getActionBar() != null)
+			actionBar.setTitle(getString(titleId));
+	}
+
+	public void setHomeIcon(int drawableId){
+		if (getActionBar() != null){
+			actionBar.setHomeLogo(drawableId);
+		}
+	}
+
+	public void setHomeAction(int drawableId){
+		if (getActionBar() != null){
+			actionBar.setHomeAction(new IntentAction(this, createHomeIntent(), drawableId));
+			//			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
+	}
+
+	public void setHomeAction(int drawableId, int titleId, Class<?> activityClass){
+		if (getActionBar() != null){
+			actionBar.setHomeAction(new IntentAction(this, getBackToChooserIntent(activityClass), drawableId));
+			//			actionBar.setDisplayHomeAsUpEnabled(true);
+			actionBar.setTitle(getString(titleId));
+		}
+	}
+
+	public void setHomeAction(int drawableId, String title, Class<?> activityClass){
+		if (getActionBar() != null){
+			actionBar.setHomeAction(new IntentAction(this, getBackToChooserIntent(activityClass), drawableId));
+			//			actionBar.setDisplayHomeAsUpEnabled(true);
+			actionBar.setTitle(title);
+		}
+	}
+
+	public Intent createHomeIntent() {
+		final Intent intent = new Intent(this, MainActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		return intent;
+	}
+
+	public Intent getBackToChooserIntent(Class<?> activityClass) {
+		final Intent intent = new Intent(this, activityClass);
+		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		return intent;
+	}
+
+	public Intent createShareIntent(String title, String extraText) {
+		final Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_TEXT, extraText);
+		return Intent.createChooser(intent, title);
+	}
+
+	public void addAction(Action action){
+		if (getActionBar() != null)
+			actionBar.addAction(action);
+	}
+
+	public void showProgress(){
+		if (getActionBar() != null)
+			actionBar.setProgressBarVisibility(View.VISIBLE);		
+	}
+
+	public void hideProgress(){
+		if (getActionBar() != null)
+			actionBar.setProgressBarVisibility(View.GONE);		
+	}
+
+	public ActivityHelper getActivityManager(){
+		return activityManager;
+	}
+
+	public MemoryManager getMemoryManager(){
+		return memoryManager;
+	}
+
+	public LayoutManager getLayoutManager(){
+		return layoutManager;
+	}
+
+	public Serializable getIntentExtra(String key){
+		Bundle extras = getIntent().getExtras();
+		return extras != null ? extras.getSerializable(key) : null;
+	}
+
+	public void getDialog(Activity activity)
+	{
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		ParkingDialog parkingDialog = new ParkingDialog(activity);
+		parkingDialog.setCancelable(false);
+		parkingDialog.show(fragmentManager, "Activity");
+	}	
+
+	public void getEditTextDialog(Activity activity){
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		new ChangeSMSTextDialog(activity).show(fragmentManager, "Activity");
+	}	
+	public void getNotificationDialog(Activity activity, String text){
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		new NotificationDialog(activity, text).show(fragmentManager, "Activity");
+	}	
+	public void getDatePickerDialog(Activity activity){
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		new DatePickerDialog(activity).show(fragmentManager, "Activity");
+	}
+	public void getExitDialog()
+	{
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		new ExitDialog(this).show(fragmentManager, "Activity");
+	}	
+
+	public void showYouTubeVideo(String videoId){
+
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube://" + videoId));
+		startActivity(intent);
+	}
+
+	public void showVideo(String videoUri){
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoUri));
+		startActivity(intent);
+	}
+	public void readImageDimensions(int imageID){
+		BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inJustDecodeBounds = true;
+		BitmapFactory.decodeResource(getResources(), imageID, options);
+		int imageHeight = options.outHeight;
+		int imageWidth = options.outWidth;
+		String imageType = options.outMimeType;
+		Log.v("Image:", imageHeight + " "+imageWidth + " "+imageType);
+	}
+	public static int calculateInSampleSize(
+			BitmapFactory.Options options, int reqWidth, int reqHeight) {
+		// Raw height and width of image
+		final int height = options.outHeight;
+		final int width = options.outWidth;
+		int inSampleSize = 1;
+
+		if (height > reqHeight || width > reqWidth) {
+
+			// Calculate ratios of height and width to requested height and width
+			final int heightRatio = Math.round((float) height / (float) reqHeight);
+			final int widthRatio = Math.round((float) width / (float) reqWidth);
+
+			// Choose the smallest ratio as inSampleSize value, this will guarantee
+			// a final image with both dimensions larger than or equal to the
+			// requested height and width.
+			inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
+		}
+
+		return inSampleSize;
+	}
+	public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+			int reqWidth, int reqHeight) {
+
+		// First decode with inJustDecodeBounds=true to check dimensions
+		final BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inJustDecodeBounds = true;
+		BitmapFactory.decodeResource(res, resId, options);
+
+		// Calculate inSampleSize
+		options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+		// Decode bitmap with inSampleSize set
+		options.inJustDecodeBounds = false;
+		return BitmapFactory.decodeResource(res, resId, options);
+	}
+
+	public static void checkIsLogIn(Activity activity){
+		Button sign = (Button)activity.findViewById(R.id.buttonSign);
+		if (Variables.user != null && Variables.user.getMembershipId() > 0)
+			sign.setBackgroundDrawable(activity.getResources().getDrawable(R.drawable.ic_padlock_active));
+		else
+			sign.setBackgroundDrawable(activity.getResources().getDrawable(R.drawable.header_padlock));
+	}
+
+	public void setUpAMSOActionBar(String title, int imageResourceID){
+		setUpAMSOActionBar(title, imageResourceID, false);
+	}
+
+	public void GoToAMSOMenu(View v){
+		activityManager.startActivity(AMSOActivity.class);
+	}
+
+	public void setUpAMSOActionBar(String title, int imageResourceID, boolean hideCallCenter){
+		TextView titleView = (TextView)findViewById(R.id.amso_title);
+		titleView.setText(title);
+
+		ImageView activityIcon = (ImageView)findViewById(R.id.activity_icon);
+		activityIcon.setImageResource(imageResourceID);
+
+		if (hideCallCenter){
+			ImageView callCenterIcon = (ImageView)findViewById(R.id.call_center);
+			callCenterIcon.setVisibility(View.GONE);
+		}
+	}
+
+	public void setUpAMSOFooter(){
+		TextView footer = (TextView)findViewById(R.id.textView1);
+		footer.setTypeface(GetFonts.getTypeface(BaseActivity.this));
+	}
+
+	public void callAmsoCallCenter(View view){
+		getActivityManager().makeCall(Constants.amsoCallCenterPhoneNumber);
+	}
+
+}

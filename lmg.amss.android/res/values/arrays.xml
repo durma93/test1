@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="repayments">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="percentes">
+        <item></item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="cities_list">
+        <item>Aleksandrovac</item>
+        <item>Aranđelovac</item>
+        <item>Bačka Palanka</item>
+        <item>Bečej</item>
+        <item>Bela Crkva</item>
+        <item>Beograd</item>
+        <item>Bujanovac</item>
+        <item>Čačak</item>
+        <item>Ćuprija</item>
+        <item>Despotovac</item>
+        <item>Inđija</item>
+        <item>Ivanjica</item>
+        <item>Jagodina</item>
+        <item>Kikinda</item>
+        <item>Knjaževac</item>
+        <item>Kragujevac</item>
+        <item>Kruševac</item>
+        <item>Kuršumlija</item>
+        <item>Lazarevac</item>
+        <item>Leskovac</item>
+        <item>Loznica</item>
+        <item>Mladenovac</item>
+        <item>Negotin</item>
+        <item>Niš</item>
+        <item>Novi Pazar</item>
+        <item>Novi Sad</item>
+        <item>Obrenovac</item>
+        <item>Pančevo</item>
+        <item>Paraćin</item>
+        <item>Petrovac na Mlavi</item>
+        <item>Pirot</item>
+        <item>Požarevac</item>
+        <item>Požega</item>
+        <item>Prokuplje</item>
+        <item>Raška</item>
+        <item>Ruma</item>
+        <item>Šabac</item>
+        <item>Senta</item>
+        <item>Šid</item>
+        <item>Smederevo</item>
+        <item>Smederevska Palanka</item>
+        <item>Sokobanja</item>
+        <item>Sombor</item>
+        <item>Sremska Mitrovica</item>
+        <item>Sremski Karlovci</item>
+        <item>Stara Pazova</item>
+        <item>Subotica</item>
+        <item>Surčin</item>
+        <item>Svilajnac</item>
+        <item>Temerin</item>
+        <item>Topola</item>
+        <item>Trstenik</item>
+        <item>Tutin</item>
+        <item>Ub</item>
+        <item>Užice</item>
+        <item>Valjevo</item>
+        <item>Veliko Gradište</item>
+        <item>Vranje</item>
+        <item>Vrnjačka Banja</item>
+        <item>Vršac</item>
+        <item>Zaječar</item>
+        <item>Zlatibor</item>
+        <item>Zrenjanin</item>
+    </string-array>
+    <string-array name="fuel_list">
+        <item>Premium BMB 95</item>
+        <item>Euro Premium BMB 95</item>
+        <item>Dizel</item>
+        <item>Euro Dizel</item>
+        <item>Autogas</item>
+        <item>Lož ulje</item>
+    </string-array>
+    <string-array name="interventions_list">
+        <item>Popravka</item>
+        <item>Šlepovanje</item>
+    </string-array>
+
+</resources>

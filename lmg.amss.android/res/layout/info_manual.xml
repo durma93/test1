@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="5dp"
+            android:src="@drawable/main_info" />
+
+        <TextView
+            android:id="@+id/info_naslov"
+            style="@style/Text"
+            android:autoLink="all"
+            android:gravity="center"
+            android:text="@string/main_info_text"
+            android:textColor="@color/actionbar_background_end"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info_text"
+        style="@style/Text"
+        android:autoLink="all"
+        android:text="@string/info_text" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/vazni_telefoni" />
+
+        <TextView
+            android:id="@+id/text1"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/medjunarodna_dokumenta" />
+
+        <TextView
+            android:id="@+id/text2"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_international_documents" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/propisi" />
+
+        <TextView
+            android:id="@+id/text3"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_tag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/propisi" />
+
+        <TextView
+            android:id="@+id/text4"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_cci_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/propisi" />
+
+        <TextView
+            android:id="@+id/text5"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_propisi_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/saveti_preporuke" />
+
+        <TextView
+            android:id="@+id/text6"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_saveti_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/kalkulator" />
+
+        <TextView
+            android:id="@+id/text7"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_kalkulator" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/stanje_putevi" />
+
+        <TextView
+            android:id="@+id/text8"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_putarine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/daljinar" />
+
+        <TextView
+            android:id="@+id/text9"
+            style="@style/Text"
+            android:autoLink="all"
+            android:paddingLeft="5dp"
+            android:text="@string/info_daljinari" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLATITE PARKING"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="60dp"
+                android:layout_height="44dp"
+                android:layout_below="@id/subtitlebar"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/backbutton_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ODABERI GRAD"
+                    android:textColor="#273e66"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/licencePlate"
+                android:layout_width="300dp"
+                android:layout_height="68dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:weightSum="741">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="52"
+                    android:background="@drawable/tablica_part01"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="226"
+                    android:background="@drawable/tablica_part02">
+                    <TextView
+                        android:id="@+id/cityPlateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="BG"
+                        android:textSize="55sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="292"
+                    android:background="@drawable/tablica_part03_dash">
+                    <TextView
+                        android:id="@+id/digitsPlateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="058"
+                        android:textSize="55sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="171"
+                    android:background="@drawable/tablica_part04">
+
+                    <TextView
+                        android:id="@+id/lettersPlateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="OX"
+                        android:textSize="55sp"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/numberOfPlate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:textSize="46sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/zonesList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/licencePlate"
+                android:background="#ffffff"
+                android:cacheColorHint="#00000000"
+                android:paddingTop="10dp"
+                android:scrollbars="none"></ListView>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

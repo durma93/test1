@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AMSS</string>
+    <string name="global_ok">DA</string>
+    <string name="global_cancel">NE</string>
+    <string name="global_yes">Da</string>
+    <string name="global_no">Ne</string>
+    <string name="global_ok_text">U REDU</string>
+    <string name="header_news">VESTI</string>
+    <string name="begining_date">Datum početka:</string>
+    <string name="header_info">INFO</string>
+    <string name="ending_date">Datum isteka:</string>
+    <string name="developed_by"></string>
+    <string name="exit_dialog_message">Zatvoriti aplikaciju?</string>
+    <string name="no_result_message">Trenutno nema informacija o izabranoj regiji.</string>
+    <string name="safety_status_ok_message">Hvala Vam što ste nas obavestili o potencijalnoj opasnosti na putu i poslali fotografiju. Naš operater će proceniti Vaše informacije. Vaš AMSS</string>
+    <string name="error_connection">Došlo je do greške u komunikaciji sa serverom</string>
+    <string name="error_login_serials">Lista serijskih brojeva je prazna.</string>
+    <string name="error_login_step1">Nažalost niste uneli korektni broj članske karte.</string>
+    <string name="error_login_step2">Nažalost niste odabrali korektno ime.</string>
+    <string name="error_login_step3">Nažalost niste odabrali korektni registraciju. Prijavljivanje neuspešno.</string>
+    <string name="error_info_tolls_calculate_cities">Lista gradova je prazna.</string>
+    <string name="error_info_tolls_calculate">Došlo je do greške prilikom učitavanja rezultata sa servera. Molimo pokušajte ponovo.</string>
+    <string name="error_road_conditions_video">Video nije učitan. Pokušajte ponovo kasnije.</string>
+    <string name="error_info_registration_calculate_municipalities">Lista opština je prazna.</string>
+    <string name="error_info_registration_calculate_vehicletypes">Lista tipova vozila je prazna.</string>
+    <string name="error_info_registration_calculate">Došlo je do greške prilikom učitavanja rezultata sa servera. Molimo pokušajte ponovo.</string>
+    <string name="error_info_registration_calculate_data">Neki od podataka nisu pravilno uneseni. Molimo proverite još jednom.</string>
+    <string name="error_info_registration_calculate_policydata">Stepen prethodne polise mora biti u opsegu [1,12]. Prepišite ovu vrednost sa trenutno važeće polise</string>
+    <string name="SMS_text_error_message">Unesite tekst poruke i pokušajte ponovo!</string>
+    <string name="menu_with_shortcuts">Meni sa prečicama</string>
+    <string name="menu_text">“Meni sa prečicama” dostupan je iz svih delova aplikacije i sadrži tri ikonice:</string>
+    <string name="menu_paddlock_text">prijavljivanje članova AMSS na aplikaciju,</string>
+    <string name="menu_news_text">za vesti,</string>
+    <string name="info_for_vehicle_owners_title">INFORMACIJE ZA VOZAČE</string>
+    <string name="advices_for_vehicle_owners_title">SAVETI</string>
+    <string name="international_documents_title">MEĐUNARODNA DOKUMENTA</string>
+    <string name="menu_info_text">za informaciju, jednostavni vodič kroz AMSS android mobilnu aplikaciju i uslove i prava korišćenja</string>
+    <string name="menu_text_long">U delu za prijavljivanje bi trebalo da ukucate broj koji se sastoji od vaše članske serije i članskog broja u poljima predviđenim za to. Sistem vam, potom, nudi opciju da od tri ponuđena imena i prezimena izaberete svoje. Posle toga, na isti način birate tačan broj registracije vašeg automobila i time je logovanje završeno. Ovo je odlična opcija aplikacije, jer će ulogovani članovi AMSS imati prednost prilikom slanja SMS poruke Operativnom centru AMSS kada im bude zatrebala pomoć na putu, šlepovanje, popravke, saveti i informacije.\n\n  Iz svih delova aplikacije možete lako da pristupite i “vestima”. Tu se nalaze sve najaktuelnije informacije iz AMSS sistema. Tu možete da saznate o svim pogodnostima i popustima za članove AMSS i ostale vozače, ali i najsvežije podatke o stanju u saobraćaju. Uz to, odmah do “vesti” je informacija o android aplikaciji kao i jednostavni, sveobuhvatni vodič kroz nju.</string>
+    <string name="help_text">Ukoliko vas je tokom vožnje zadesila bilo kakva nezgoda ili kvar, dovoljno je da u početnom meniju AMSS android mobilne aplikacije kliknete na “pomoć”. Na ekranu će vam se pojaviti vaša trenutna GPS lokacija i pitanje da li želite da pozovete Operativni centar AMSS na broj 1987 ili da operateru pošaljete SMS poruku. Ukoliko želite da pozovete, pojavljuju se vaše koordinate, savet da ih zapišete i pitanje da li da pozivete 1987. Ako odgovorite “da”, tada se uspostavlja veza sa operaterom. Istovremeno, postoji opcija i slanja SMS poruke u kojoj su automatski već unete vaše koordinate, a od vas se očekuje da napišete tekst poruke u smislu koja vam je pomoć neophodna i to pošaljete. Za nekoliko trenutaka dobićete odgovor da je vaš zahtev prihvaćen i da vam uskoro stiže odgovor operatera. A ako ste u aplikaciji prijavljeni kao član AMSS, imaćete prioritet u odnosu na druge građane koji su se, takođe, obratili Operativnom centru AMSS. Operater će vas pozvati ili poslati SMS poruku u kojoj će biti podaci kada je vozilo za šlepovanje ili za pomoć na putu krenulo ka vama, okvirno vreme njegovog dolaska do vaše lokacije i po potrebi koje su njegove registarske tablice.</string>
+    <string name="road_text">Pre nego što sednete za volan, stanje na putevima možete brzo da proverite ukoliko na glavnom meniju AMSS android mobilne aplikacije kliknete na tu ikonicu. Otvara vam se mogućnost da odgledate AMSS TV informativnu emisiju “Stanje na putevima”, koja sadrži nasvežije i najažurnije informacije prikupljene od nadležnih službi o situaciji na putevima u celoj zemlji. Osim toga, možete da pogledate i sveobuhvatnu mapu prohodnosti puteva. Na karti Srbije prikazani su svi gradovi, mesta i tačke na putevima sa jasno obeleženim saobraćajnim znakovima kakvi radovi su trenutno u toku. To nije sve, ako putujete u inostranstvo postoji u podmeniju “granični prelaz” - spisak graničnih prelaza ka Mađarskoj, Hrvatskoj, Bugarskoj, Makedoniji, Crnoj Gori, Rumuniji i Bosni i Hercegovini. Izaberite prelaz koji vas zanima i dobićete oznaku puta koji do tamo vodi, kao i aktuelno vreme zadržavanja pri ulasku i izlasku iz zemlje. U “stanju na putevima” očekuje vas još jedan izuzetno zanimljiv podmeni - “ograničenja”. Ukoliko tu uđete, možete da saznate kolika su ograničenja brzina na putevima u naseljenim mestima, van njih i na auto-putevima, ali i dozvoljeni nivo alkohola u krvi u promilima i brojeve telefona hitnih službi u Evropi.</string>
+    <string name="membership_text">Glavni meni, u rubrici “članstvo” nudi sve informacije u vezi sa članstvom u AMSS. Detaljno su objašnjene usluge u zavisnosti od veličine članskog paketa – osnovna članska kartica i super članska kartica. Imate i priviligeju da preko naše android mobilne aplikacije postanete član AMSS, uz 10 odsto popusta. Dovoljno je da u podmeniju “postanite član” izaberete opciju da li ste fizičko ili pravno lice i popunite sva polja vašim podacima. Kao odgovor, dobićete povratni e-mejl u kojem će biti neophodni podaci o uplati. Pošto ste uradili sve što je neophodno da postanete član AMSS, dobićete vašu člansku karticu na kućnu adresu. Takođe, u rubrici “članstvo”, u podmeniju “popusti i uštede” su brojne informacije gde vas, kao članove AMSS, u okviru sistema “Show your card” očekuju popusti i uštede u Evropi, ali i podaci gde takve povoljnosti možete ostvariti i u Srbiji.</string>
+    <string name="network_text">Izuzetno korisna opcija u glavnom meniju za svakog vozača je svakako “mreža”. Sadrži kompletnu mapu Srbije, na kojoj su označeni gradovi i mesta gde se nalaze auto-centri AMSS. Kada izaberete grad, na primer Vršac, dobijate adresu, telefon i radno vreme tog auto-centra.</string>
+    <string name="info_text">AMSS android mobilna aplikacija donosi vam apsolutno sve odgovore na vaša pitanja. U podmeniju su rubrike:</string>
+    <string name="info_phone"><b>”važni telefoni”</b>- tu su telefoni i radno vreme institucija kao što su policija, vatrogasna brigada, hitna pomoć, AMSS – pomoć na putu, tačno vreme, telegrami, ali i drugih koji mogu da vam zatrebaju.</string>
+    <string name="info_international_documents"><b>“međunarodna dokumenta”</b> - nude odgovore na pitanja o <b>međunarodnoj vozačkoj dozvoli</b> - šta je ona, koja su vam dokumenta neophodna da biste je izvadili, rok važenja i mreža poslovnica AMSS gde je možete dobiti.  Tu je detaljno objašnjena informacija i o <b>dozvoli za upravljanje tuđim vozilom u inostranstvu</b> - koja su neophodna dokumenta da biste je dobili, koliko košta, kome se izdaje, rok važenja, a, takođe, imate i kompletnu mapu poslovnica gde je možete dobiti.</string>
+    <string name="info_tag"><b>“TAG elektronska naplata putarina”</b> - kada kliknete na tu ikonicu u podmeniju dobićete korisne informacije za šta služe TAG uređaji za elektronsko plaćanje putarina i koliko olakšavaju prolazak kroz naplatne rampe. AMSS Poslovni sistem obezbeđuje vam popust od osam do 15 odsto na punu cenu putarine. Možete da se informišete i o cenama TAG uređaja i vrednostima avansne uplate i popustima. Naravno, tu je i mapa Srbije na kojoj su označeni gradovi gde se nalaze auto-centri AMSS u kojima se prodaju TAG uređaji.</string>
+    <string name="info_cci_text"><b>“Camping Card International (CCI)  - Međunarodna kamping kartica</b> - ovde su informacije o tome šta je CCI kartica, ko može da je dobije, njenoj ceni, od čega je sve osiguran njen vlasnik, uslovi za dobijanje, kao i mapa lokacija međunarodnih auto-kampova.</string>
+    <string name="info_propisi_text"><b>”propisi”</b> - u ovoj rubrici su podaci o važećim propisima u vezi sa prevozom dece u Srbiji i Evropi, visini kazni za pojedine saobraćajne prekršaje u zemljama EU, šta važi u Makedoniji, Hrvatskoj, Crnoj Gori, možete da otvorite ceo Zakon o bezbednosti saobraćaja. </string>
+    <string name="info_saveti_text"><b>”saveti i preporuke”</b> - ova opcija nudi spisak saveta za održavanje vašeg vozila – šta bi trebalo da uradite posle pređenih 500, 5.000, 10.000, 20.000, 30.000 kilometra, kao i kako se kontroliše akumulator, pritisak u pneumaticima, kad i kako se pere i štiti vozilo u odnosu na period u godini, koja vam je neophodna oprema za duža putovanja.</string>
+    <string name="info_kalkulator"><b>”kalkulator registracije” </b>” - informativno izračunava koliko bi mogla da vas košta registracija vašeg vozila. Neophodno je da u traženim poljima upišete tip vozila, kao i da ubeležite polje da li vam je potrebna nova saobraćajne dozvole ili nove registarske tablice. Sa druge strane, ako želite da saznate baš tačan iznos morate da unesete takozvani premijski stepen prethodne polise i broj šteta po toj polisi. </string>
+    <string name="info_putarine"><b>“izračunavanje putarina”</b>- uz ovu opciju ne morate više da se pitate koliko će vas koštati putarina. Dovoljno je samo da označite odakle ste krenuli i gde bi trebalo da stignete, a AMSS android mobilna aplikacija uradiće taj posao.</string>
+    <string name="info_daljinari"><b>“daljinari”</b> – opcija vam prikazuje daljinu između dve destinacije. Dovoljno je da ih označite u aplikaciji. </string>
+    <string name="amso_text">U glavnom meniju AMSS android mobilne aplikacije očekuju vas sve informacije o proizvodima AMS Osiguranja. Tu su svi podaci o osiguranju od autoodgovornosti, Kasko polisi, Kasko lajt polisi, Putnom zdravstvenom osiguranju, osiguranju od posledica nesrećnog slučaja - nezgode, kao i kompletna prodajna mreža AMS Osiguranja u Srbiji. Dovoljno je da izaberete region i opštinu kako biste dobili naziv, telefon, radno vreme poslovnice i koje proizvode AMS Osiguranja možete da kupite kod njih. U ovom delu aplikacije velika povoljnost je što možete sami, preko opcije “kalkulator premije”, informativno da izračunate cenu polise Putnog zdravstvenog osiguranja, Kasko lajt polise, pošto popunite polja osigurane sume i perioda njenog pokrića. Za informativnu vrednost Kasko polise, u zavisnoti od izabranih opcija i konkretnog vozila,  dobićete ponudu u PDF formatu.</string>
+   	<string name="safety_text">Opcija “bezbednost” na glavnom meniju predviđa da aktivirate lokator na mestu gde ste uočili potencijalnu opasnost za učesnike u saobraćaju – led na putu, velika rupa, saobraćajni udes… da to fotografišete i prosledite našem operateru.</string>
+    <string name="my_car_manual_text">Izuzetno korisna opcija AMSS android mobilne aplikacije je “moj auto”. Ona omogućava vlasniku vozila da memoriše kada je natočio gorivo ili poslednji put bio na servisu. Unesite podatke o proizvođaču vašeg automobila, modelu, godištu i pređenoj kilometraži. U podmeniju je i opcija “gde mi je auto”, koja omogućava vozaču da memoriše lokaciju gde je parkirao vozilo. Na ovaj način ćete bez problema, uz vodič na mapi, pronaći kola čak i u nepoznatom gradu.</string>
+	<string name="parking_manual_text">Preko AMSS android mobilne aplikacije možete da platite parking. Potrebno je da unesete broj registracije vašeg vozila, izaberete grad u kojem ste, obeležite zonu i pošaljete SMS poruku. A to možete da uradite i ako ste u zoni bez ograničenja, kao i da kupite dnevnu kartu. </string>
+	<string name="parking_text">Preko AMSS android mobilne aplikacije možete da platite parking. Potrebno je da unesete broj registracije vašeg vozila, izaberete grad u kojem ste, obeležite zonu i pošaljete SMS poruku. A to možete da uradite i ako ste u zoni bez ograničenja, kao i da kupite dnevnu kartu.</string>
+    <string name="my_current_location_title">Moja lokacija</string>
+    <string name="my_current_location_snippet">Moja trenutna lokacija</string>
+    <string name="mycar_current_location_title">Auto</string>
+    <string name="mycar_current_location_snippet">Ovde sam ostavio kola</string>
+    <string name="main_helponroad_text">POMOĆ\nNA PUTU</string>
+    <string name="main_roadstate_text">STANJE NA\nPUTEVIMA</string>
+    <string name="roads_long">Stanje na putevima</string>
+    <string name="main_parking_text">PLATITE\nPARKING</string>
+    <string name="main_network_text">Mreža</string>
+    <string name="main_safety_text">Bezbednost</string>
+    <string name="main_my_text">Moj auto</string>
+    <string name="main_info_text">INFORMACIJE\nZA VOZAČE</string>
+    <string name="main_insurance_text">AMS OSIGURANJE</string>
+    <string name="main_registration_calculator">KALKULATOR REGISTRACIJE</string>
+    <string name="insurance_traveling_30_percent">30% popusta</string>
+    <string name="web_shop_subtitle">Webshop</string>
+    <string name="insurance_home">Akcija za osiguranje doma</string>
+    <string name="main_members_text">AMSS ČLANSTVO</string>
+    <string name="main_cameras_text">KAMERE\nUŽIVO</string>
+    <string name="main_tv_text">TV</string>
+    <string name="main_calculator_text">Kalkulator</string>
+    <string name="main_savings_text">Uštedite</string>
+    <string name="main_map_text">Mapa</string>
+    <string name="main_fuelprices_text">Cene goriva</string>
+    <string name="main_about_text">O nama</string>
+    <string name="main_warnings_for_drivers">Upozorenje za vozače</string>
+    <string name="main_near">U VAŠOJ\nBLIZINI</string>
+    <string name="login_membershipcard_text">Unesite svoj članski broj</string>
+    <string name="login_step1_text">1.</string>
+    <string name="login_step2_text">2.</string>
+    <string name="login_step3_text">3.</string>
+    <string name="login_serials_prompt">Izaberite seriju</string>
+    <string name="login_step1_prompt">Izaberite vaše ime</string>
+    <string name="login_step2_prompt">Izaberite broj tablica</string>
+    <string name="login_submit_text">Potvrda</string>
+    <string name="LoginActivity_Label">Prijavljivanje</string>
+    <string name="LoginActivity_Label_upper">PRIJAVLJIVANJE</string>
+    <string name="callhelp_latitude_text">Geo. širina:\u00A0</string>
+    <string name="callhelp_longitude_text">Geo. dužina:\u00A0</string>
+    <string name="callhelp_membership_text">ČLANSKI BROJ:</string>
+    <string name="callhelp_accuracy_text">Preciznost:\u00A0</string>
+    <string name="callhelp_address_text">Adresa:\u00A0</string>
+    <string name="callhelp_button_text">Pozovi 1987</string>
+    <string name="callhelp_dialog_title">Pozivam 1987</string>
+    <string name="callhelp_dialog_header">Trenutne kordinate:</string>
+    <string name="callhelp_dialog_message">Zapišite Vaše koordinate i saopštite ih operateru AMSS, kako bi služba Pomoći na putu došla do Vas u najkraćem roku.</string>
+    <string name="callhelp_dialog_latitude_text">Širina:\u00A0</string>
+    <string name="callhelp_dialog_longitude_text">Dužina:\u00A0</string>
+    <string name="CallHelpActivity_Label">POMOĆ</string>
+    <string name="CallHelp_AccuracyNotKnown_Text">Nepoznato</string>
+    <string name="CallHelp_AddressNotKnown_Text">Nepoznata</string>
+    <string name="sendsms_dialog_title">Šaljem na 1987</string>
+    <string name="sendsms_hint_text">Unesite tekst poruke</string>
+    <string name="sendsms_dialog_toast">Poruka poslata. Pomoć je na putu.</string>
+    <string name="sendsms_marka_vozila">Marka vozila</string>
+    <string name="sendsms_boja_vozila">Boja vozila</string>
+    <string name="sendsms_registracija">Registracija</string>
+    <string name="sendsms_intervencija">Intervencija</string>
+    <string name="MapsActivity_GpsDisabled_AlertDialog_Title">GPS</string>
+    <string name="MapsActivity_GpsDisabled_AlertDialog_Message">Želite li da uključite GPS kako bi interaktivna mapa precizno prikazivala vašu lokaciju?</string>
+    <string name="NetworkActivity_Label">MREŽA</string>
+    <string name="NetworkActivity_ProgressBar_Title">Mreža poslovnica</string>
+    <string name="NetworkActivity_ProgressBar_Message">Učitavanje sadržaja&#8230;</string>
+    <string name="membership_progress_title">Članstvo</string>
+    <string name="MembershipActivity_ProgressBar_Message">Učitavanje sadržaja&#8230;</string>
+    <string name="AMSONetworkActivity_Label">PRODAJNA MREŽA</string>
+    <string name="SafetyActivity_Label">UPOZORENJE ZA VOZAČE</string>
+    <string name="SafetyActivity_Loading_Text">Slanje podataka u toku&#8230;</string>
+    <string name="Calculation_text">Izračunavanje u toku&#8230;;</string>
+    <string name="CalculatorActivity_repaymentSpinner_Text">Izaberite rok otplate</string>
+    <string name="CalculatorActivity_percentSpinner_Text">Izaberite kamatnu stopu</string>
+    <string name="slikaj">Slikaj</string>
+    <string name="posalji">Poslati</string>
+    <string name="dodaj_komentar">Dodajte komentar:</string>
+    <string name="coord"></string>
+    <string name="dalje">Dalje</string>
+    <string name="CalculateActivity">Kalkulator registracije</string>
+    <string name="Loading">Učitavanje</string>
+    <string name="network_international_documents">Međunarodna dokumenta</string>
+    <string name="InternationalDocumentsOfficesLabel">Poslovnice</string>
+    <string name="network_all_categories">Sve kategorije</string>
+    <string name="network_tehnical_review">Tehnički pregled</string>
+    <string name="network_amss_membership">AMSS članstvo</string>
+    <string name="network_registration">Registracija</string>
+    <string name="network_insurance">Osiguranje</string>
+    <string name="network_help_on_road">Pomoć na putu</string>
+    <string name="network_towing">Šlepovanje</string>
+    <string name="network_driving_school">Auto škola</string>
+    <string name="network_atest">Atesti</string>
+    <string name="network_auto_service">Auto servis</string>
+    <string name="network_exchange_office">Menjačnica</string>
+    <string name="network_tng_pump">Auto gas</string>
+    <string name="network_car_wash">Perionica</string>
+    <string name="network_tourism">Turizam</string>
+    <string name="network_tag">Prodaja i dopuna TAG</string>
+    <string name="network_shop">Prodavnica</string>
+    <string name="network_restaurant">Restoran</string>
+    <string name="network_spedition">Špedicija</string>
+    <string name="parking_zone1">ZONA I</string>
+    <string name="parking_zone2">ZONA II</string>
+    <string name="parking_zone3">ZONA III</string>
+    <string name="parking_daily">Dnevna karta</string>
+    <string name="parking_daily_all_zones">Dnevna sve zone</string>
+    <string name="parking_zone0">Zona 0</string>
+    <string name="parking_zone01">Zona 1</string>
+    <string name="parking_zone01_visecasovna">Zona 1 višečasovna</string>
+    <string name="parking_zone02">Zona 2</string>
+    <string name="parking_zone02_visecasovna">Zona 2 višečasovna</string>
+    <string name="parking_zones_bez_ogranicenja">Bez ograničenja</string>
+    <string name="parking_zones_crvena_zona">Crvena zona</string>
+    <string name="parking_zones_crvena_zona_dnevna">Crvena zona: Dnevna karta</string>
+    <string name="parking_zones_plava_zona">Plava zona</string>
+    <string name="parking_zones_zelena_zona">Zelena zona</string>    
+    <string name="parking_zones_zelena_zona_dnevna">Zelena zona: Dnevna karta</string>
+    <string name="parking_zones_zuta_zona">Žuta zona</string>
+    <string name="parking_zones_zuta_dnevna_zona">Žuta dnevna</string>
+    <string name="parking_zones_centralna_zona">Centralna zona</string>
+    <string name="parking_zones_dnevna_karta">Dnevna karta</string>
+    <string name="parking_zones_bela_zona">Bela zona</string>
+    <string name="parking_zones_strand_zona">Štrand</string>
+    <string name="parking_zones_najlon_zona">Najlon</string>
+    <string name="parking_zones_zona">Zona</string>
+    <string name="parking_zones_1_zona">I zona</string>
+    <string name="parking_zones_1_zona_dnevna">I zona: Dnevna karta</string>
+    <string name="parking_zones_2_zona">II zona</string>    
+    <string name="parking_zones_2_zona_dnevna">II zona: Dnevna karta</string>    
+    <string name="parking_zones_3_zona">III zona</string>    
+    <string name="parking_zones_3_zona_dnevna">III zona: Dnevna karta</string>    
+    <string name="parking_zones_zona1">Zona I</string>
+    <string name="parking_zones_zona1_dnevna">Zona I: Dnevna karta</string>    
+    <string name="parking_zones_zona2">Zona II</string>   
+    <string name="parking_zones_zona2_dnevna">Zona II: Dnevna karta</string>
+    <string name="parking_zones_zona3">Zona II</string>   
+    <string name="parking_zones_zona3_dnevna">Zona II: Dnevna karta</string>   
+    <string name="parking_zones_zona2_putnica_vozila">Zona II: Putnička vozila</string>
+    <string name="parking_zones_zona2_teretna_vozila">Zona II: Teretna vozila</string> 
+    <string name="parking_zones_zona1_crvena">Zona I (crvena zona)</string>
+    <string name="parking_zones_zona1_dnevna_crvena">Zona I dnevna (crvena zona)</string>
+    <string name="parking_zones_zona1_zuta">Zona I (žuta zona)</string>
+    <string name="parking_zones_zona2_zuta">Zona II (žuta zona)</string>
+    <string name="parking_zones_zona3_zelena">Zona III (zelena zona)</string>
+    <string name="parking_zones_zona3_dnevna_zelena">Zona III dnevna (zelena zona)</string>
+    <string name="parking_zones_zona3_plava">Zona III (plava zona)</string>
+    <string name="parking_zones_zona3_dnevna_plava">Zona III dnevna (plava zona)</string>
+    <string name="parking_zones_zona4_plava">Zona IV (plava zona)</string>
+    <string name="parking_zones_zona1_poslovna">Zona I poslovna karta</string>
+    <string name="parking_zones_zona2_zona4">Zona II i IV poslovna karta</string>
+    <string name="parking_zones_zona2_zelena">Zona II (zelena zona)</string>
+    <string name="parking_zones_zona2_plava">Zona II (plava zona)</string>
+    <string name="parking_zones_zona2_dnevna_zuta">Zona II dnevna (žuta zona)</string>
+    <string name="parking_zones_plava_dnevna">Plava zona dnevna karta</string>
+    <string name="parking_zones_ekstra_zona">Ekstra zona</string>
+    <string name="parking_zones_ekstra_zona_dnevna">Ekstra zona: Dnevna karta</string>
+    <string name="parking_zones_posebna_zona">Posebna zona</string>
+    <string name="parking_zones_sremski_karlovci">Zona Sr. Karlovci</string>
+    <string name="parking_zones_sremski_karlovci_bus">Zona Sr. Karlovci - BUS</string>
+    <string name="parking_zones_posebno_parkiraliste">Posebno parkiralište</string>
+    <string name="parking_zones_blok_42">Blok 42 i Vidin kapija</string>
+    <string name="parking_zones_blok_42_visesatna">Blok 42 i Vidin kapija - Višesatna karta</string>
+    <string name="parking_zones_sava_promenada">Sava promenada</string>
+    <string name="parking_zones_sava_promenada_visesatna">Sava promenada - Višesatna karta</string>
+    <string name="parking_zones_sajam">Sajam</string>
+    <string name="parking_no_cities_error">Trenutno nije moguće ažurirati listu gradova. Molimo Vas da pokušate kasnije.</string>
+    <string name="beograd">Beograd</string>
+    <string name="kragujevac">Kragujevac</string>
+    <string name="novisad">Novi Sad</string>
+    <string name="krusevac">Kruševac</string>
+    <string name="subotica">Subotica</string>
+    <string name="nis">Niš</string>
+    <string name="valjevo">Valjevo</string>
+    <string name="sabac">Šabac</string>
+    <string name="arandjelovac">Aranđelovac</string>
+    <string name="uzice">Užice</string>
+    <string name="parking_zones_bez_ogranicenja_dnevna">Bez ograničenja - dnevna karta</string>
+    <string name="parking_zone1_number">9111</string>
+    <string name="parking_zone2_number">9112</string>
+    <string name="parking_zone3_number">9113</string>
+    <string name="parking_daily_number">9118</string>
+    <string name="parking_label">PARKING</string>
+    <string name="safety_latitude">Geo. širina:</string>
+    <string name="safety_address">Adresa:</string>
+    <string name="safety_longitude">Geo. dužina:</string>
+    <string name="safety_comment_hint">Komentar:</string>
+    <string name="safety_aktiviraj_lokator_text">Aktivirati Lokator</string>
+    <string name="safety_longitude_text">Dužina</string>
+    <string name="safety_latitude_text">Širina</string>
+    <string name="roads_label">STANJE NA PUTEVIMA</string>
+    <string name="safety_tip_kvara">Tip kvara:</string>
+    <string name="roads_tv_text">TV &#8211; Stanje na putevima</string>
+    <string name="roads_info_text">Info &#8211; prohodnost puteva</string>
+    <string name="roads_borders_text">Granični prelaz</string>
+    <string name="roads_bounders_text">Ograničenja</string>
+    <string name="mycar_label">MOJ AUTO</string>
+    <string name="mycar_change_oil_text">Zameniti ulje</string>
+    <string name="mycar_refull_gas_text">Dopuniti gorivo</string>
+    <string name="mycar_check_brakes_text">Proveriti kočnice</string>
+    <string name="mycar_change_tyres_text">Zameniti gume</string>
+    <string name="mycar_reservation_text">Zakazati tehnički pregled</string>
+    <string name="mycar_whereismycar_text">Gde mi je auto</string>
+    <string name="AMSO_label">AMS OSIGURANJE</string>
+    <string name="AMSO_safety_text">Obavezno osiguranje vozila</string>
+    <string name="AMSO_kasko_text">Kasko osiguranje</string>
+    <string name="AMSO_kasko_light_text">Kasko light</string>
+    <string name="AMSO_accidents_text">Osiguranje domaćinstva</string>
+    <string name="AMSO_accidents_subtitle">/ Webshop</string>
+    <string name="AMSO_healthy_insurance_text">Putno zdravstveno osiguranje</string>
+    <string name="AMSO_healthy_insurance_subtitle">/ Webshop</string>
+    <string name="AMSO_sales_text">Prodajna mreža</string>
+    <string name="AMSS_sales_text">Mreža poslovnica</string>
+    <string name="AMSO_kasko_light_heading">ZAHTEVAJ OBRAČUN PREMIJE</string>
+    <string name="AMSO_kasko_light_choose_amount">Izaberite osiguranu sumu:</string>
+    <string name="AMSO_kasko_light_choose_period_of_coverage">Izaberite period pokrića:</string>
+    <string name="AMSO_kasko_travel_insurance_no_cover_period_text">Odaberite period pokrića!</string>
+    <string name="AMSO_kasko_travel_insurance_result_text">Vaša putna premija iznosi: </string>
+    <string name="AMSO_kasko_travel_insurance_date_error_text">Datum početka osiguranja je veći od datuma isteka osiguranja</string>
+    <string name="AMSO_kasko_light_calculator_result_text">Prema izabranoj osiguranoj sumi i periodu pokrića, Vaša premija iznosi:</string>
+    <string name="AMSO_kasko_light_further_questions">Za sve dodatne informacije kontaktirajte Službu dobrovoljnih osiguranja,  AMS Osiguranje, na telefon 011/30 84 901 ili putem emaila kasko@ams.co.rs</string>
+    <string name="AMSO_footer_text" formatted="false"><b>AMS OSIGURANJE</b>, Ruzveltova 16, Beograd\nTelefon: 011 3084900, call centar: 0800009009 besplatna info linija\ninfo@ams.co.rs www.ams.co.rs</string>
+    <string name="loyalty_label">Članstvo</string>
+    <string name="loyalty_basic_text">Osnovna članska kartica</string>
+    <string name="loyalty_super_text">Super članska kartica</string>
+    <string name="loyalty_sales_text">Popusti i uštede</string>
+    <string name="loyalty_profile">Profil</string>
+    <string name="loyalty_become_partner_text">Postanite član</string>
+    <string name="parking_unesite_registraciju_hint">Unesite registraciju</string>
+    <string name="parking_unesite_grad_hint">Unesite grad</string>
+    <string name="where_is_my_car_clear">Obrisati</string>
+    <string name="where_is_my_car_save">Zapamtiti</string>
+    <string name="loyalty_basic_itinerer">Trаnsport vozilа (šlepovаnje) u slučаju kvаrа ili sаobrаćаjne nezgode, do 40 km prelаskа šleperа u odlаsku i povrаtku – pаušаl*.\nOvа uslugа se može koristiti jednom u toku jedne Člаnske godine</string>
+    <string name="loyalty_benefits_info_1">Postanite član najstarije i najveće porodice vozača i uverite se zašto nam je poverenje ukazalo preko 100 hiljada članova. Učlanjenjem u AMSS postajete privilegovan vozač kroz Srbiju i kontinentalnu Evropu i stičete pravo korišćenja besplatnog šlepovanja, pomoć na putu, i popusta na preko 2000 prodajnih mesta, u Srbiji i Evropi.</string>
+    <string name="loyalty_benefits_info_2">Kad voziš da ne brineš, kad je teško da pozoveš 1987!</string>
+    <string name="loyalty_basic_advice">Poprаvkа vozilа nа putu, do 40 km prelаskа SPI vozilа zа pomoć u odlаsku i povrаtku
+i do jednog čаsа rаdа аutomehаničаrа – pаušаl**.\nOvа uslugа se može koristiti jednom
+u toku jedne Člаnske godine</string>
+    <string name="loyalty_basic_free_help">Neogrаničeni broj prаvnih sаvetа iz oblаsti sаobrаćаjа (potrebno je dostаviti pisаni
+zаhtev i prаteću dokumentаciju Službi Člаnstvа AMSS)
+</string>
+    <string name="loyalty_basic_free_CMV">Procenа vrednosti vozilа kаdа Člаn želi dа prodа ili kupi polovno vozilo (potrebno
+je dostаviti pisаni zаhtev i sve podаtke o vozilu Službi Člаnstvа AMSS)
+</string>
+    <string name="loyalty_basic_repair">Pomoć prilikom trаženjа rezervnih delovа zа vozilo (informаcije se dobijаju od
+Operаtivnog centrа AMSS)</string>
+    <string name="loyalty_basic_traffic">Izrаdа plаnа putovаnjа – itinererа (Srbijа i Evropа) – zаhtev se upućuje Operаtivnom
+centru AMSS</string>
+    <string name="loyalty_basic_discount">20% popustа nа cenu pređenih kilometаrа trаnsportа vozilа u Srbiji (bez ogrаničenjа
+u kilometrаži). \nOvа uslugа se može koristiti jednom u toku jedne Člаnske godine</string>
+    <string name="loyalty_super_srbija">SRBIJA</string>
+    <string name="loyalty_super_one">Trаnsport vozilа (šlepovаnje) u slučаju kvаrа, do 100 km prelаskа šleperа u odlаsku i
+povrаtku*. Dozvoljenа je mogućnost kumulаtivnog korišćenjа ove usluge (ukupnа
+kilometrаžа sа prаvom iz Osnovnog člаnskog pаketа je 140 km).\n Ovа uslugа se može
+koristiti jednom u toku jedne Člаnske godine</string>
+    <string name="loyalty_super_two">Trаnsport vozilа (šlepovаnje) u slučаju sаobrаćаjne nezgode*** bez ogrаničenjа u
+kilometrаži*. Vozilo se trаnsportuje do kućne аdrese Člаnа ili u željeni servis. \nOvа
+uslugа se može koristiti jednom u toku jedne Člаnske godine
+</string>
+    <string name="loyalty_super_three">Tri poprаvke vozilа nа putu, do 40 km prelаskа SPI vozilа zа pomoć u odlаsku i
+povrаtku i do jednog čаsа rаdа аutomehаničаrа – pаušаl**. Ovа uslugа se može
+koristiti tri putа u toku trаjаnjа jedne Člаnske godine. Dozvoljenа je i mogućnost
+kumulаtivnog korišćenjа ove usluge sа prаvom iz Osnovnog člаnskog pаketа (ukupnа
+kilometrаžа 80, 120 ili 160 km i mаksimаlno 4 čаsа rаdа – 4 pаušаlа)</string>
+    <string name="loyalty_super_four">Refundаcijа troškovа po rаčunu zа hotelski smeštаj do 3 dаnа u hotelu B kаtegorije zа
+Člаnа i Člаnove porodičnog domаćinstvа (supružnici i decа sа istom аdresom
+stаnovаnjа) u slučаju sаobrаćаjne nezgode***, kаdа je vozilo moguće poprаviti u mestu
+gde se nezgodа dogodilа (isključuje trаnsport vozilа po osnovu sаobrаćаjne nezgode).\n
+Ovа uslugа se može koristiti jednom u toku jedne Člаnske godine</string>
+    <string name="loyalty_super_five">Refundаcijа troškovа prevozа Člаnа i Člаnovа porodičnog domаćinstvа vozom ili
+аutobusom do mestа prebivаlištа (uz dostаvljаnje voznih ili аutobuskih kаrаtа) u
+slučаju kvаrа vozilа ili sаobrаćаjne nezgode.\nOvа uslugа se može koristiti jednom u
+toku jedne Člаnske godine</string>
+    <string name="loyalty_super_six">EVROPA</string>
+    <string name="loyalty_super_seven">Refundаcijа troškovа prevozа Člаnа i Člаnovа porodičnog domаćinstvа vozom ili
+аutobusom do mestа prebivаlištа (uz dostаvljаnje voznih ili аutobuskih kаrаtа) u
+slučаju kvаrа vozilа ili sаobrаćаjne nezgode.\nOvа uslugа se može koristiti jednom u
+toku jedne Člаnske godine
+</string>
+    <string name="loyalty_super_eight">Poprаvkа vozilа nа putu** i/ili trаnsport vozilа (šlepovаnje) do nаjbližeg servisа.
+Ovu uslugu pružа korespondentni klub zemlje u kojoj je Člаn doživeo kvаr nа vozilu, а
+po nаlogu AMSS. Konkretno, to znаči dа će mаnji kvаr biti otklonjen nа putu, а u
+suprotnom, gаrаntovаn je trаnsport do nаjbližeg servisа. Troškove poprаvke vozilа u
+servisu i nаbаvku rezervnih delovа snosi Člаn.\nOvа uslugа se može koristiti jednom u
+toku jedne Člаnske godine
+</string>
+    <string name="loyalty_super_nine">Refundаcijа troškovа po rаčunu zа hotelski smeštаj do 300 EUR zа Člаnа i Člаnove
+porodičnog domаćinstvа (supružnici i decа sа istom аdresom stаnovаnjа) u slučаju
+sаobrаćаjne nezgode***, kаdа je vozilo moguće poprаviti u zemlji u kojoj se nezgodа
+dogodilа.\nOvа uslugа se može koristiti jednom u toku jedne Člаnske godine
+</string>
+    <string name="loyalty_super_ten">Prаvni sаvet iz oblаsti sаobrаćаjа u korespondentnom klubu do iznosа od 50 EUR</string>
+    <string name="loyalty_super_eleven">Kredit zа poprаvku, trаnsport vozilа (šlepovаnje) ili prevoz Člаnа i Člаnovа njegovog
+porodičnog domаćinstvа po gаrаnciji, uz obаvezаn depozit do iznosа od 1.000 EUR
+Popusti i pogodnosti zа Člаnove AMSS u sistemu Show your Card! (nа 28.000
+prodаjnih mestа, 600 pаrtnerа – hoteli, restorаni, rent&#8211;а&#8211;kаr...). \nSve detаlje pogledаti
+nа internet strаni AMSS www.amss.org.rs/Člаnstvo/Uštedite nа putovаnju kаo
+Člаn AMSS
+</string>
+    <string name="loyalty_napomene_text">Nаpomene:\n
+* U slučаju dа se utovаr i istovаr vozilа ne mogu bezbedno obаviti nаvlаčenjem vozilа nа
+nаvoz, аngаžuje se „pаuk“ jer Člаnskа pogodnost podrаzumevа i otežаn utovаr i istovаr.\n
+** Pod terminom „Poprаvkа vozilа nа putu“ ovim Prаvilnikom podrаzumevа se otklаnjаnje
+mаnjeg kvаrа zа koji se ne zаhtevа rаd u servisu, „kаnаl“ i specijаlni аlаti &#8211; obuhvаtа
+zаmenu delovа koje Člаn poseduje u vozilu (gumа, osigurаči, sijаlice, sаjle zа gаs i
+kvаčilo i sl.) ili otključаvаnje vozilа u kome su zаborаvljeni ključevi.\n
+*** Pod terminom „Sаobrаćаjnа nezgodа“ ovim Prаvilnikom obuhvаtа sаobrаćаjni udes u
+kome učestvuju nаjmаnje dvа vozilа, uz obаvezаn zаpisnik Policije.   
+</string>
+    <string name="camera_copyrigth">Strogo je zabranjeno svako korišćenje kamera na bilo kojoj drugoj Web lokaciji ili računarskoj mreži bez pisanog odobrenja AMSS i Naxi media group. Materijali na ovom sajtu zaštićeni su i svako neovlašćeno korišćenje može predstavljati kršenje Zakona o autorskim i srodnim pravima, žigu ili drugih zakona.\nCopyright © Naxi Media group</string>
+    <string name="info_label">INFORMACIJE</string>
+    <string name="info_cci_kartice_label">Camping Card International (CCI) &#8211; Međunarodna kamping kartica</string>
+    <string name="info_destination_text">Daljinari</string>
+    <string name="info_telephones_text">Važni telefoni</string>
+    <string name="info_documents_text">Međunarodna dokumenta</string>
+    <string name="info_orders_text">Propisi</string>
+    <string name="info_advices_and_recommends_text">Saveti</string>
+    <string name="info_calculator_text">Kalkulator registracije</string>
+    <string name="info_calculator_result_text">Uplatnice</string>
+    <string name="info_gas_prices_text">Cene goriva</string>
+    <string name="info_tolls_text">Putarine</string>
+    <string name="info_tag_text">TAG uređaji i dopuna</string>
+    <string name="info_tolls_calculate_text">Izračunavanje putarine</string>
+    <string name="info_tolls_calculate_cityfrom_prompt">Izaberite mesto polaska</string>
+    <string name="info_tolls_calculate_cityto_prompt">Izaberite kranje odredište</string>
+    <string name="info_tolls_calculate_button_text">IZRAČUNATI</string>
+    <string name="info_tolls_calculate_result_button_text">IZRAČUNATI</string>
+    <string name="info_tolls_calculate_result2_button_text">IZRAČUNATI</string>
+    <string name="info_tolls_calculate_category_text">Kategorija</string>
+    <string name="info_tolls_calculate_categoryI_text">Kategorija I</string>
+    <string name="info_tolls_calculate_categoryII_text">Kategorija II</string>
+    <string name="info_tolls_calculate_categoryIII_text">Kategorija III</string>
+    <string name="info_tolls_calculate_categoryIV_text">Kategorija IV</string>
+    <string name="info_tolls_calculate_rsd_text">RSD</string>
+    <string name="info_tolls_calculate_eur_text">EUR</string>
+    <string name="info_tolls_calculate_results_text">Rezultati:</string>
+    <string name="info_tolls_calculate_legend_text">Legenda:</string>
+    <string name="info_tolls_calculate_legendI_text">I a) &#8211; Motorna vozila do 1,3 m visine (kod prednje osovine vozila); 2 osovine &#8211; motocikli i putnička vozila.\n  b) &#8211; Motorna vozila do 1,9 m visine (kod prednje osovine vozila); 2 osovine; masa vozila do 3500 kg.</string>
+    <string name="info_tolls_calculate_legendII_text"> II a)&#8211; Motorna vozila sa prikolicom visine do 1,3 m (kod prednje osovine vozila), sa viąe od 2 osovine &#8211; putnička vozila sa prikolicom.\n  b)&#8211; Motorna vozila visine veće do 1,9 m a manje od 3 m (kod prednje osovine vozila); 2 osovine; masa vozila do 3.500 kg.</string>
+    <string name="info_tolls_calculate_legendIII_text"> III &#8211; Motorna vozila visine veće od 1,3 m (kod prednje osovine vučnog vozila), sa 2 i 3 osovine &#8211; autobusi, kamioni sa 2 i 3 osovine.  (i za kombi vozila sa prikolicom; visine veće od 1,9 m a manje od 3 m; mase vozila do 3.500 kg)</string>
+    <string name="info_tolls_calculate_legendIV_text"> IV &#8211; Motorna vozila visine veće od 1,3 m (kod prednje osovine vučnog vozila) sa više od 3 osovine &#8211; sva vozila sa više od 3 osovine.</string>
+    <string name="info_registration_calculate_municipality_prompt">Izaberite opštinu</string>
+    <string name="info_monasteries_text">Manastiri</string>
+    <string name="info_registration_calculate_kw_hint">Snaga motora (kw)</string>
+    <string name="info_registration_calculate_ccm_hint">Zapremina motora (ccm)</string>
+    <string name="info_registration_calculate_year_hint">Godina proizvodnje (YYYY)</string>
+    <string name="info_registration_calculate_vehicletype_prompt">Izaberite vrstu vozila</string>
+    <string name="info_registration_calculate_policy_hint">Stepen prethodne polise</string>
+    <string name="info_registration_calculate_claim_hint">Broj šteta po prethodnoj polisi</string>
+    <string name="info_registration_calculate_newdrivinglicence">Izdavanje nove saobraćajne dozvole</string>
+    <string name="info_registration_calculate_newplates">Izdavanje novih tablica</string>
+    <string name="info_registration_calculate_result_payee">Primalac:</string>
+    <string name="info_registration_calculate_result_purpose">Svrha plaćanja:</string>
+    <string name="info_registration_calculate_result_amount">Iznos:</string>
+    <string name="info_regulations_children">Propisi vezani za prevoz dece SRB/EU</string>
+    <string name="info_regulations_felony">Propisi za pojedine saobraćajne prekršaje u zemljama Evrope</string>
+    <string name="info_regulations_zobs">ZOBS</string>
+    <string name="info_regulations_prekrsaji_i_kazne">Prekršaji i kazne</string>
+    <string name="info_regulations_mk">Ukoliko putujete automobilom u Makedoniju</string>
+    <string name="info_regulations_cro">Ukoliko putujete automobilom u Hrvatsku</string>
+    <string name="info_regulations_mne">Ukoliko putujete automobilom u Crnu Goru</string>
+    <string name="info_regulations_children_text" formatted="false"><b>Srbija</b> – U motornom vozilu na prednjem sedištu ne sme da se prevozi dete mladje od 12 godina. Dete do 3 godine starosti prevozi se u bezbednosnom sedištu, odnosno korpi, osim u vozilima za javni prevoz putnika. Izuzetno, dete do 3 godine starosti može se prevoziti na prednjem sedištu ukoliko se prevozi u bezbednosnom sedištu, korpi, koja je okrenuta suprotno pravcu kretanja vozila, kada vozilo nema ili je isključen bezbednosni vazdušni jastuk.\nBezbednosna sedišta za decu koja se postavljaju u vozila moraju biti homologovana u skladu s jednoobraznim tehničkim uslovima i moraju da budu postavljena na način kako to preporučuju proizvođač dečjeg sedišta i proizvođač vozila. Homologaciona oznaka za dečja sedišta je ECER 44/04.\n\n<b>Austrija</b> – Deca do 14 godina i visine manje od 1.50 m moraju da koriste specijalne pojaseve koji odgovaraju njihovoj visini ili specijalna dečija sedišta, ili na prednjem ili na zadnjem sedištu. Vozila bez ovakve zaštite (dvosedi, sportska vozila) ne smeju da se koriste za prevoz dece mladje od 14 godina. Ova obaveza se ne odnosi na autobuse ili vozila koja se koriste za prevoz školske dece ili u poljoprivrednim vozilima. Dečija sedišta treba d odgovaraju ECE standardu 44/03 ili 44/04.\nDeca mladja od 14 godina, al viša od 1.50 m moraju da koriste pojaseve za odrasle.\nIzuzetno je dozvoljeno deci višoj od 1.35 m da koriste pojas sa tri tačke vezivanja bez specijalne podloške, ali pri tome pojas ne sme da prelazi detetu preko grla i vrata.\n\n<b>Nemačka</b> – Dete ispod 1.50 m visine koje putuje u bilo kakvom tipu vozila mora da sedi u posebnom sedištu za dete. Tamo gde to nije moguće, dete starije od 3 godine mora da se prevozi na zadnjem sedištu vozila i koristi sigurnosni pojas ili ostalu bezbednosnu opremu. Dete mladje od 3 godine ne sme se prevoziti u vozilu bez specijalnog sedišta koje odgovara ECE 44/03 standardu. Obaveza je vozača da obezbedi bezbedan prevoz dece. Ova obaveza odnosi se i na vozila registrovana u Nemačkoj i na vozila inostranih registracija.\n\n<b>Hrvatska</b> – Deci mladjoj od 12 godina nije dozvoljeno da se nalaze na prednjem sedištu. Jedini izuzetak se odnosi na decu mladju od 2 godine koja se mogu prevoziti na prednjem sedištu ako su u specijalnom sedištu koje odgovara njihovoj visini i ako su okrenuta suprotno pravcu kretanja vozila, a da pri tome moraju da budu deaktivirani vazdušni jastuci. Deca do 5 godina straosti moraju da sede u posebnom sedištu koje odgovara njihovoj visini na zadnjem sedištu vozila. Deca od 5 do 12 godina moraju da se prevoze na zadnjem sedištu koristeći pojas sa tri tačke vezivanja sa specijalnom podloškom, ako je neophodna zbog njihove visine.\n\n<b>Slovenija</b> – Sva deca moraju da budu u specijalnim sedištima koja odgovaraju njihovom uzrastu. Deca starija od 12 godina mogu da koriste pojaseve za odrasle. Zabranjeno je da se na prednjem sedištu prevoze deca mladja od 12 godina.\n\n<b>Madjarska</b> – Deca niža od 1.50 m moraju da koriste specijalna sedišta odgovarajuća njihovoj težini. Deca mladja od 3 godine mogu da se voze samo u posebnim sedištima i ne smeju se prevoziti na drugi način, ona se mogu prevoziti i na prednjem sedištu u posebnom sedištu ako u vozilu nema ili je deaktiviran vazdušni jastuk. Deca starija od 3 godine, visoka 1.35 m i više mogu da putuju na zadnjem sedištu vozila koristeći sigurnosne pojaseve.\n\n<b>Italija</b> – Deca do 36 kg i do 150 cm visine koja putuju u vozilima sa italijanskim tablicama moraju da imaju vezane pojaseve odgovarajuće njihovom uzrastu i visini. Deca do 9 kg moraju da se prevoze na sedištu okrenutom suprotno od kretanja vozila. Kada su u pitanju vozila registrovana u drugim zemljama, primenjuju se odredbe za prevoz dece koje su propisan u zemlji iz koje dolazi vozilo.<b>Grčka</b> – Zabranjeno je da se deca starija od 3 godine i niža od 1.50 m voze na prednjem sedištu vozila. Deca do 3 godine moraju da koriste dečija sedišta odgovarajuća njihovojh težini u svim automobilima, kombijima, osim ukoliko se voze na zadnjem sedištu taksija. Dečija sedišta treba d odgovaraju ECE standardu 44/03 ili novijim.\nDeca visine 1.35 m i viša mogu da koriste regularne sigurnosne pojaseve. Vožnja dece na prednjem sedištu u specijalnim dečijim sedištima okrenutim suprotno pravcu kretanja vozila dozvoljena je samo kada je deaktiviran vazdušni jastuk.\n\n<b>Švajcarska</b> – Deca starija od 12 godina moraju da budu vezana bilo da su na prednjem ili zadnjem sedištu vozila. Deca do 7 godina moraju da budu u posebnom sedištu koje odgovara njihovoj veličini. Deca izmedju 7 i 12 godina moraju da budu vezana ili u specijalnim sedištima dizajniranim za decu.\nOd 01. aprila 2010. godine deca do 12 godina moraće da budu u sedištima koja odgovaraju ECE r44.03 standardu. Deca viša od 1.50 m neće biti uključena u ovu kategoriju.<b>Bugarska</b> &#8211; deca starosti do 3 godine moraju da se prevoze u specijalnim sedištima koja odgovaraju EU standardu 44/03. Deca starija od 3 godine i niža od 150 cm ne moraju imati posebno sedište, ali se prevoze isključivo na zadnjem sedištu vozila.\n\n<b>Francuska</b> &#8211; Deca ispod 10 godina starosti ne smeju da se prevoze na prednjem sedištu, osim ako ne postoji zadnje sedište ili ukoliko na zadnjem sedištu već sedi dete mlađe od 10 godina. Deca do 10 godina starosti treba da sede u sedištu koje odgovara standardima i koje je prilagođeno njihovoj visini. Prema francuskom zakonu, dete do 13 kg težine mora da se prevozi u sedištu okrenutom u suprotnom smeru od kretanja vozila ili mora da postoji nosiljka za decu težine do 10 kg. Dete između 9 i 18 kg mora da sedi na posebnom sedištu, a dete od 15 kg i do 10 godina starosti, može da koristi posebno sedište sa pojasom.\n\n<b>Makedonija</b> &#8211; deca ispod 12 godina starosti ne smeju da se prevoze na prednjem sedištu.\n\n<b>Crna Gora</b> &#8211; deca starosti do 5 godina moraju da se prevoze u specijalnim sedištima, a deca ispod 12 godina starosti ne smeju da se prevoze na prednjem sedištu.\n\n<b>Holandija</b> &#8211; Deca i osobe ispod 18 godina starosti visine do 1.35 m moraju da koriste pojaseve odgovarajuće njihovoj visini po standardima ECE 44&#8211;03. To se odnosi i na prednja i na zadnja sedišta. Deca do 3 godine prevoze se isključivo u posebnim sedištima.\n\n<b>Rumunija</b> &#8211; deca ispod 12 godina starosti ne smeju da se prevoze na prednjem sedištu.\n\n<b>Španija</b> &#8211; deca ispod 12 godina i visine do 1,35 m koja se prevoze na prednjem sedištu moraju da koriste posebne dečije pojaseve, a deca preko 1,35 m visine mogu da koriste sigurnosne pojaseve za odrasle. Deca niža od 1,35 m  koja se prevoze na  zadnjem sedištu moraju takođe da budu vezana posebnim dečijim pojasom osim ukoliko se prevoze taksijem u gradskim sredinama.</string>
+    <string name="info_cci_info">Camping Card International (CCI) – Međunarodna kamping kartica\n\n\n 
+ <b>Opšte informacije</b>\n\n
+Međunarodna kamping kartica (CCI) je dokument koji je vlasništvo Međunarodnog turističkog saveza (AIT), Međunarodne automobilske federacije (FIA) i Međunarodne federacije za kamping i karavaning (FICC).\n\n
+Međunarodna kamping kartica izdaje se samo članovima AMSS. Cena kartice je 1,500.00 dinara.\n\n
+Međunarodna kamping kartica nije samo dokaz identifikacije u kamp&#8211;naselju, već predstavlja i osiguranje od odgovornosti protiv trećih lica. Uz to, kamp&#8211;naselja širom Evrope nude i posebne pogodnosti i popuste na osnovu kamping kartice.\n\n
+Vlasnik kamping kartice, zajedno sa svojim saputnicima &#8211; maksimalno 11 osoba &#8211; osiguran je od šteta i povreda nanetih drugim licima i njihovoj imovini, u toku kampovanja. Uslov je da te osobe (maksimalno njih 11) putuju istim vozilom ili u istoj grupi biciklista i da se kreću istom putanjom. Osiguranje traje od napuštanja mesta prebivališta vlasnika kamping kartice do njegovog povratka kući. Ono pokriva upotrebu daske za jedrenje/surfovanje i čamaca bez motornog pogona, dužine do 5 metara.\n\n
+ <b>Izuzeci:</b>\n\n
+ <b>Iz pokrića se izuzimaju odštetni zahtevi koji su nastali usled ili su rezultat sledećih dogadjaja:</b>\n\n
+•	Radioaktivna kontaminacija ili nuklearna katastrofa, rat, građanski rat, revolucija, pobuna i slično;\n 
+•	Kontaminacija azbestom, u bilo kom obliku i na bilo koji način;\n 
+•	Šteta na imovini vlasnika kamping kartice ili na imovini kojom se on služi;\n 
+•	Svaki zlonamerni akt (šteta naneta tlu ili usevima prilikom raščišćavanja terena ili postavljanja šatora, kao i podzemnim cevima za vodu, gas i električnim vodovima i kablovima);\n 
+•	Svako lice koje zapošljava vlasnik kamping kartice;\n 
+•	Svako vozilo na motorni pogon;\n 
+•	Svako plovilo ili letelica (osim daske za jedrenje/surfovanje i čamaca bez motornog pogona, dužine do 5 metara);\n 
+•	Trovanje hranom ili pićem, stranim ili smrtonosnim sastojcima u hrani ili piću;\n 
+•	Zagađenje vazduha, vode ili zemljišta;\n 
+•	Skijanje;\n 
+•	Organizovani zabavni program većeg obima za koji se naplaćuje ulaznica;\n 
+ <b>Rok važnosti kamping kartice/perioda osiguranja</b>\n 
+Kamping kartica se izdaje na osnovu članske karte AMSS i važi do isteka te članske karte.\n\n 
+ <b>Jurisdikcija</b>\n 
+Iz ovog osiguranja izuzima se primena zakona i bilo koji troškovi po osnovu odštetnih zahteva za štete nastale u Sjedinjenim Američkim Državama i Kanadi, ili na bilo kojoj teritoriji na kojoj se primenjuju zakoni Sjedinjenih Američkih Država i Kanade.
+\n\n<b>Odštetni zahtev</b>\n
+Ukoliko nastane odštetni zahtev ili ima naznaka za mogući odštetni zahtev, vlasnik kamping kartice mora odmah da obavesti matični klub (AMSS u ovom slučaju).\n\n
+ <b>Uslovi za sticanje CCI kartice</b>\n\n1. Zahtev za izdavanje CCI kartice, potpisan od strane podnosioca zahteva 
+\n2. Kopija pristupnice za AMSS članstvo
+\n3. Kopija putne isprave
+\n4. Uplata/dokaz o uplati naknade od 1,500.00 RSD na ime izdavanja CCI kartice 
+\n5.	Više informacija o izdavanju karneta na broj telefona + 381 69 870 19 22, V. Maksimović</string>
+    <string name="info_regulations_felony_text" formatted="false"><b>BOSNA I HERCEGOVINA</b>
+
+\n\nUkida se član koji propisuje obavezu da mladi vozači (do 23 godina starosti) budu u pratnji najmanje jedne osobe starije od 18 godina od 23:00 do 05:00 h
+\nOpšte ograničenje brzine u BIH je za putnička vozila u naseljenom mestu je 50 km / h ukoliko nije drugačije precizirano saobraćajnim znakom, van naseljenog mesta 80 km / h, na brzim putevima 100 km /h i na auto putevima 130 km / h
+\nu naseljenim mestima je opšte ograničenje brzine 50 km / h ukoliko nije drugačije precizirano saobraćajnim znakom
+
+\n\nKazne za prekoračenje brzine su sledeće:
+\nu naseljenim mestima:
+\n• 10 do 20 km / h &#8211; 40 KM (konvertibilnih maraka, odnosno oko 20 eura)
+\n• 20 do 30 km / h &#8211; 50 KM
+\n• 30 do 50 km / h &#8211; od 100 KM do 300 KM
+\n• više od 50 km / h &#8211; od 400 KM do 1000 KM
+
+\nvan naseljenog mesta:
+\n• 10 do 20 km / h &#8211; 30 KM
+\n• 20 do 30 km / h &#8211; 40 KM
+\n• 30 do 50 km / h &#8211; 50 KM
+\n• više od 50 km / h &#8211; od 100 KM do 300 KM
+
+\n\nDozvoljeno je do 0,3 promila alkohola u krvi, a kazna za vožnju sa 2 odnosno više promila alkohola u krvi je od 400 KM do 1000 KM (odnosno od približno 200 do 500 eura).
+
+\n\nU slučaju kršenja Zakona o bezbednosti saobraćaja, strani državljani će biti kažnjeni na licu mesta.
+
+\n\n<b>CRNA GORA</b>
+\n\n• nevezivanje pojaseva &#8211; od 40 do 100 evra
+\n• vožnja sa 0,05% alkohola &#8211; od 70 do 200 evra
+\n• vožnja sa preko 0,05% alkohola &#8211; oduzimanje vozačke dozvole i kazna do 2000 evra
+\n• vožnja sa letnjim gumama u zimskom periodu &#8211; 150 evra
+\n• ako se na prednjem sedištu vozi dete mlađe od 12 godina &#8211; od 60 do 150 evra
+\n• ukoliko dete uzrasta do 5 godina nije u sigurnosnom sedištu &#8211; od 30 do 90 evra
+\n• vožnja deteta mlađeg od 12 godina na mopedu ili motociklu &#8211; do 150 evra
+\n• preticanje kolone &#8211; 450 evra
+\n• prelazak preko pune linije &#8211; 300 evra
+\n• neposedovanje reflektujućeg prsluka &#8211; od 30 do 80 evra
+\n• prekoračenje brzine u naseljenom mestu za 30 do 50 km/h &#8211; 450 evra
+\n• prekoračenje brzine u naseljenom mestu za 50 do 70 km/h &#8211; do 1000 evra
+\n• prekoračenje brzine u naseljenom mestu više od 70 km/h &#8211; do 2000 evra
+\n• neposedovanje Evropskog izveštaja o saobraćajnoj nezgodi &#8211; od 40 do 200 evra.
+
+\n\n<b>ČEŠKA</b>
+\n\n• prekoračenje brzine preko 20 km u gradu i 30 km van grada 2500 do 5000 kruna
+\n• prekoračenje brzine preko 40 km u gradu i 50 km van grada 5000 do 10000 kruna
+\n• vožnja u alkoholisanom stanju preko 0,3%  2500 do 50000 kruna uz moguću zabranu vožnje
+\n• nevezivanje pojaseva 1500 do 2500 kruna
+\n• upotreba mobilnog telefona tokom vožnje od 1000 d0 2500 kruna
+\n• vožnja sa ugašenim svetlima 1500 do 2500 kruna
+
+\n\nNAPOMENA &#8211; 1 euro je 24,3 CZK
+
+\n\n<b>ITALIJA</b>
+\n\n• nevezivanje pojaseva, nekorišćenje dečijih sedišta – 76 do 306 evra
+\n• prekoračenje brzine – od 39 do 3199 evra
+\n• pogrešno parkiranje – od 39 do 318 evra
+\n• vožnja pod uticajem alkohola preko 0,5 promila – od 500 do 6000 evra
+\n• vožnja pod uticajem droga – 1500 do 6000 evra, oduzimanje vozačke dozvole i zatvor do godinu dana
+\n• prolaz kroz crveno svetlo – 154 do 613 evra
+\n• korišćenje mobilnog telefona tokom vožnje – 152 do 608 evra
+\n• nedozvoljeni prevoz putnika na mopedu – 76 do 306 evra
+
+\n\nNAPOMENA – kazne za teže prekršaje koji su počinjeni u toku noći u periodu između 22 i 07 h, uvećavaju se za 30 % (odnosi se na prekoračenje brzine, prolaz kroz crveno svetlo, opasnu vožnju itd.) Kada vozač izazove saobraćajnu nezgodu pod uticajem alkohola, kazna se udvostručuje.
+
+\n\n<b>GRČKA</b>
+\n• nedozvoljeno parkiranje – 40 do 80 evra
+\n• prekoračenje brzine – od 40 do 750 evra
+\n• nevezivanje pojaseva – 350 evra
+\n• nepoštovanje pešaka – 200 evra
+\n• vožnja u alkoholisanom stanju – od 0,5 do 0,8 promila &#8211;78evra, od 0,8 do 1,1 promila&#8211; 156 evra, preko 1,1 promila&#8211; 625 evra
+\n• opasna vožnja – 700 evra
+\n• korišćenje mobilnog telefona tokom vožnje – 100 evra
+\n• obavezno je vezivanje svih pojaseva
+\n• obavezan je trougao
+\n• obavezan je protivpožarni aparat
+\n• obavezna je prva pomoć
+
+\n\n<b>NEMAČKA</b>
+\n\n• nepropisno zaustavljanje – od 10 do 30 evra
+\n• nepropisno parkiranje – od 10 do 70 evra
+\n• nevezivanje pojaseva – 30 evra
+\n• nenošenje kacige – 15 evra
+\n• nedozvoljeno preticanje – od 30 do 250 evra
+\n• prekoračenje brzina – od 15 do 600 evra
+\n• prolaz kroz crveno svetlo – od 90 do 320 evra
+\n• vožnja pod uticajem alkohola ili droge – 500 evra
+
+\n\n<b>SLOVENIJA</b>
+\n\n• prekoračenje brzine u naseljenom mestu do 10 km/h – 100 evra
+\n• prekoračenje brzine u naseljenom mestu od 11 do 20 km/h – 300 evra
+\n• prekoračenje brzine u naseljenom mestu od 21 do 30 km/h – 500 evra
+\n• prekoračenje preko 31 do 50  km/h u naseljenom mestu –  1000 evra
+\n• prekoračenje preko 50 km u naseljenom mestu – 1200 evra uz mogućnost oduzimanja dozvole
+\n• prekoračenje brzine van naseljenog mesta do 20 km/h – 80 evra
+\n• prekoračenje brzine van naseljenog mesta od 21 do 30 km/h – 160 evra
+\n• prekoračenje brzine van naseljenog mesta od 31 do 40 km/h – 300 evra
+\n• prekoračenje preko 40 km/h van naseljenog mesta – minimalna kazna je 500 evra
+\n• nevezivanje pojaseva – 120 evra
+\n• pogrešno parkiranje – 40 do 200 evra
+\n• prolazak kroz crveno – 300 evra
+\n• korišćenje mobilnog telefona – 120 evra
+\n• vožnja pod uticajem alkohola od 300 do 1200 evra ili više, uz mogućnost oduzimanja dozvole
+\n• obavezna su upaljena svetla i tokom dana, kazna je u suprotnom 40 evra
+\n• obavezan je trougao
+\n• obavezna je prva pomoć
+\n• obavezan je sigurnosni prsluk – kazna za neposedovanje istog je 40 evra
+\n• obavezne su rezervne sijalice
+\n• protivpožarni aparat nije obavezan
+
+\n\nNAPOMENA – stranci mogu da ostvare popust od 50% ukoliko plate kaznu na licu mesta
+
+\n\n<b>HRVATSKA</b>
+\n\n• prekoračenje brzine u naseljenom mestu do 10 km/h – 300 kuna
+\n• prekoračenje brzine u naseljenom mestu od 10 do 20 km/h – 500 kuna
+\n• prekoračenje brzine u naseljenom mestu od 20 do 30 km/h – 1000 kuna
+\n• prekoračenje brzine u naseljenom mestu od 30 do 50 km/h – 2000 kuna
+\n• prekoračenje preko 50 km/h u naseljenom mestu – 5000 do 15000 kuna
+\n• prekoračenje brzine van naseljenog mesta od 10 do 30 km/h – 500 kuna
+\n• prekoračenje brzine van naseljenog mesta od 30 do 50 km/h –1000 kuna
+\n• prekoračenje preko 50 km/h van naseljenog mesta – 3000&#8211;7000 kuna
+\n• do 0,5 promila alkohola za mlade vozače, profesionalne vozače i instruktore vožnje – 700 kuna, dok ostali ne plažaju kaznu jer je dozvoljena količina alkohola do 0,5 promila
+\n• od 0,5 do 1 promil – 1000 do 3000 kuna
+\n• preko 1,5 promil alkohola – 5000&#8211;15.000 kuna
+\n• nevezivanje pojaseva – 500 kuna
+\n• nenošenje kaciga za motocikliste – 1000 kuna
+\n• prolazak kroz crveno svetlo – 2000&#8211;5000 kuna
+\n• razgovor mobilnim – 500 kuna
+\n• obavezno je vezivanje
+\n• obavezne su sijalice
+\n• obavezan je trougao
+\n• obavezna je prva pomoć
+\n• nije obavezan protivpožarni aparat
+\n• obavezni su sigurnosni prsluci
+\nnaplata kazni može biti na licu mesta ili se plaća u bankama i poštama u roku od 8 dana, a kao predostrožnost se može konfiskovati pasoš vozača
+
+\n\n<b>FINSKA</b>
+\n\n• nepropisno preticanje – 84 evra
+\n• neustupanje prava prvenstva prolaza – 60 evra
+\n• prolaz kroz crveno svetlo – 60 evra
+\n• prolaz na znak STOP – 40 evra
+\n• vožnja bez važeće dozvole – 120 evra
+\n• upotreba radara – 120 evra
+\n• prekoračenje brzine – 115 evra minimalno
+\n• nedržanje propisanog rastojanja – 60 evra
+\n• nevezivanje pojaseva – 60 evra
+
+\n\n<b>ŠVEDSKA</b>
+\n\n• prekoračenje brzine u naseljenom mestu do 50 km/h od 2000 SEK do krivičnog gonjenja
+\n• prekoračenje van naseljenog mesta preko 50km/h od 1500 SEK do krivičnog gonjenja
+\n• nevezivanje pojaseva 1500 SEK, a ako deca do 15 godina starosti nisu vezana ili nemaju propisano sedište kazna je 2500 SEK
+\n• prolaz kroz crveno svetlo 3000 SEK
+\n• nedržanbje odgovarajućeg odstojanaj 2000 SEK
+\n• vožnja pod uticajem alkohola i droga – kazne su veoma stroge, a iznosi se procenjuju zavisno od težine prekršaja
+
+\n\n<b>ŠPANIJA</b>
+\n\n• upotreba mobilnog telefona tokom vožnje, vožnja uz upotrebu uređaja za navigaciju – 200 evra
+\n• prekoračenje brzine – od 100 do 600 evra
+\n• vožnja pod uticajem alkohola, bahata vožnja, odbijanje testa na alkohol, vožnja bez odgovarajuće vozačke dozvole – 500 evra
+\n• neki prekrđaji, kao npr. Vožnja pod uticajem alkohola i bahata vožnja tretiraju se kao krivično delo i vozač može da bude uhapšen i poslat na izdržavanje kazne
+\n• stranci plaćaju kazne na licu mesta, osim ako imaju boravak ili prebivalište u Španiji ili ukoliko rade u firmi koja će garantovati plaćanje kazne. Ukoliko se kazna ne plati ili se za nju ne garantuje, vozilo se oduzima
+
+\n\n<b>MAĐARSKA</b>
+\n\n• vožnja pod uticajem alkohola 200.000 forinti
+\n• prekoračenje brzina od 30.000 do 300.000 forinti
+\n• prolazak kroz crveno svetlo 100.000
+\n• nevezivanje pojaseva u naseljenim mestima 15.000, van naseljenog mesta 30.000 i na auto putu 40.000 forinti
+\n• u slučaju drugih prekršaja iznosi kazni kreću se od 3.000 do 20.000 forinti
+\nstrane vozače policija može da zadrži uz oduzimanje saobraćajne dozvole dok se ne plati kazna
+
+\n\n<b>NORVEŠKA</b>
+\n\n• prolaz kroz crveno svetlo i nedozvoljeno preticanje– 5200 NOK
+\n• nedozvoljeno parkiranje i nevezivanje pojaseva – 750 NOK
+\n• prekoračenje brzine više od 5 km u odnosu na dozvoljenu brzinu &#8211; 600 NOK
+\n• prekoraćenje brzine do 35 km više u odnosu na dozvoljenu – 7800 NOK ili odlazak kod sudije za prekršaje, sve preko toga automatski se ide kod sudije za prekršaje, utvrđuju više kazne i oduzima vozačka dozvola
+\n• vožnja pod uticajem alkohola od 0,2 do 0,5 promila – 5000 do 10.000 NOK
+\n• vožnja pod uticajem alkohola preko 0,5 promila – novčana kazna koja se utvrđuje na osnovu težine prekršaja, a moguća je i zatvorska kazna
+
+\n\n<b>AUSTRIJA</b>
+\n\n• vožnja pod uticajem alkohola od minimalno 300 do 5900 evra uključujući oduzimanje vozačke dozvole i druge sankcije
+\n• prekoračenje brzine preko 30 km u odnosu na dozvoljenu brzinu u naseljenom ili van naseljenog mesta od 70 do 2180 evra
+\n• prekoračenje od 40 km u odnosu na dozvoljenu brzinu u naseljenom ili 50 km van naseljenog mesta – od 150 do 2180 evra i oduzimanje vozačke dozvole minimalno 2 nedelje
+\n• prolaz kroz crveno svetlo – 70 do 2180 evra
+\n• nedozvoljeno preticanje – 36 do 2180 evra i oduzimanje vozačke dozvole do 6 meseci minimum ukoliko su ugroženi drugi učesnici u saobraćaju
+\n• nepropisno parkiranje – 21 do 726 evra, a moguće je i odnošenje vozila što je dodatni trošak od preko 200 evra
+\n• upotreba mobilnog telefona u toku vožnje – 50 evra i plaća se na licu mesta
+\n• nevezivanje pojaseva – 35 evra za svaku osobu u vozilu i plaća se na licu mesta
+
+\n\n<b>BUGARSKA</b>
+\n\n• kazna za nevezivanje pojaseva, razgovaranje telefonom tokom vožnje, prolazak kroz crveno svetlo je 50 leva
+\n• prekoračenje brzine do 40 km/h se kažnjava od 10 do 150 leva, a ako je prekoračenje preko 40 km/h od dozvoljenog može da se oduzme i vozačka dozvola
+\n• kazna za parkiranje na nedozvoljenom mestu je 10 leva
+\n• ako je u krvi nadjeno od 0,5 do 0,12 promila alkohola, kazna je za vozače koji imaju do 2 godine vozačkog iskustva od 300 do 600 leva, moguće i oduzimanje dozvole od 2 do 12 meseci
+\n• za isti nivo alkoholisanosti za vozače koji imaju preko 2 godine iskustva, kazna je od 200 do 500 leva, a dozvola može da se oduzme u trajanju od 1 do 12 meseci
+\n• za ponovljeni prekršaj vožnje pod uticajem alkohola kazna je 1000 do 2000 leva, a dozvola može biti oduzeta u trajanju od 1 do 3 godine
+\n• za vožnju sa više od 0,12 promila alkohola zaprežena je kazna zatvorom do 1 godine
+
+\n\n<b>VELIKA BRITANIJA</b>
+\n\n• prekoračenje brzine – standardna kazna je 60 funti, ali zavisno od težine prekršaja iznos se povećava
+\n• vožnja pod uticajem alkohola – kazna je zatvor u trajanju od 3 do 6 meseci, 2500 do 5000 funti novčana kazna i moguća zabrana vožnje zavisno od težine prekršaja
+\n• odbijanje alko testa i analize krvi i urina – 6 meseci zatvora, kazna do 5000 funti i zabrana upravljanja najmanje godinu dana
+\n• bahata vožnja pod uticajem alkohola pri čemu je izazvana saobraćajna nezgoda sa poginulim licima – 14 godina zatvora, neograničena novčana kazna, zabrana upravljanja vozilom najmanje 2 godine i ponovno polaganje vozačkog ispita re vraćanja dozvole
+\n• nevezivanje pojaseva, korišćenje mobilnog telefona – 60 funti
+
+\n\n<b>MAKEDONIJA</b>
+\n\n• prekoračenje brzine u naseljenom mestu do 10 km/h – 20 evra
+\n• prekoračenje brzine u naseljenom mestu od 10 do 30 km/h – 45 evra
+\n• prekoračenje brzine van naseljenog mesta do 10 km/h – 20 evra
+\n• prekoračenje 30 km/h u naseljenom mestu, odnosno prekoračenje 50 km/h van naseljenog mesta – do 300 evra
+\n• nevezivanje pojaseva – 20 evra
+\n• razgovaranje mobilnim telefonom 45 evra
+\n• vožnja u alkoholisanom stanju – od o,5 do 0,9 promila – 250 evra, od 0,9 do 1,45 promila – 300 evra, od 1,45 do 1,99 350 evra i preko 2 promila&#8211; 400 evra
+\n• prolazak kroz crveno svetlo – 300 evra
+\n• nedozvljeno parkiranje 45 evra
+\n• obavezna vožnja sa svetlima i tokom dana – u suprotnom kazna 35 evra
+\n• odbijanje alko testa – 500 evra
+\n• obavezan je trougao
+\n• obavezno je vezivanje pojaseva
+\n• obavezna je prva pomoć
+\n• obavezan je protivpožarni aparat</string>
+    <string name="info_regulations_mk_text_before_3" formatted="false"><b>POTREBNA SAOBRAĆAJNA DOKUMENTA</b></string>
+    <string name="info_regulations_mk_text_before_2" formatted="false">\n• <a href="rs.org.amss.shell://show/2">Zelena karta osiguranja</a></string>
+    <string name="info_regulations_mk_text_before_1" formatted="false">• <a href="rs.org.amss.shell://show/1">Dozvola za upravljanje tuđim vozilom u inostranstvu (opciono)</a></string>
+    <string name="info_regulations_mk_text" formatted="false">
+\n<b>STANDARDNA OPREMA</b>
+
+\n\nPravilnik koji se u Makedoniji primenjuje od 09.04.2010. godine, pored standardne opreme propisuje:
+\nKada je u pitanju protivpožarni aparat obaveze su sledeće:
+\nKombinovana i putnička vozila koja koriste alternativna goriva (tečni naftni gas), komprimovani naftni gas, vozila za javni prevoz, autobusi, teretna motorna i priključna vozila moraju da imaju protivpožarni aparat postavljen na vidno mesto lako za dohvat kako bi se mogao upotrebiti u slučaju opasnosti.
+\nKombinovana vozila moraju da imaju jedan protivpožarni aparat od 2kg napunjen ABC praškom.
+\nAutobusi za gradski, prigradski i međugradski saobraćaj moraju da imaju protivpožarni aparat i to jedan od 3 i jedan od 6 kg.
+\nTeretna motorna vozila do 10 tona moraju da imaju jedan PP aparat od 6 kg, a teretna vozila preko 10 tona moraju da imaju po dva aparata od 6 kg.
+\nGrupa vozila (drumski tegljač, vučno i priključno vozilo) moraju da budu opremljeni sa jednim PP aparatom za gašenje požara na motoru i u kabini i najmanje još jednim PP aparatom namenjenim za gašenje robe koja se prevozi. Broj PP aparata namenjenih za gašenje požara robe zavisi od vida i količine robe koja se prevozi.
+\nPUTNIČKA MOTORNA VOZILA MOGU DA IMAJU PROTIVPOŽARNI APARAT, ali on nije obavezan.
+\nProtivpožarni aparat mora da bude na vidnom i dostupnom mestu u vozilu da bi se lako mogao upotrebiti u slučaju potrebe.
+\nKada su u pitanju rezervne sijalice i osigurači:
+\nZa motorna vozila, osim za motocikle, mopede, lake tricikle, lake četvorocikle, tricikle, četvorocikle, motocikle, traktore, autobuse za gradski i prigradski saobraćaj, mogu se imati rezervne sijalice i osigurači koji će biti na vidnom mestu i to za polovinu sijaličnih mesta na uređajima za osvetljavanje puta i davanje svetlosnih signala, i po jedna sijalica za neudvojena sijalična mesta za koje je moguća zamena samo sijalice (ali to nije obavezno).
+\nZa motorna vozila koja su opremljena novim svetlosnim telima bez žarećeg vlakna (ksenon, neon, led svetla i sl.) nisu potrebne rezervne sijalice.
+\nU svim motornim vozilima, osim motociklima, mopedima i četvorociklima, obavezno je i posedovanje sigurnosnog reflektujućeg prsluka koji je vozač dužan da koristi ukoliko napušta vozilo na putu van naseljenog mesta u slučaju promene gume, otklanjanja sitnijih kvarova, sipanja goriva i sl. Ovaj prsluk mora biti žute boje i uskladjen sa evropskim standardom EN-471.
+
+\n\n<b>LETNJI REŽIM SAOBRAĆAJA ZA TERETNA VOZILA</b>
+
+\n\nPrema informacijama Ministarstva saobraćaja Republike Makedonije, u toku letnje sezone (od 01.07. do 31.08.) saobraćaj je zabranjen za teška teretna vozila preko 15 tona i to:<br/>
+\npetkom od 17,00 do 22,00 h
+\nsubotom od 09,00 do 19,00 h
+\nnedeljom od 09,00 do 22,00 h
+    </string>
+    <string name="info_regulations_cro_text" formatted="false">Vozači u toku letenjeg perioda računanja vremena koji će trajati do poslednjeg vikenda u oktobru, nisu u obavezi da voze sa upaljenim svetlima tokom dana, osim u uslovima kada je zbog vremenskih prilika smanjena vidljivost &#8211; kiša, magla i sumaglica.\n\nZa vozače motocikala i mopeda, i dalje je obavezno korišćenje kratkih svetala i u dnevnim uslovima.</string>
+    <string name="info_regulations_mne_text" formatted="false">Za Crnu Goru nisu potrebna dokumenta kao što su zeleni karton, međunarodna vozačka dozvola i dozvola za upravljanje tuđim automobilom u inostranstvu. Ukoliko vlasnik vozila nije u njemu, osoba koja upravlja vozilom treba da poseduje ovlašćenje overeno u sudu ili opštini, ali se prihvata i ovlašćenje za upravljanje tuđim vozilom u inostranstvu izdato u AMSS, koja važi godinu dana.\n\nZa ulazak u Crnu Goru, za sada nije potreban pasoš, već samo lična karta.\nMaloletna lica, ako putuju sa roditeljima, treba da poseduju dokument koji dokazuje njihov identitet. Deca školskog uzrasta treba da imaju dokument sa fotografijom &#8211; đačka knjižica, pasoš, lična karta&#8230;\nDeca predškolskog uzrasta treba da poseduju dokument kao što je izvod iz matične knjige rođenih, zdravstvena knjižica, putna isprava..\nUkoliko dete putuje bez roditelja odnosno staratelja obavezna je overena saglasnost oba roditelja.\n\nPrema Zakonu o bezbednosti hrane Republike Crne Gore, po vozilu je dozvoljen unos hrane u sledećim količinama: ukupno 1 kg suvog voća, povrća, pečurki, sireva, kafe, čaja, začina, 1 litar alkoholnog pića, 2 litra soka i 5 litara flaširane vode, u originalnoj ambalaži\n\n<b>Kontrola prijave boravka na graničnim prelazima prilikom izlaska iz Crne Gore</b>\n\nMinistarstvo održivog razvoja i turizma i Uprava policije, Sektor granične policije Crne Gore saopštili su da se na graničnim prelazima u skladu sa Zakonom o graničnoj kontroli vrše uobičajene kontrole, kao i provera zakonitosti boravka stranaca na teritoriji Crne Gore.\n\nKontrola prijave boravka se vrši na svim graničnim prelazima, što znači da obuhvata putnike koji putuju svim vrstama prevoza (avionom, automobilom, vozom, brodom..) Stranci koji u Crnoj Gori borave duže od 24 sata, dužni su da, po dolasku u Crnu Goru, obavezno policiji prijave svoj boravak, a ukoliko su u pitanju turisti, onda su izdavaoci smeštaja, kod kojih turisti borave, dužni da ih prijave.\n\n<b>Detaljnije u saopštenju Ministarstva održivog razvoja i turizma Crne Gore:</b>\n\n<i>"Ministarstvo održivog razvoja i turizma i Uprava policije, Sektor granične policije, povodom netačnih informacija koje su prethodnih dana plasirane u medijima, žele da informišu javnost da  na graničnim prelazima Crne Gore službenici Uprave policije, Sektora za graničnu policiju u skladu sa Zakonom o graničnoj kontroli vrše kontrole u sklopu kojih se vrši i provjera zakonitosti boravka stranaca na teritoriji Crne Gore.\n\nUlaz, izlaz i boravak stranaca u Crnoj Gori je propisan Zakonom o graničnoj kontroli (usvojen 30.okotobra 2009. godine, Službeni list broj 72/09), Zakonom o strancima (usvojen u decembru 2008.godine), Zakonom o registima prebivališta i boravišta i Uredbom o viznom režimu.\n\nShodno članu 24, Zakona o registrima prebivališta i boravišta se navodi sledeće: “Privredno društvo, preduzetnik i lice kojem stranac sa boravkom do 90 dana dolazi u posjetu i kojem obezbjeđuje smještaj duže od 24 časa obavezan je da policiji podnese prijavu i odjavu boravišta stranca, u roku od 12 časova od časa dolaska odnosno odlaska stranca”.U cilju boljeg informisanja turista tokom prošle ljetnje turističke sezone na svim graničnim prelazima pripradnici Uprave policije, Sektora granične policije dijelili su brošure, prevedene na 5 jezika, sa osnovnim informacijama za strance koji dolaze u Crnu Goru, kako bi se turisti bolje upoznali sa obavezama koje imaju prilikom prelaska državne granice Crne Gore.Kao i u svim drugim zemljama, stranci su po dolasku u Crnu Goru obavezni da policiji prijave svoj boravak, a ukoliko su u pitaju turisti onda su izdavaoci smještaja, kod kojih turisti borave, dužni da ih prijave.\nKontrola prijave boravka se vrši na svim graničnim prelazima, što znači da obuhvata putnike koji putuju svim vrstama prevoza (avionom, automobilom, vozom, brodom&#8230;).\n\nDa bi se izbjegle gužve na graničnim prelazima i smanjilo vrijeme potrebno za ulazak u našu zemlju, službenici Uprave policije, Sektora granične policiju u skladu za članom 34, Zakona o graničnoj kontroli imaju mogućnost da propuste određene radnje tj. odstupe od režima graničnih provjera i kontrolu mogu vršiti selektivno.\n\n
+Službenici Uprave policije u skladu sa zakonskim ovlašćenjima vrše provjeru lica koja ulaze i izlaze iz naše zemlje u cilju stvaranja bezbjednosnih uslova, odnosno obezbjeđenja građana i turista.\n\n
+Takođe želimo da napomenemo da su službenici Uprave policije sa kolegama iz Republike Srbije potpisali Protokol o razmjeni policijskih službenika za vrijeme ljetnje turističke sezone kao i Sporazum o pojednostavljenju graničnih kontrola za vrijeme sezone, na graničnim prelaziima između Crne Gore i Republike Srbije, kako bi zadržavanje na graničnim prelazima bilo svedeno na najmanju moguću mjeru, pa cijenimo da procedure na graničnim prelazima neće imati negativan uticaj na  odvijanje turističke sezone.\n\nShodno Zakonu, boravišna taksa je paušalni novčani iznos koji plaća gost koji koristi usluge smještaja u smještajnom objektu u kojem se obavlja turistička ili ugostiteljska djelatnost."</i></string>
+    <string name="info_international_documents_MVD_label" formatted="false">MVD Međunarodna vozačka dozvola</string>
+    <string name="info_international_documents_DTV_label" formatted="false">DTV Dozvola za upravljanje tuđim vozilom u inostranstvu </string>
+    <string name="info_international_documents_ZELENA_KARTA_label" formatted="false">ZELENA KARTA Međunarodno osiguranje autoodgovornosti </string>
+    <string name="info_international_documents_TAG_label" formatted="false">TAG elektronska naplata putarina</string>
+    <string name="info_international_documents_DTV_text" formatted="false">Dozvola za upravljanje tuđim vozilom u inostranstvu (DTV) izdaje se isključivo za vozila registrovana u Republici Srbiji na obrascu utvrđenom od strane međunarodnih organizacija AIT i FIA. DTV služi kao dokaz da vozač može da putuje tuđim vozilom u inostranstvo, na osnovu ovlašćenja potpisanog od strane vlasnika vozila.
+
+\n\nCena  je 1.500,00 dinara.
+
+\n\n<b>Dokumenta potrebna za izdavanje DTV</b>, uz obavezno lično prisustvo vlasnika i korisnika vozila:
+\na) Važeća lična karta vlasnika vozila – na uvid
+\nb) Važeća putna isprava (pasoš) korisnika vozila – na uvid
+\nc) Saobraćajna dozvola za vozilo – na uvid
+
+\n\n<b>Ako je vlasnik vozila pravno lice</b>: umesto lične karte, prilaže se originalni dopis, na memorandumu, potpisan od strane ovlašćenog lica i overen pečatom, kojim se korisnik vozila ovlašćuje da može da upravlja vozilom predmetnog vlasnika-pravnog lica, u inostranstvu.
+\n<b>Ako je vlasnik vozila lizing kuća, a korisnik lizinga fizičko lice</b>: korisnik mora da obezbedi ovlašćenje od lizing kuće da može predmetnim vozilom da putuje u inostranstvo. Ukoliko u ugovoru o lizingu već postoji ova odredba, nije potrebno dodatno ovlašćenje lizing kuće.
+\n<b>Ako je vlasnik vozila lizing kuća, a korisnik lizinga pravno lice</b>: pravno lice daje ovlašćenje krajnjem korisniku. Takođe, mora da se obezbedi ovlašćenje lizing kuće za upravljanje vozilom u inostranstvu, ukoliko ova odredba nije navedena u ugovoru o lizingu. Izdatu DTV, potrebno je odneti u lizing kuću na overu.
+
+\n\nKorisnik vozila može da priloži ovlašćenje dato od strane vlasnika vozila, overeno u sudu ili opštini, na osnovu koga prisustvo vlasnika vozila nije obavezno pri izdavanju DTV. Predmetno ovlašćenje mora da sadrži klauzulu da se korisnik vozila ovlašćuje da upravlja tim vozilom u inostranstvu, odnosno da predmetno vozilo može da otuđi. Takvo ovlašćenje važi do opoziva, ali ne može da se prenosi na treće lice.
+
+\n\nU slučaju da korisnik vozila putuje u Bosnu i Hercegovinu i Crnu Goru, za koje nije potreban pasoš, DTV može da se izda korisniku na osnovu njegove lične karte, s tim da korisnik potpiše da je upoznat da ne može da koristi izdatu DTV u drugim zemljama, za koje mora da ima pasoš.
+
+\n\nPri svakoj promeni podataka iz lične karte/pasoša, izdaje se novi dokument.
+
+\n\n<b>DTV se može izdati</b>:
+\n1. Državljanima Republike Srbije, uvidom u ličnu kartu ili pasoš, izdat u Republici Srbiji.
+\n2. Stranim državljanima, sa privremenim ili stalnim boravkom u Republici Srbiji, uvidom u odgovarajući dokument o prijavi boravka koji je izdat od strane MUP-a.
+\n3. Stranim državljanima sa dvojnim državljanstvom, odnosno sa pasošem izdatim u nekoj od bivših jugoslovenskih republika, samo pod uslovom da takav korisnik ima važeću ličnu kartu, izdatu u Republici Srbiji. U tom slučaju, u DTV se unosi samo jedan od brojeva pasoša (ne oba), a kopija lične karte se ostavlja za arhivu.
+
+\n\nOva dozvola može se izdati i voziima sa registarskom oznakom "E" (ekonomske tablice) i to na osnovu konsultacije sa nadležnim organima u vezi sa obaveznom preregistracijom vozila sa stranim i ekonomskim tablicama, za koju je rok istekao 21. jula 2009. godine (Uredba Vlade Republike Srbije o obaveznoj preregistraciji vozila sa stranim tablicama).
+
+\n\n<b>DTV se ne može izdati</b>: za vozila sa registarskim tablicama kao što su: 999-xxx, RP, CD, A, i ostala vozila registrovana po posebnoj proceduri, kao ni na osnovu kopije saobraćajne dozvole.
+
+\n\nOva dozvola može se izdati i vozilima sa registarskom oznakom "E" (ekonomske tablice) i to na osnovu konsultacije sa nadležnim organima u vezi sa obaveznom preregistracijom vozila sa stranim i ekonomskim tablicama, za koju je rok istekao 21. jula 2009. godine (Uredba Vlade Republike Srbije o obaveznoj preregistraciji vozila sa stranim tablicama).
+
+\n\n<b>Rok važnosti DTV</b>: Izdaje najduže na rok od godinu dana, s tim što taj rok može da bude i kraći, ukoliko to vlasnik vozila zahteva.
+</string>
+    <string name="info_international_documents_TAG_text" formatted="false">TAG je elektronski uređaj za plaćanje putarine, a korisnik može biti svako pravno ili fizičko lice, koje potpiše Ugovor sa JP “Putevi Srbije” i preuzme ovaj uređaj uz odgovarajuću naknadu i uplati početni iznos pretplate čime TAG postaje validan za korišćenje. Jedan TAG  koristi se za jedno vozilo odgovarajuće kategorije. TAG nema vremensko ograničenje korišćenja i na njemu se nalaze sledeći podaci: registarski broj vozila, kategorija puta i iznos plaćene putarine.\n\nKada se vozilo opremljeno TAG uređajem približi izlaznoj brzoj traci, koja je opremljena ENP sistemom, antena na nadstrešnici detektuje prisutni TAG uređaj, čita memorisane podatke i ako je komunikacija uspešna, na displeju se pokazuje kategorija vozila, iznos putarine, sredstvo plaćanja i preostalo stanje na računu. Rampa se diže i vozilo napušta izlaznu traku.\n\n<b>OBEZBEDITE:</b>\n\n
+•	naplatu putarine bez zaustavljanja na posebno obeleženim stazama za naplatu ETC-ENP , čime se izbegavaju mogući zastoji, usled ograničene propustljivosti na naplatnim rampama u saobraćajnim špicevima\n
+•	jednostavnu naplatu putarine, kojim se izbegava gotovinsko plaćanje i nepotrebno zadržavanje na naplatnim rampama\n
+•	jeftiniju putarinu uz popuste\n\n<b>AMSS POSLOVNI SISTEM D.O.O OMOGUĆAVA VAM POPUST OD 8 DO 15% NA PUNU CENU PUTARINE !\n</b>\n\nCENA TAG UREĐAJA JE  2.966,10 dinara + PDV\n\nU skladu sa Odlukom o visini posebne naknade za upotrebu puta, njegovog dela i putnog objekta, domaćim i stranim učesnicima u saobraćaju omogućen je popust pri kupovini dopune i to:\n\n      
+</string>
+    <string name="info_international_documents_ZELENA_KARTA_text" formatted="false">Važno: Ukinuta obaveza posedovanja zelene karte za 33 zemlje!
+\nRepublika Srbija pristupila je Multilateralnom sporazumu (MA) koji predstavlja formalni dogovor jednog broja zemalja o međusobnom proširivanju teritorijalnog važenja osiguranja autoodgovornosti. Potpisivanjem Multilateralnog sporazuma i pristupanjem sistemu registarske oznake, prestaje obaveza da motorna vozila koja se uobičajeno nalaze na teritoriji Republike Srbije poseduju međunarodnu kartu osiguranja autoodgovornosti zelenu kartu, prilikom ulaska na teritoriju neke od zemalja potpisnica MA. Sporazum je stupio na snagu 01.01.2012. godine.
+
+\n\n<b>Zemlje u kojima nije obavezno, po sporazumu, posedovanje zelene karte su</b>:
+\nAustrija, Bugarska, Belgija, Češka Republika, Kipar, Nemačka, Danska, Španija, Estonija, Francuska, Finska, Ujedinjeno Kraljevstvo Velike Britanije i Severne Irske (uključiv Kanalska ostrva i ostrvo Man), Grčka, Mađarska, Italija, Irska, Luksemburg, Litvanija, Letonija, Malta, Holandija, Portugalija, Poljska, Rumunija, Švedska, Slovačka, Slovenija, Hrvatska, Švajcarska (uključiv Lihtenštajn), Andora, Norveška i Island. Za Crnu Goru tiče zeleni karton nije neophodan za putovanje na osnovu sporazuma o međusobnom priznavanju polisa obaveznog osiguranja između dve zemlje.
+
+\n\n<b>Posedovanje zelene karte obavezno je kada se ulazi na teritoriju sledećih zemalja</b>: Rusija, Belorusija, Ukrajina, Moldavija, Turska, Izrael, Iran, Makedonija, Albanija, BiH, Tunis, Maroko.
+
+\n\n<b>Ko izdaje</b>: Zelenu kartu osiguranja izdaje isključivo osiguravajuće društvo kod kojeg je zaključeno obavezno osiguranje od auto-odgovornosti. Zelena karta važi do isteka premije obaveznog osiguranja.
+
+\n\n<b>Dokumenta potrebna za izdavanje zelene karte</b>:
+\n1. Polisa obaveznog osiguranja na uvid
+\n2. Saobraćajna dozvola
+    </string>
+    <string name="info_international_documents_TAG_napomena_text"><b>VAŽNA NAPOMENA:</b> U slučaju da vršite plaćanje putarine putem gotovine ili platnim karticama, u obavezi ste da obezbedite zaštitu uređaja od slučajnog očitavanja! (npr. uređaj umotajte u aluminijumsku foliju) </string>
+    <string name="info_international_documents_text" formatted="false">MVD se može izdati državljanima Republike Srbije i stranim državljanima koji poseduju važeću vozačku dozvolu, izdatu u Republici Srbiji. Strani državljani moraju da imaju dokaz o boravku ili prebivalištu u Republici Srbiji. MVD se ne može izdati na osnovu probne vozačke dozvole.
+
+\n\nNaknada za izdavanje MVD iznosi 2.000,00 dinara.
+
+\n\nRok važenja MVD je tri godine od datuma izdavanja, osim u slučaju kada važnost nacionalne vozačke dozvole ističe pre tog roka.
+
+\n\n<b>1. Dokumenta za izdavanje MVD</b>
+
+\n\nIzdavanje MVD se vrši na lični zahtev i uz prisustvo korisnika i uz zahtev za izdavanje MVD prilaže se:
+\na) važeća lična karta – na uvid
+\nb) važeća vozačka dozvola - na uvid i fotokopija
+\nc) 2 fotografije formata 35 mm x 45 mm
+\nd) dokaz o plaćenoj republičkoj administrativnoj taksi za izdavanje MVD u skladu sa Zkonom o republičkim administrativnim taksama.
+\ne) uverenje teritorijalno nadležne organizacione jedinice Ministarstva unutrašnjih poslova o izrečenim ili izvršenim važećim zaštitnim merama, odnosno merama bezbednosti zabrane upravljanja motornim vozilom.
+
+\n\n<b>Ovlašćenje za uverenje</b>
+\nUkoliko podnosilac zahteva za izdavanje MVD ne dostavi navedeno uverenje, može uz potpisano punomoćje i plaćenu taksu od ukupno 600,00 rsd ( za zahtev – 300,00 rsd i izdavanje uverenja - 300,00 rsd) u skladu sa Tarifnim brojem 1. i 11. Zakona o republičkim administrativnim taksama, ovlastiti određenog radnika, pravno lice koje vrši izdavanje MVD (u daljem tekstu Izdavaoci MVD), da u njegovo ime može pribaviti uverenje teritorijalno nadležne organizacione jedinice MUP.
+
+\n\n<b>Dokaz o uplati takse za izdavanje MVD</b>
+\nLice koje podnosi zahtev za MVD, mora da priloži dokaz o uplati republičke administrativne takse u iznosu od 770,00 dinara (za zahtev 270,00 dinara i 500,00 dinara za izdavanje MVD) u skladu sa tarifnim brojem 40 Zakona o republičkim administrativnim taksama. Izdavaoci MVD su dužni da na Zahtevu za izdavanje MVD, evidentiraju napomenu da je izvršen uvid u dokaz o plaćenoj taksi u iznosu od 770 dinara i da to overe pečatom i potpisom.
+\nDokaz je uplatnica na ime fizičkog lica koja se čuva u arhivi AMSS, račun primaoca je: 840-742221843-57, primalac je Republika Srbija, a poziv na broj se razlikuje u zavisnosti od opštine u kojoj se izdaje dozvola.
+
+\n\n<b>2. Naknadno upisivanje nove kategorije</b>
+\nU slučaju kada vlasnik međunarodne vozačke dozvole položi ispit za novu kategoriju, ista se unosi u već prethodno izdatu MVD, tako što se u rubriku predviđenu za tu kategoriju, unese datum polaganja vozačkog ispita, pečat i potpis izdavaoca MVD. Vlasnik MVD popunjava novi obrazac, koji se odlaže u arhivu zajedno sa prvobitno popunjenim obrascem, a informacijama o novoj kategoriji upisuje se i u registar izdatih MVD. Zbog evidencije podataka, unos nove kategorije u MVD mora da izvrši isti izdavalac, koji je prvobitno izdao ovaj dokument. Ne naplaćuje se dodatna nadoknada za naknadni upis kategorije.
+
+\n\n<b>Ukoliko se radi o MVD koje se koriste u Rusiji, potrebno je overiti predmetne kategorije na svim listovima MVD.</b>
+\nPotpis nosioca MVD ili otisak palca stavlja se ispod fotografije, a na stranicu "Le tutulaire est dechu du droit de conduire sur le territoire". U ovu rubriku ne unose se nikakvi podaci prilikom izdavanja MVD, već ona služi da organ vlasti koji je poništio važenje MVD na svojoj teritoriji evidentira da MVD ne važi na toj teritoriji do određenog datuma, i to overi potpisom i pečatom.
+    </string>
+    <string name="information_emergancy_numbers_turism_text" formatted="false"><b>TURISTIČKA ORGANIZACIJA SRBIJE</b> &#8211; informativni centar, Čika Ljubina 8, +381 11 655 7100, +381 11 6557 127 faks +381 11 2626 767, e&#8211;mail: office@serbia.travel, www.srbija.travel</string>
+    <string name="information_emergancy_numbers_turism_belgrade_text" formatted="false"><b>TURISTIČKA ORGANIZACIJA BEOGRADA</b> &#8211; Masarikova 5/IX, +381 11 3061 400, faks +381 11 3061 414\nwww.travel&#8211;belgrade.com; www.tob.rs; www.tob.co.rs</string>
+    <string name="information_emergancy_numbers_turism_centers_text" formatted="false"><b>TURISTIČKI INFO CENTRI:</b>\n Knez Mihailova 6, +381 11 3281 859, (pon.&#8211;sub. 09.00&#8211;21.00, ned. 10.00&#8211;15.00)\nbginfo.knezmihailova@tob.co.rs\nŽeleznička stanica, +381 11 3612 732, (09.00&#8211;20.00, sub&#8211;ned. 10.00&#8211;16.30)\nbginfo.stanica@tob.co.rs\nPristanište, +381 11 3288 246 (mart&#8211;novembar, 08.00&#8211;19.00), samo za putnike kruzera bginfo.pristaniste@tob.co.rs \n Aerodrom, +381 11 2097 828 (pon.&#8211;ned. 09.00&#8211;22.00)\n Turistički centar Zemuna, Zemun, Zmaj Jovina 14, +381 11 2192 094</string>
+    <string name="loyalty_discounts_text" formatted="false">•	AMS Osiguranje &#8211; 10% popusta na kasko polisu\n\n
+•	Auto servisi Tyre+ - 20% popusta na sve usluge i 5% popusta na auto delove i dodatni asortiman na lokacijama širom Srbije – Beograd, Novi Sad, Lazarevac, Aranđelovac, Pirot, Subotica, Kragujevac, Kraljevo, Valjevo, Ub, Čačak, Šabac. Više informacija na www.tyreplus.rs  ili putem telefona 011/3955-080.\n\n
+•	“Show Your Card” sistem - popusti za vlasnike AMSS super članske kartice. Preko 600 „Show your card“ partnera u Evropi u više od 30 000 objekata:\n
+- 10% -  Best Western Hoteli,\n
+- 25% - Sheraton, Le Meridien, Luxury collection, St. Regis, Four Points...\n             
+- 15% - Hertz  rent-a-car,\n 
+- 10% - u Autogrill restoranima duž autoputa širom Austrije,\n 
+- 15% - u svim Hard Rock klubovima... \n
+</string>
+    
+    <string name="advices_document_loss_label">U slučaju gubitka isprava ili novca u EU</string>
+    <string name="advices_vehicle_maintanance_label">Održavanje vozila</string>
+    <string name="advices_vehicle_maintanance_text" formatted="false">Posle svakih pređenih 500 km treba kontrolisati:
+\n• nivo ulja u motoru i
+\n• pritisak u pneumaticima
+
+\n\nPosle svakih 5.000 km treba kontrolisati:
+\n• stanje elektrolita u akumulatoru
+\n• da li su oksidisale kleme na akumulatoru
+\n• stanje kočnica
+\n• debljinu disk pločica
+\n• po potrebi promeniti ulje u motoru
+\n• proveriti tečnost u rashladnom sistemu
+
+\n\nPosle pređenih 10.000 km treba kontrolisati:
+\n• stanje ulja u menjaču
+\n• svećice
+\n• ventile
+\n• klinasti kaiš
+\n• filter za vazduh
+\n• stanje pneumatika
+\n• zavrtnje na točkovima
+\n• promeniti ulje u motoru i filter za ulje
+
+\n\nPosle pređenih 20.000 km treba kontrolisati:
+\n• agregate na motoru automobila
+\n• kaiševe koji pokreću agregate
+\n• za starija vozila, karburator - eventulno ga očistiti
+
+\n\nPosle pređenih 30.000 km kontrolišite:
+\n• starter, očistiti ga i podmazati
+\n• zamena ulja u menjaču i diferencijalu kao i u kočionom sistema
+
+\n\nNa svakih 40.000 km prekontrolisati zupčasti kaiš i eventualno ga zameniti
+
+\n\nPosle svakih 60.000 km proverit alternator i zameniti i tečnost u sistemu za hlađenje (ili svake druge godine)
+\nAkumulator – je jedan od najvažnijih električnih uređaja u automobilu i zato ga treba povremeno kontrolisati.
+\nNeophodno je da se nivo elektrolita kontroliše, posebno u letnjem periodu, jer tada voda isparava i ploče mogu da ostanu suve.
+
+\n\nPritisak u pneumaticima – mora redovno da se kontroliše, jer je u suprotnom vozilo nestabilnije i pneumatik je izložen većem naprezanju. Podešavanje propisanog pritiska radi se uvek samo kada je pneumatik hladan. Posle svakog skidanja pneumatika, obavezno je balansiranje.
+
+\n\nPranje i zaštita automobila – u zimskim uslovima eksploatacije karoserija je izložena velikim temperaturnim razlikama, vodi, snegu, industrijskoj soli koja je najveći neprijatelj karoserije. Blato, voda i so se zadržavaju na karoseriji i polako je nagrizaju. Zbog toga je poželjno da se vozilo češće pere, posebno donji postroj.
+\nOprema za duža putovanja – Uz obaveznu opremu koja podrazumeva rezervni točak, sigurnosni trougao, komplet za prvu pomoć, uže ili polugu za vuču, svetloodbojni prsluk, dobro je da u vozilu bude i aparat za gašenje požara, nekoliko rezervnih osigurača, kolut izolir trake, baterijska lampa, rezervni ključevi od automobila (ne ostavljati ih u vozilu), ključ za rezervni točak, ispravna dizalica, žica, ključ za svećice, flaša vode. Preporučujemo i nešto od potrošnog materijala (kaiševi ventilatora i alternatora), kao i osnovni alat (ključevi, kombinovana klješta, odvijači, čekić i ispitna lampica).
+</string>
+    <string name="advices_winter_conditions_label">Zimski uslovi vožnje</string>
+    <string name="advices_checking_used_vehicles_label">Ispitivanje uvezenih polovnih vozila</string>
+    <string name="advices_holes_damages_label">Udarne rupe - naknada štete</string>
+
+    <string name="advices_ecological_driving_label">Deset saveta za ekološku vožnju</string>
+    <string name="advices_document_loss_text">O krađi ili nestanku dokumenta - pasoša, lične karte i vozačke dozvole - neophodno je obavestiti policiju zemlje u kojoj se naš državljanin nalazi i zatražiti izdavanje potvrde da je prijavljen gubitak, odnosno krađa.
+\nImajte obavezno kod sebe na putu i fotokopiju pasoša, lične karte ili vozačke dozvole, jer će Vam za izdavanje potvrde zatražiti brojeve istih. Prijavu nestanka isprava  ne možete obaviti u nekoj drugoj zemlji EU. Ukoliko bez putne isprave prelazite unutrašnju granicu Šengenskog područja, na teritoriju bilo koje zemlje potpisnice, činite prekršaj za koji je zaprećena novčana kazna od 200 do 1200 eura.
+\nPo dobijanju potvrde policije o prijavi nestanka ili krađi, obratite se najbližem diplomatsko-konzularnom predstavništvu RS u zemlji u kojoj su ostali bez dokumenata, gde će Vam izdati putni list sa kojim se možete vratiti u Srbiju. Diplomatsko-konzularna predstavništva Republike Srbije u drugoj državi EU nisu nadležna za izdavanje putnog lista, a posebno je delikatan slučaj kada ne prijavite nestanak isprava. Obavezno prijavite nestanak ili karađu. Sa putnim listom ne može se putovati u druge zemlje, jer ovaj dokument važi samo za povratak u Srbiju. Važno je znati da bezvizni režim EU ne važi i za putne listove u većini zemalja EU, pa je pre povratka u Srbiju, potrebno pribaviti vize zemalja kroz koje će se tranzitirati.
+\nU slučajevima kada naši državljani ostanu bez novčanih sredstava ili ih pre povratka u Srbiju nemaju  dovoljno da plate novčane kazne za učinjeni prekršaj u zemljama EU, zbog čega Vam, na osnovu zakona zemalja prijema privremeno zadrže putne isprave, tada rodbina ili prijatelji mogu da uplate novac, na račun najbližeg diplomatsko-konzularnom predstavništva Republike Srbije, koje im potom može isplatiti novac lično, ili se mogu obratiti Ministarstvu spoljnih poslova u Beogradu, gde će dobiti precizne informacije kako da se novac najbrže dostavi.
+</string>
+    <string name="advices_winter_conditions_text">Od 01. novembra do 01. aprila prema Zakonu o bezbednosti u saobraćaju, obaveznu zimsku opremu čine sve četiri zimska pneumatika sa dubinom šare najmanje 4 mm, a ukoliko se nalazite van grada, u prtljlažniku morate imati lance. Kazna koju ćete platiti ukoliko ne poštujete propise o obaveznoj zimskoj opremi je 3.000 dinara.
+
+\n\n• proverite tehničku ispravnost vozila
+\n• prekontrolisati nivo svih tečnosti
+\n• prekontrolisati  antifriz
+\n• koristiti za pranje vetrobranskog stakla tečnost koja ne mrzne
+\n• proveriti stanje akumulatora
+\n• vozilo uvek očistiti od snega
+\n• proveriti pritisak u pneumaticima uključujući i rezervni točak
+\n• staviti glicerin u sve bravice na vratima a glicerinom namazati i prijanjajuće gume na vratima
+\n• u dizel gorivo eventualno dodati odgovarajući aditiv koji će sprečiti smrzavanje dizel goriva
+\n• obavezno poneti  zimsku i prateću opremu
+\n• ne piti alkohol
+\n• nikada ne ubrzavati i ne kočiti naglo
+\n• uvek prilagodjavati vožnju trenutnim uslovima na putu
+\n• obavezno držati propisno rastojanje
+
+\n\nU bilo koje vreme, vozačima savetujemo da se pre puta detaljno informišu o stanju na putu, pozivom broja 1987, Operativnog centra koji u AMSS Srbije.
+</string>
+    <string name="advices_checking_used_vehicles_text">Kako stići do sertifikata prilikom uvoza polovnjaka?
+
+\n\nKontrola uvoza polovnih vozila podrazumeva utvrđivanje porekla i verodostojnosti na osnovu propisanih kriterijuma kao i stručnu proveru i utvrđivanje da li je vozilo naknadno modifikovano. Agencija za bezbednost saobraćaja ovlastila je AMSS - Centar za motorna vozila (CMV) da ispituje uvezena polovna vozila. Nakon utvrđivanja stanja uvezenog vozila u CMV može se izdati potvrda na osnovu koje vlasnk u Agenciji dobija sertifikat predviđen zakonom. CMV posluje u okviru AMSS i radi u najsavremenijim akreditovanim  laboratorijama, koje su specijalizovane za različita ispitivanja. Tako, širom Srbije, na oko 170 adresa stručnjaci ovog centra AMSS mogu ispitivati i da li uvezena vozila ispunjavaju uslove za dobijanje sertifikata koji je ujedno i uslov za registraciju u Srbiji. Informacije o zakazivanju pregleda i ispitivanja vozila, najbližoj adresi i potrebnoj pratećoj dokumentaciji mogu se dobiti na sajtu AMSS Centra za motorna vozila – CMV
+</string>
+    <string name="advices_holes_damages_text">Postupak za naknadu štete u slučaju oštećenja vozila nastalog kao posledica oštećenog kolovoza - udarne rupe i slično:
+
+\n\n1. pozvati saobraćajnu policiju koja će da napravi zvanični zapisnik, fotografiše oštećenje na vozilu i ono na putu
+
+\n\n2. ukoliko policija nije u mogućnosti da izađe na teren, treba obezbediti dva svedoka i napraviti dovoljno snimaka koji će poslužiti kao dokaz da je oštećenje na putu dovelo do oštećenja automobila
+
+\n\n3. otići do osiguravajuće kuće u kojoj je vozilo osigurano kako bi se procenila šteta. Osiguranici AMS Osiguranja u ovakvim slučajevima uslugu procene štete ne plaćaju
+
+\n\n4. sa zapisnikom policije i ostalim dokazima, obratiti se za naknadu štete preduzeću za puteve koje je nadležno za održavanje odredjene deonice puta
+</string>
+    <string name="advices_ecological_driving_ltext">1. Kupujte ekološke automobile i njihove komponente
+\nKada kupujete automobil, uvek treba da imate u vidu njegove ekološke performanse.
+\nKupite vozilo koje odgovara vašim potrebama.
+\nAutomobil sa boljim ekološkim performansama će biti isplativiji za vožnju i održavanje.
+\nFIA Fondacija i njen program EcoTest /www.ecotest.eu/ pomoći će vam da lakše razumete sistem ocenjivanja novih modela automobila putem zvezdica, u pogledu njihovih ekoloških performansi.
+
+\n\n2. Planirajte vaše putovanje
+\nDobro isplanirano putovanje će vam omogućiti da stignete do svog odredišta na najbrži i najlakši način i tako sprečite nepotrebno emitovanje izduvnih gasova.
+\nImajte na umu da deset minuta nepotrebne vožnje u toku samo jednog sata putovanja dovodi do smanjenja efikasne upotrebe goriva za 14%.
+\nKod kraćih putovanja, potrudite se da koristite bicikl, javni prevoz ili da prošetate.
+\nUgradnjom sistema za globalno pozicioniranje (GPS) u vaše vozilo možete unapred da utvrdite najlakši put do krajnjeg odredišta.
+
+\n\n3. Redovno proveravajte pritisak u pneumaticima
+\nPropisan pritisak u pneumaticima smanjuje otpor kotrljanja i time povećava performanse pneumatika i samog vozila.
+\nVožnja sa pneumaticima čiji je vazdušni pritisak 50kPA (0.5kg/cm2) manji od propisanog, smanjuje efikasnost goriva za 2% u gradskim sredinama, odnosno za 4% u prigradskim sredinama.
+\nRazmislite o ugradnji sistema za kontrolu pritiska u pneumaticima u vaše vozilo koji će vam omogućiti da znate kada treba da naduvate pneumatike.
+\nPropisno naduvan pneumatik povećava stepen prianjanja za voznu površinu, pa je iz tog razloga ne samo ekološki, već i bezbedniji pneumatik.
+
+\n\n4. Smanjite teret i izbegavajte ptrljažnik na krovu vozila
+\nDodatna težina povećava potrošnju goriva, kao i povećani otpor vazduha
+\nVožnja sa 100 kg nepotrebnog tereta u/na vozilu dovodi do značajnog smanjenja efikasnosti goriva, za oko 6%, u klasi srednjih automobila.
+\nProverite sadržaj vašeg ptrljažnika i odstranite sav nepotrebni prtljag ili veće predmete.
+\nIako moderni automobili poseduju određena aerodinamička svojstva, ipak nosač prtljaga na krovu takvog automobila može da poveća potrošnju goriva za 20%.
+
+\n\n5. Ne zagrevajte motor pre nego što krenete
+\nModerna vozila više ne treba da se zagrevaju pre nego što krenu, osim u uslovima ekstremne hladnoće
+\nLagana vožnja će možda biti neophodna po pokretanju motora; ovaj stil vožnje takođe dovodi do povećanja efikasnosti goriva.
+\nKod modernih automobila koji imaju motor sa direktnim ubrizgavanjem goriva više nije potrebno pritiskati gas pri pokretanju motora. Ukoliko to činite, zbunićete sisteme koji se nalaze u vozilu i povećati potrošnju goriva.
+
+\n\n6. Koristite klima-uređaj samo kada je to neophodno
+\nNe podešavajte klima-uređaj na suviše nisku temperaturu, jer on troši veliki deo snage vozila. Kada je spoljašnja temperatura 25°C, klima-uređaj smanjuje efikasnost goriva za 12%.
+\nU toku vožnje gradom, kada je bezbedno, možete da otvorite prozor, pre nego da uključite klima-uređaj. Ipak, u toku vožnje pri većoj brzini, usled otpora vazduha, bolje je zatvoriti prozor i uključiti klima-uređaj.
+\nOstali uređaji u vozilu, kao što su zvučni sistemi i dr, takođe povećavaju potrošnju goriva.
+
+\n\n7. Lagano ubrzavajte i održavajte konstantnu brzinuPri laganoj vožnji troši se manje goriva, ona je bezbednija i njome ćete vi i vaši saputnici udobnije doći do krajnjeg odredišta Krenite lagano (20km/h u prvih 5 sekundi, čime se postiže povećanje uštede goriva od 11%) i izbegavajte nagla i velika ubrzanja i usporenja u toku vožnje.
+\nIzbegavajte isuviše malo rastojanje od vozila ispred vas jer to dovodi do nepotrebnog ubrzanja/usporenja, čime se povećava potrošnja goriva za 2% u gradskim sredinama, odnosno 6% u prigradskim sredinama. Koristite što viši stepen prenosa u bilo kojoj situaciji.
+
+\n\n8. Kočite motorom
+\nKorišćenjem svojstva motora da sam koči takođe se štedi gorivo. Kada shvatite da treba da usporite, otpuštanjem papučice za gas prekidate dovod goriva, čime se njegova efikasnost povećava za 2%.
+\nKočenje motorom takođe predstavlja dodatnu uštedu jer doprinosu smanjenju habanja kočionog sistema.
+
+\n\n9. Ne ostavljajte motor da radi u praznom hodu
+\nGorivo se troši čak i kada motor radi u praznom hodu. Kada ostavite motor da radi u praznom hodu više od jednog minuta, potroši se više goriva nego što je potrebno da se motor ponovo pokrene.
+\nU toku deset minuta rada motora u praznom hodu (u neutralnom položaju, sa ugašenim klima-uređajem) potroši se 130 cc goriva.
+
+\n\n10. Smanjite emisiju ugljen-dioksida (CO2)
+\nEmisija ugljen-dioksida (CO2) u saobraćaju i transportu je često neizbežna, ali ako vozite, ipak možete da date svoj doprinos smanjenju emisije ugljen-dioksida (CO2).
+</string>
+
+    <string name="information_emergency_numbers_text">VAŽNI TELEFONI</string>
+    <string name="information_emergency_numbers_working_time_text">RADNO VREME</string>
+    <string name="information_emergency_numbers_numbers_text">BROJ TELEFONA</string>
+    <string name="information_emergency_numbers_police_text">Policija</string>
+    <string name="information_emergency_numbers_police_time_text">00&#8211;24</string>
+    <string name="information_emergency_numbers_police_number_text">192</string>
+    <string name="information_emergency_numbers_fireman_text">Vatrogasna brigada</string>
+    <string name="information_emergency_numbers_fireman_number_text">193</string>
+    <string name="information_emergency_numbers_hospital_text">Hitna pomoć</string>
+    <string name="information_emergency_numbers_hospital_number_text">194</string>
+    <string name="information_emergency_numbers_amss_text">Auto&#8211;moto savez Srbije &#8211; pomoć na putu</string>
+    <string name="information_emergency_numbers_amss_number_text">1987</string>
+    <string name="information_emergency_numbers_time_text">Tačno vreme (govorni automat)</string>
+    <string name="information_emergency_numbers_time_number_text">195</string>
+    <string name="information_emergency_numbers_telegrams_text">Telegrami</string>
+    <string name="information_emergency_numbers_telegrams_number_text">96</string>
+    <string name="information_emergency_numbers_telegrams_working_time_text">08&#8211;20</string>
+    <string name="information_emergency_numbers_telegrams_sundays_text">nedeljom</string>
+    <string name="information_emergency_numbers_telegrams_working_time_sundays_text">08&#8211;15</string>
+    <string name="information_emergency_numbers_telegrams_sundays_number_text">1961</string>
+    <string name="information_emergency_numbers_international_calls_text">Međunarodni razgovori</string>
+    <string name="information_emergency_numbers_international_calls_number_text">19011</string>
+    <string name="information_emergency_numbers_military_emergency_text">Vojna hitna pomoć</string>
+    <string name="information_emergency_numbers_military_emergency_number_text">1976</string>
+    <string name="information_emergency_numbers_phone_interference_text">Prijava telefonskih smetnji</string>
+    <string name="information_emergency_numbers_phone_interference_number_text">19771</string>
+    <string name="information_emergency_numbers_city_info_text">Gradski centar za obaveštavanje i uzbunjivanje</string>
+    <string name="information_emergency_numbers_city_info_number_text">985</string>
+    <string name="information_emergency_numbers_white_pages_text">Brojevi pretplatnika</string>
+    <string name="information_emergency_numbers_white_pages_number_text">11811</string>
+    <string name="information_emergency_numbers_waking_text">Služba buđenja</string>
+    <string name="information_emergency_numbers_waking_number_text">19811</string>
+    <string name="information_emergency_numbers_info_text">Razna obaveštenja</string>
+    <string name="information_emergency_numbers_info_number_text">19812</string>
+    <string name="information_emergency_numbers_phone_center_text">Fiksna telefonija Srbije &#8211; info centar</string>
+    <string name="information_emergency_numbers_phone_center_working_time_text">08&#8211;19</string>
+    <string name="information_emergency_numbers_phone_center_number_text">19813</string>
+    <string name="information_emergency_numbers_calendar_text">Crkveni kalendar</string>
+    <string name="information_emergency_numbers_calendar_number_text">1982 (opcija 3)</string>
+    <string name="information_emergency_numbers_weather_text">Meteorološki podaci</string>
+    <string name="information_emergency_numbers_weather_number_text">19822 (opcija 1)</string>
+    <string name="information_emergency_numbers_loto_text">Loto</string>
+    <string name="information_emergency_numbers_loto_number_text">19822 (opcija 2)</string>
+    <string name="information_emergency_numbers_military_police_text">Vojna policija</string>
+    <string name="information_emergency_numbers_military_police_number_text">19860</string>
+    <string name="information_emergency_numbers_mts_text">Mobilna telefonija Srbije &#8211; info centar</string>
+    <string name="information_emergency_numbers_mts_number_text">064/789</string>
+    <string name="information_emergency_numbers_vip_text">Vip &#8211; korisnički servis</string>
+    <string name="information_emergency_numbers_vip_number_text">060/1234</string>
+    <string name="information_emergency_numbers_telenor_text">Telenor &#8211; info centar</string>
+    <string name="information_emergency_numbers_telenor_number_text">063/9863</string>
+    <string name="information_emergency_numbers_retirement_text">Informacije o penzijama</string>
+    <string name="information_emergency_numbers_retirement_number_text">0700/017017</string>
+    <string name="information_emergency_numbers_ptt_text">JP PTT Saobraćaja Srbije &#8211; info centar</string>
+    <string name="information_emergency_numbers_ptt_number_text">0700/100300</string>
+    <string name="information_emergency_numbers_ptt_working_time_text">08&#8211;20</string>
+    <string name="information_emergency_numbers_ptt_sundays_text">nedeljom</string>
+    <string name="information_emergency_numbers_ptt_sundays_number_text">0700/100300</string>
+    <string name="information_emergency_numbers_ptt_working_time_sundays_text">08&#8211;15</string>
+    <string name="information_advices_text">SAVETI ZA ODRŽAVANJE VOZILA</string>
+    <string name="AMSO_safety_long_text">Obavezno osiguranje vozila je zakonom definisana obaveza vlasnika motornih vozila. Zaključuje se prilikom registracije vozila u cilju zaštite od štete koja je vašim vozilom pričinjena trećem licu, nezavisno od toga ko je upravljao vozilom u trenutku nezgode. Polisa obaveznog osiguranja vozila se zaključuje na godinu dana i glasi na motorno vozilo, ne na vlasnika vozila.
+        \n\nPravo na naknadu štete imaju sve osobe koje se nalaze u vozilu које је izazvalo saobraćajnu nezgodu, kao i sve osobe koje se nalaze u drugom vozilu koje učestvuje u saobraćajnoj nezgodi.
+        \n\nPolisu obaveznog osiguranja vozila možete zaključiti u preko 250 poslovnica  AMS Osiguranja širom Srbije.\n</string>
+    <string name="AMSO_safety_button">PRODAJNA MREŽA</string>
+    <string name="AMSO_kasko_long_text">Kasko osiguranje je najsigurniji vid zaštite vašeg vozila. Ugovaranjem Kasko osiguranja AMS Osiguranje preuzima rizik od nastanka štete na vašem vozilu bez obzira usled čije odgovornosti je šteta nastala. Kasko osiguranje pokriva troškove nastale štete usled:\nn
+• saobraćajne nezgode\n
+• pada drveća, delova fasada i drugih predmeta\n
+• elementarnih nepogoda\n
+• požara\n
+• poplava\n
+• eksplozije (osim nuklearne)\n
+• krađe (ukoliko je ugovoreno)\n\nUz svaku zaključenu polisu Kasko osiguranja poklanjamo Super člansku karticu AMSS koja vam omogućava besplatne popravke na putu i šlepovanje u zemlji i Evropi, čitavih godinu dana!\n\nNudimo vam mogućnost plaćanja na 12 mesečnih rata, dok za plaćanje u celosti odobravamo i dodatni popust!\n</string>
+    <string name="AMSO_kasko_light_long_text">Kasko light je rešenje za sve vozače koji ne poseduju polisu Kasko osiguranja. Namenjen je pre svega onima koji putuju kako bi na jeftiniji način u kraćem vremenskom periodu zaštitili svoje vozilo od rizika sudara i štete koje on nosi.\n\nOno što ističe Kasko light proizvod je da on ne opterećuje budžet, a u potpunosti zadovoljava potrebe za osiguranjem prilikom saobraćajnih nezgoda nastalih na javnom putu sa jednim ili više motornih vozila.\n\nOsiguranici sami određuju visinu premije koja se može zaključiti na iznos od 100.000 do 500.000 RSD i u toku perioda osiguranja mogu prijaviti više šteta do momenta iscrpljenja osigurane sume.\n\nKasko light namenjen je svim motornim putničkim vozilima sa standardnom i dodatno ugrađenom opremom u skladu sa uslovima osiguranja, a idealan je za osiguranje polovnih vozila, uz pokriće na geografskom području Evrope.\n</string>
+    <string name="AMSO_accidents_long_text">Osiguranje imovine spada u dobrovoljna osiguranja, koja štite od nastanka štete vašu pokretnu i nepokretnu imovinu. Ovo osiguranje karakteriše suma osiguranja koja mora biti realno utvrđena, u zavisnosti od vrednosti osiguranog predmeta. Cilj osiguranja je da se usled nepredviđenog događaja, isplatom novčanog iznosa osiguranik vrati u period pre nastanka štete.\n\nJedna od najčešče zaključivanih vrsta osiguranja imovine je osiguranje domaćinstva, koje vas štiti od sledećih rizika:\n
+• požar i udar groma
+• eksplozija\n
+• oluja\n
+• grad\n
+• pad letelice\n
+• manifestacije i demonstracije\n
+• izliv vode iz instalacija\n
+• provalna krađa i razbojništvo\n
+• lom stakla\n
+• odgovornost iz upotrebe osiguranog stana\n\nOsiguranje domaćinstva obezbeđuje pokriće šteta:\n
+• na građevinskom objektu (stan ili kuća)\n
+• stvari i dragocenosti u vašem domaćinstvu\n
+• odgovornost za štetu pričinjenu iz vašeg stana ili kuće\n\nAMS Osiguranje nudi vam još i osiguranje domaćinstva na prvi rizik, poseban proizvod prilagođen vašem budžetu, vremenu i potrebnom za sigurnošću. Ova vrsta osiguranja podrazumeva pokriće određenog broja rizika, do iznosa iscrpive sume osiguranja, bez primene načela podosiguranja, uz mogućnost prijave više štetnih događaja u toku trajanja osiguranja.\n\nJednokratnom uplatom premije, u iznosu od svega 1.800 RSD, vaš dom je osiguran do iznosa 2.500.000 RSD. Suma osiguranja je iscrpiva i nastale štete biće pokrivene do iznosa sume osiguranja bez obzira na njihov broj, u skladu sa uslovima osiguranja.\n\nOvim osiguranjem možete osigurati stalno nastanjene objeke:\n
+• stanove (u kućama i stambenim zgradama)\n
+• kuće\nPokrivene su štete na građevinskom objektu sa ugrađenim instalacijama i opremom.\n\nOsigurajte vaše domaćinstvo online putem našeg WEBSHOP-a - u samo nekoliko koraka, ne izlazeći iz kuće, kupite polisu osiguranja domaćinstva ili osiguranja domaćinstva na prvi rizik!</string>
+    <string name="AMSO_healthy_insurance_long_text">Putno zdravstveno osiguranje pokriva troškova lečenja i prevoza usled iznenadne bolesti ili nesrećnog slučaja za vreme privremenog boravka u inostranstvu.\n\nKupite polisu Putnog zdravstvenog osiguranja online, putem našeg WEBSHOP-a, i ostvarićete čak 30% popusta na premiju osiguranja!\n\nU ponudi  AMS Osiguranja nalaze se:\n\n
+• INDIVIDUALNO -samo za jednu osobu\n
+• PORODIČNO - roditelji starosti do 71 godine i deca do 18. godine starosti\n
+• TURISTIČKO - ako se osigurava više osoba\n\nZaključenjem polise Putnog zdravstvenog osiguranja, AMS Osiguranje preuzima troškove:\n
+• ambulantnog i bolničkog lečenja kao posledice iznenadne bolesti ili nesrećnog slučaja do ugovorene obaveze\n
+• neophodnih lekova, zavoja i medicinsko tehničkih pomagala do ugovorene obaveze\n
+• neophodne dijagnostike do ugovorene obaveze\n
+• stomatoloških tretmana do 200€\n
+• medicinske pratnje\n
+• lekarskih saveta i upućivanje na lekare\n
+• prevoza osiguranika u zemlju prebivališta do 7.000€ u okviru ugovorene obaveze, kada se iz zdravstvenih razloga osiguranik ne može vratiti na način na koji je to nameravao\n
+• neophodnog prevoza osiguranika do zdravstvene ustanove radi lečenja, vozilom hitne pomoći do najbliže bolnice\n</string>
+    <string name="information_advices_long_text"><b>NA PREĐENIH 500 KM TREBA KONTROLISATI:</b>\n\n
+•	nivo ulja u motoru i\n
+•	pritisak  u pneumaticima\n\n
+ <b>NA 5.000 KM TREBA KONTROLISATI:</b>\n\n
+•	stanje  elektrolita u akumulatoru\n
+•	da li su oksidisale kleme na akumulatoru\n
+•	stanje  kočnica\n
+•	debljinu disk pločica\n
+•	po potrebi promeniti  ulje u motoru\n
+•	proveriti tečnost u rashladnom sistemu\n\n
+ <b>NA 10.000 KM TREBA KONTROLISATI:</b>\n\n
+•	stanje  ulja u menjaču\n
+•	svećice\n
+•	ventile\n
+•	klinasti kaiš\n
+•	filter za vazduh\n
+•	stanje  pneumatika\n
+•	zavrtnje na točkovima\n
+•	promeniti  ulje u motoru i filter za ulje\n\n
+ <b>NA 20.000 KM TREBA KONTROLISATI:</b>\n\n
+•	agregate na motoru automobila\n
+•	kaiševe koji pokreću agregate\n
+•	za starija vozila, karburator &#8211; eventulno ga očistiti\n\n
+ <b>NA 30.000 KM TREBA KONTROLISATI:</b>\n\n
+•	starter,  očistiti ga i podmazati\n
+•	zamena ulja u menjaču i diferencijalu kao i u kočionom 
+
+sistemu\n\n
+
+NA SVAKIH 40.000 KM PREKONTROLISATI ZUPČASTI KAIŠ I EVENTUALNO GA ZAMENITI\n\n
+
+POSLE SVAKIH 60.000 KM PROVERITI ALTERNATOR I ZAMENITI TEČNOST U SISTEMU ZA HLAĐENJE (ILI SVAKE DRUGE GODINE)\n\n
+
+Akumulator – je jedan od najvažnijih električnih uređaja u 
+automobilu i zato ga treba povremeno kontrolisati. 
+Najčešće  se na polovima akumulatora stvore oksidne  naslage, pogotovo na plus klemi koja je slab provodnik  električne energije u oba smera, odnosno kada daje struju i kada je prima 
+od diname alternatora. Ako je klema previše oksidirala treba je natopiti zajedno sa stezačem, mlakom vodom ili mlakim rastvorom sode bikarbone i sačekati da otpusti. Potom je treba dobro obrisati  i očistiti finom brusnom hartijom. Stezač treba očistiti na isti način pre nego što se fiksira, a klemu treba namazati glicerinom.\n\n
+
+Neophodno je da se nivo elektrolita kontroliše, posebno u letnjem periodu, jer tada voda isparava i ploče mogu da ostanu suve. Nivo elektrolita mora biti od 10 do 15 mm iznad ploče, 
+a treba sipati isključivo destilovanu vodu jer ako se sipa obična voda može doći do samopražnjenja ili uništenja ćelija.\n\n
+
+Pritisak u pneumaticima – mora redovno da se kontroliše, jer je u suprotnom vozilo nestabilnije i pneumatik je izložen većem  naprezanju. Podešavanje propisanog pritiska radi se uvek samo kada je pneumatik hladan. Posle svakog skidanja pneumatika, obavezno je balansiranje.\n\n
+
+Pranje i zaštita automobila – u zimskim uslovima eksploatacije karoserija je izložena velikim  temperaturnim razlikama, vodi, snegu, industrijskoj soli koja je najveći neprijatelj karoserije. Blato, voda i so se zadržavaju na karoseriji i polako je nagrizaju. Zbog toga je poželjno da se vozilo češće pere, posebno donji postroj.\n\n
+
+Zaštita gumenih delova – U letnjim danima, kada su pneumatici izloženi uticaju sunca, treba ih namazati sredstvom koje ih štiti i tako im produžiti vek. Tokom zime, pri niskim temperaturama, gumene delove – kedere koji zaptivaju vrata i gepek treba namazati glicerinom i tako ih zaštiti, sprečiti oštećenja i izbeći probleme pri otvaranju.\n\n
+
+Oprema za duža putovanja – Uz obaveznu opremu koja 
+podrazumeva rezervni točak, sigurnosni trougao, komplet 
+za prvu pomoć, uže ili polugu za vuču, svetloodbojni prsluk, dobro je da u vozilu bude i aparat  za gašenje požara,  nekoliko rezervnih osigurača, kolut izolir trake, baterijska lampa, rezervni ključevi od automobila (ne ostavljati ih u vozilu), ključ za rezervni točak, ispravna dizalica, žica, ključ za svećice, flaša vode. Preporučujemo i nešto od potrošnog materijala (kaiševi ventilatora i alternatora), kao i osnovni alat (ključevi, kombinovana klješta, odvijači, čekić i ispitna lampica).\n\n</string>
+    <string name="my_car_kilometraza_text">Kilometraža</string>
+    <string name="my_car_model_text">Model</string>
+    <string name="my_car_basic_info_text">Opšte informacije</string>
+    <string name="my_car_basic_info_upper_text">OPŠTE INFORMACIJE</string>
+    <string name="my_car_manufacturer_text">Proizvođač</string>
+    <string name="my_car_potrosnja_button_text">Potrošnja</string>
+    <string name="my_car_kolicina_button_text">Količina</string>
+    <string name="my_car_price_button_text">Cena (ukupno)</string>
+    <string name="my_car_datum_button_text">Datum</string>
+    <string name="my_car_pumpa_button_text">Pumpa</string>
+    <string name="my_car_gorivo_button_text">Vrsta goriva</string>
+    <string name="my_car_obavezno_text">Obavezno</string>
+    <string name="my_car_keep_button_text">Sačuvati</string>
+    <string name="my_car_cancel_button_text">Odustati</string>
+    <string name="my_car_godiste_text">Godište</string>
+    <string name="my_car_opis_text">Opis</string>
+    <string name="my_car_cena_text">Cena</string>
+    <string name="my_car_redovan_text">Redovan</string>
+    <string name="my_car_step_one_text">Dodati/izmeniti podatke o autu</string>
+    <string name="my_car_step_two_text">Dodati/izmeniti podatke o dopuni</string>
+    <string name="my_car_step_three_text">Dodati/izmeniti podatke o servisu</string>
+    <string name="settings_auto_proizvodjac">Proizvođač</string>
+    <string name="settings_auto_model">Model</string>
+    <string name="settings_auto_kilometraza">Kilometraža</string>
+    <string name="Albanija">Albanija</string>
+    <string name="Austrija">Austrija</string>
+    <string name="Belgija">Belgija</string>
+    <string name="Bugarska">Bugarska</string>
+    <string name="BosnaiHercegovina">Bosna i Hercegovina</string>
+    <string name="Ceska">Češka</string>
+    <string name="CrnaGora">Crna Gora</string>
+    <string name="Finska">Finska</string>
+    <string name="Francuska">Francuska</string>
+    <string name="Grcka">Grčka</string>
+    <string name="Holandija">Holandija</string>
+    <string name="Hrvatska">Hrvatska</string>
+    <string name="Irska">Irska</string>
+    <string name="Island">Island</string>
+    <string name="Italija">Italija</string>
+    <string name="Kipar">Kipar</string>
+    <string name="Luksemburg">Luksemburg</string>
+    <string name="Madjarska">Mađarska</string>
+    <string name="Makedonija">Makedonija</string>
+    <string name="Nemacka">Nemačka</string>
+    <string name="Norveska">Norveška</string>
+    <string name="Portugalija">Portugalija</string>
+    <string name="Rumunija">Rumunija</string>
+    <string name="Rusija">Rusija</string>
+    <string name="Slovacka">Slovačka</string>
+    <string name="Slovenija">Slovenija</string>
+    <string name="Svajcarska">Švajcarska</string>
+    <string name="Turska">Turska</string>
+    <string name="Ukrajina">Ukrajina</string>
+    <string name="VelikaBritanija">Velika Britanija</string>
+    <string name="Danska">Danska</string>
+    <string name="Spanija">Španija</string>
+    <string name="Poljska">Poljska</string>
+    <string name="Svedska">Švedska</string>
+    <string name="Srbija">Srbija</string>
+    <string name="Albanija_percents">0,01 %\n129/127</string>
+    <string name="Austrija_percents">0,049 %\n112/112</string>
+    <string name="Belgija_percents">0,05 %\n112/112</string>
+    <string name="Bugarska_percents">0,05 %\n112/112</string>
+    <string name="BosnaiHercegovina_percents">0,03 %\n12/124</string>
+    <string name="Ceska_percents">0,00 %\n11/11</string>
+    <string name="CrnaGora_percents">0,03 %\n92/94</string>
+    <string name="Finska_percents">0,05 %\n112/112</string>
+    <string name="Francuska_percents">0,05%\n112/112</string>
+    <string name="Grcka_percents">0,05 %\n112/112</string>
+    <string name="Holandija_percents">0,05 %\n112/112</string>
+    <string name="Hrvatska_percents">0,05 %\n112/112</string>
+    <string name="Irska_percents">0,05 %\n112/112</string>
+    <string name="Island_percents">0,05 %\n112/112</string>
+    <string name="Italija_percents">0,05 %\n112/112</string>
+    <string name="Kipar_percents">0,05 %\n112/112</string>
+    <string name="Luksemburg_percents">0,05 %\n112/112</string>
+    <string name="Madjarska_percents">0,00 %\n112/112</string>
+    <string name="Makedonija_percents">0,05 %\n192/194</string>
+    <string name="Nemacka_percents">0,05 %\n112/112</string>
+    <string name="Norveska_percents">0,02 %\n112/112</string>
+    <string name="Portugalija_percents">0,05 %\n112/112</string>
+    <string name="Rumunija_percents">0,00 %\n955/112</string>
+    <string name="Rusija_percents">0,00 %\n02(112)/03(112)</string>
+    <string name="Slovacka_percents">0,00 %\n112/112</string>
+    <string name="Slovenija_percents">0,05 %\n112/112</string>
+    <string name="Svajcarska_percents">0,05 %\n112/112</string>
+    <string name="Turska_percents">0,05 %\n112/112</string>
+    <string name="Ukrajina_percents">0,00 %\n02/03</string>
+    <string name="VelikaBritanija_percents">0,08 %\n999 (112)/999 (112)</string>
+    <string name="Danska_percents">0,05 %\n112/112</string>
+    <string name="Spanija_percents">0,05 %\n112/112</string>
+    <string name="Poljska_percents">0,02 %\n112/112</string>
+    <string name="Svedska_percents">0,02 %\n112/112</string>
+    <string name="Srbija_percents">0,03 %\n192/194</string>
+    <string name="info_calculate_monastir_distance">Izaberite manastir</string>
+    <string name="info_monastir_button_text">Prikazati</string>
+    <string name="login_serial_text">Izaberite seriju:</string>
+    <string name="login_activated_name_text">Ime:</string>
+    <string name="login_membeshipid_text">Članski broj:</string>
+    <string name="login_membership_card_seria_text">Serija:</string>
+    <string name="login_changeuser_button_text">Promeniti korisnika</string>
+    <string name="my_car_servis_label">POSLEDNJI SERVIS</string>
+    <string name="my_car_servis_date">Datum</string>
+    <string name="my_car_servis_amount">Količina</string>
+    <string name="my_car_servis_price">Cena</string>
+    <string name="my_car_servis_button">Servisna knjižica</string>
+    <string name="my_car_gas_button">POSLEDNJA DOPUNA GORIVA</string>
+    <string name="my_car_button_servis">Pogledati dopune</string>
+    <string name="my_car_button_text">Izmeniti podatke</string>
+    <string name="text_button_offices_text">PRIKAZATI POSLOVNICE</string>
+    <string name="camping_text_button_offices_text">Lokacije auto kampova</string>
+    <string name="amso_kasko_spinner_label_premijska_grupa_vrsta_vozila">Premijska grupa (Vrsta vozila)</string>
+    <string name="amso_kasko_spinner_label_marka_vozila">Marka vozila</string>
+    <string name="amso_kasko_spinner_label_type">Tip vozila</string>
+    <string name="amso_kasko_edittext_hint_model_vozila">Model vozila</string>
+    <string name="amso_kasko_edittext_hint_zapremina_motora_ccm">Zapremina motora (ccm)</string>
+    <string name="amso_kasko_edittext_hint_snaga_kw">Snaga (kW)</string>
+    <string name="amso_kasko_edittext_hint_broj_vrata">Broj vrata</string>
+    <string name="amso_kasko_godina_proizvodnje">Godina proizvodnje</string>
+    <string name="amso_kasko_oblik_i_namena_karoserije">Oblik i namena karoserije</string>
+    <string name="amso_kasko_da_li_se_vozilo_vodi_na_lizing_rent">Da li se vozilo vodi na Lizing/Rent</string>
+    <string name="amso_kasko_teritorijalno_pokrice">Teritorijalno pokriće</string>
+    <string name="amso_kasko_ukljuciti_i_rizik_kradje">Uključiti i rizik krađe</string>
+    <string name="amso_kasko_zeljena_dinamika_placanja">Željena dinamika plaćanja</string>
+    <string name="amso_kasko_ime_i_prezime">Ime i prezime</string>
+    <string name="amso_kasko_e_mail">E&#8211;mail</string>
+    <string name="amso_kasko_telefon">Telefon</string>
+    <string name="amso_kasko_purpose">Namena vozila</string>
+    <string name="amso_kasko_button_text_poslati_e_mail">Zahtevaj obračun</string>
+    <string name="amso_network_filter_show">Prikazati</string>
+    <string name="amso_network_show">Prikazati sve</string>
+    <string name="loyalty_search_button">Pretraga pogodnosti po zemljama</string>
+    <string name="amso_network_locations_unavailable">Lista AMSS lokacija trenutno nedostupna. Provedite internet konekciju.</string>
+    <string name="info_registration_note_label">OBAVEŠTENJE:</string>
+    <string name="info_registration_note_text">Za tačan iznos morate uneti stepen polise (koji možete pročitati sa svoje polise) i broj šteta po prethodnoj polisi.</string>
+    <string name="amso_network_auto_liability">autoodgovornost</string>
+    <string name="amso_network_green_card">zelena karta</string>
+    <string name="amso_network_car_accident">auto nezgoda</string>
+    <string name="amso_network_kasko">auto kasko</string>
+    <string name="amso_network_kasko_light">kasko light</string>
+    <string name="amso_network_voluntary_health_insurance">dobrovoljno zdravstveno</string>
+    <string name="amso_network_membership">članstvo AMSS</string>
+    <string name="amso_network_international_documents">međunarodna dokumenta</string>
+    <string name="amso_network_additional_services">dodatne usluge</string>
+    <string name="amso_network_regions_prompt">Regioni</string>
+    <string name="amso_network_municipalities_prompt">Opštine</string>
+    <string name="amso_network_regions">Region</string>
+    <string name="amso_network_municipalities">Opština</string>
+    <string name="amso_travel_insurance_period_pokrica">Period pokrića</string>
+    <string name="amso_travel_insurance_razred_opasnosti">Razred opasnosti</string>
+    <string name="amso_travel_insurance_ucese">Učešće</string>
+    <string name="amso_travel_insurance_svrha_putovanja">Svrha putovanja</string>
+    <string name="amso_travel_insurance_datepicker_bt">Izaberite datum početka i datum isteka osiguranja</string>
+    <string name="amso_travel_insurance_trajanje_osiguranja">Trajanje osiguranja</string>
+    <string name="amso_travel_insurance_vrsta_tarife">Vrsta tarife</string>
+    <string name="amso_travel_insurance_starost">Starost</string>
+    <string name="header_info_about_app">O APLIKACIJI</string>
+    <string name="parking_insert_reg_plate_error">Unesite registraciju pre potvrde.</string>
+    <string name="Loading_ClientProtocolException">Došlo je do greške u komunikaciji sa serverom</string>
+    <string name="Loading_IOException">Server nije dostupan</string>
+    <string name="Loading_Exception">Došlo je do greške u komunikaciji sa serverom</string>
+    <string name="warning_amso_regions">Morate selektovati regiju!</string>
+    <string name="amso_kasko_successfful_msg">Vaši podaci su uspešno poslati. Uskoro će Vas kontaktirati služba Kasko osiguranja.</string>
+    <string name="amso_kasko_failure_msg">Neuspešno slanje podataka. Proverite Vašu internet konekciju i pokušajte ponovo.</string>
+    <string name="typeOfRate_types_01">Individualna</string>
+    <string name="typeOfRate_types_02">Porodična</string>
+    <string name="typeOfRate_types_03">Individualna (više ulazaka)</string>
+    <string name="typeOfRate_levelOfDangerous_01">RO1 &#8211; 30000 €</string>
+    <string name="typeOfRate_levelOfDangerous_02">RO2 &#8211; 10000 €</string>
+    <string name="typeOfRate_levelOfDangerous_03">RO3 &#8211; 30000 €</string>
+    <string name="typeOfRate_participation_01">Bez učešća</string>
+    <string name="typeOfRate_participation_02">25 €</string>
+    <string name="typeOfRate_travel_purpose_01">turistički</string>
+    <string name="typeOfRate_travel_purpose_02">50%&#8211;rekreativno skijanje</string>
+    <string name="typeOfRate_travel_purpose_03">100%&#8211;privremeni rad u inostranstvu</string>
+    <string name="typeOfRate_travel_purpose_04">50%&#8211;profesionalni vozači</string>
+    <string name="typeOfRate_travel_purpose_05">100%&#8211;izvođ.građ.radova</string>
+    <string name="typeOfRate_travel_purpose_06">50%&#8211;sportisti (trening,takm.)</string>
+    <string name="date_picker_text_01">Izaberite datum početka osiguranja:</string>
+    <string name="date_picker_text_02">Izaberite datum početka i datum isteka osiguranja:</string>
+    <string name="kasko_types">putničko vozilo</string>
+    <string name="kasko_vehicles_01">kupe</string>
+    <string name="kasko_vehicles_02">limuzina</string>
+    <string name="kasko_vehicles_03">karavan</string>
+    <string name="kasko_vehicles_04">produžena limuzina</string>
+    <string name="kasko_vehicles_05">višenamenski zatvoreni putnički automobil</string>
+    <string name="kasko_vehicles_06">specijalni zatvoreni putnički automobil</string>
+    <string name="kasko_vehicles_07">kupe kabriolet</string>
+    <string name="kasko_vehicles_08">limuzina kabriolet</string>
+    <string name="kasko_vehicles_09">sportski automobil</string>
+    <string name="kasko_vehicles_10">višenamenski otvoreni putnički automobil</string>
+    <string name="kasko_vehicles_11">kombi</string>
+    <string name="kasko_payments_01">mesečno</string>
+    <string name="kasko_payments_02">kvartalno</string>
+    <string name="kasko_payments_03">godišnje</string>
+    <string name="amso_travel_insurance_level_of_danger_info_text">RO1 – Geografska teritorija Evrope uključujući i Tursku\n\nRO2 – Ostale zemlje sveta isključujući Australiju, Okeaniju, Novi Zeland, Kanadu, Japan i SAD\n\nRO3 – Australija, Okeanija, Novi Zeland, Kanada, Japan i SAD</string>
+    <string name="parking_title">Parking</string>
+    <string name="amss_name">AMSS</string>
+    <string name="verzija_aplikacije_text">Verzija aplikacije: 1.0\n\n</string>
+    <string name="lmg_group_text"></string>
+    <string name="vrednost_avasne_uplate"><b>Vrednost avasne uplate</b></string>
+    <string name="popust"><b>Popust</b></string>
+    <string name="tag_price_one_text">1.500,00 &#8211; 16.000,00 dinara</string>
+    <string name="tag_price_one_percentage_text">8.00%</string>
+    <string name="tag_price_two_text">16.001,00 &#8211; 80.000,00 dinara</string>
+    <string name="tag_price_three_text">80.001,00 i više dinara</string>
+    <string name="tag_price_two_percentage_text">10.00%</string>
+    <string name="tag_price_three_percentage_text">15.00%</string>
+    <string name="info_tag_0_0">10,000.00 – 25,000.00 dinara</string>
+    <string name="info_tag_0_1">4.00%</string>
+    <string name="info_tag_1_0">25,001.00 – 50,000.00 dinara</string>
+    <string name="info_tag_1_1">6.00%</string>
+    <string name="info_tag_2_0">50,001.00 - 100,000.00 dinara</string>
+    <string name="info_tag_2_1">8.00%</string>
+    <string name="info_tag_3_0">100,001.00 i više dinara</string>
+    <string name="info_tag_3_1">10.00%</string>
+
+    <string name="become_member_discount_text">10% popusta na online učlanjenje</string>
+    <string name="become_loyalty_fizicko_lice_button_text">Fizičko lice</string>
+    <string name="become_loyalty_pravno_lice_button_text">Pravno lice</string>
+    <string name="become_loyalty_old_member_text">Stari član:</string>
+    <string name="become_loyalty_osnovni_podaci_text">Osnovni podaci:</string>
+    <string name="become_loyalty_next_button_text">Dalje</string>
+    <string name="become_loyalty_name_text">Ime:</string>
+    <string name="become_loyalty_name_error_text">Niste uneli ime!</string>
+    <string name="become_loyalty_prezime_text">Prezime:</string>
+    <string name="become_loyalty_prezime_error_text">Niste uneli prezime!</string>
+    <string name="become_loyalty_jmbg_text">JMBG - matični broj:</string>
+    <string name="become_loyalty_jmbg_error_text">Niste uneli JMBG!</string>
+    <string name="become_loyalty_company_name_text">Naziv firme:</string>
+    <string name="become_loyalty_company_name_error_text">Niste uneli naziv firme!</string>
+    <string name="become_loyalty_company_person_name_text">Ime nosioca članstva:</string>
+    <string name="become_loyalty_company_person_name_error_text">Niste uneli ime nosioca članstva!</string>
+    <string name="become_loyalty_company_person_surname_text">Prezime nosioca članstva:</string>
+    <string name="become_loyalty_company_person_surname_error_text">Niste uneli prezime nosioca članstva!</string>
+    <string name="become_loyalty_company_pib_text">PIB:</string>
+    <string name="become_loyalty_company_pib_error_text">Niste uneli PIB!</string>
+    <string name="become_loyalty_kontakt_podaci_text">Kontakt podaci:</string>
+    <string name="become_loyalty_adresa_text">Adresa:</string>
+    <string name="become_loyalty_adresa_error_text">Niste uneli adresu!</string>
+    <string name="become_loyalty_mesto_text">Mesto:</string>
+    <string name="become_loyalty_mesto_error_text">Niste uneli mesto!</string>
+    <string name="become_loyalty_wrong_email_format_error_text">Pogrešan format teksta u polju ADRESA E-POŠTE!</string>
+    <string name="become_loyalty_pick_type_of_loyalty_error_text">Odaberite tip članstva!</string>
+    <string name="become_loyalty_telefon_text">Telefon:</string>
+    <string name="become_loyalty_telefon_error_text">Niste uneli telefon!</string>
+    <string name="become_loyalty_mobilni_telefon_text">Mobilni telefon:</string>
+    <string name="become_loyalty_mobilni_telefon_error_text">Niste uneli mobilni telefon!</string>
+    <string name="become_loyalty_email_text">Adresa e-pošte:</string>
+    <string name="become_loyalty_email_error_text">Niste uneli adresu e-pošte!</string>
+    <string name="become_loyalty_podaci_o_vozilu_text">Podaci o vozilu:</string>
+    <string name="become_loyalty_marka_vozila_text">Marka vozila:</string>
+    <string name="become_loyalty_marka_vozila_error_text">Niste uneli marku vozila!</string>
+    <string name="become_loyalty_tip_vozila_text">Tip vozila:</string>
+    <string name="become_loyalty_tip_vozila_error_text">Niste uneli tip vozila!</string>
+    <string name="become_loyalty_registarska_oznaka_text">Registarska oznaka:</string>
+    <string name="become_loyalty_registarska_oznaka_error_text">Niste uneli registraciju!</string>
+    <string name="become_loyalty_boja_vozila_text">Boja vozila:</string>
+    <string name="become_loyalty_boja_vozila_error_text">Niste uneli boju vozila!</string>
+    <string name="become_loyalty_godina_proizvodnje_text">Godina proizvodnje:</string>
+    <string name="become_loyalty_godina_proizvodnje_error_text">Niste uneli godinu proizvodnje!</string>
+    <string name="become_loyalty_osiguravajuce_drustvo_text">Osiguravajuće društvo:</string>
+    <string name="become_loyalty_osiguravajuce_drustvo_error_text">Niste uneli osiguravajuće društvo!</string>
+    <string name="become_loyalty_vrsta_clanstva_text">Vrsta članstva:</string>
+    <string name="become_loyalty_osnovno_text">osnovno</string>
+    <string name="become_loyalty_osnovno_super_text">osnovno+super</string>
+    <string name="become_loyalty_button_text">Postani član</string>
+    <string name="become_loyalty_values_text">Lični podaci</string>
+    <string name="become_loyalty_izaberite_seriju_text">Izaberite seriju:</string>
+    <string name="become_loyalty_unesite_broj_kartice_text">Unesite broj kartice:</string>
+    <string name="become_loyalty_unesite_broj_kartice_error_text">Niste uneli broj kartice!</string>
+    <string name="become_loyalty_postanski_broj__text">Poštanski broj:</string>
+    <string name="become_loyalty_postanski_broj_error_text">Niste uneli poštanski broj!</string>
+    <string name="become_loyalty_successffull_text">Uskoro će Vam biti prosleðeno uputstvo oko načina plaćanja na adresu e-pošte!</string>
+    <string name="become_loyalty_sending_data_error_text">Greška prilikom slanja informacija! Pokušajte ponovo.</string>
+    <string name="usage_conditions_text"><b>Uslovi i prava korišćenja AMSS android mobilne aplikacije</b>\n\nUvek koristite mobilne telefone na siguran način! Ukoliko bilo šta želite da pogledate u AMSS android mobilnoj aplikaciji, ne činite to tokom vožnje, jer možete da ugrozite sebe i ostale učesnike u saobraćaju. Prvo se propisno parkirajte, na mestu gde ste bezbedni i sigurni, pa tek onda uzmite svoj mobilni telefon i otvorite aplikaciju.\n\nSve troškove aplikacije plaćate po tarifama vašeg mobilnog operatera. Vodite računa kada ste u inostranstvu o cenama rominga.\n\nU određenim delovima aplikacije biće potrebno da dostavite svoje lične podatke čime pristajete na pravila o zaštiti ličnih podataka i dozvoljavate da vas informišemo preko telefona, SMS poruka o pogodnostima koje vam pruža AMSS.\n\nAMSS se obavezuje da će štititi vaše lične podatke. Prikupljaće samo one koji su neophodni za nesmetano funkcionisanje aplikacije. Lični podaci strogo se čuvaju i dostupni su samo zaposlenima u AMSS sistemu.\n\n AMSS u aplikaciji prosleđuje prikupljene informacije od nadležnih institucija u zemlji i ne garantuje za njihovu tačnost. Informacije koje korisnici dobijaju kroz aplikaciju imaju samo informativni karakter i AMSS neme nikakve obaveze prema korisnicima u tom smislu. \n\nSvi podaci i informacije u aplikaciji mogu se koristiti isključivo u lične i nekomercijalne svrhe. Zabranjeno je svako modifikovanje, kopiranje, štampanje, javno prikazivanje i reprodukovanje, distribuiranje ili na drugi način javno objavljivanje u komercijalne svrhe.\n\nAMSS android mobilna aplikacija vlasništvo je AMSS i zaštićena je autorskim pravima. Svako korišćenje na drugačiji način, od onoga kako je predviđeno, je zabranjeno.</string>
+    <string name="Next">Dalje</string>
+    <string name="benefits_zero">0</string>
+    <string name="benefits_one">1</string>
+	<string name="benefits_two">2</string>
+	<string name="benefits_three">3</string>
+	<string name="benefits_basic_itinerer">Itinerer</string>
+	<string name="benefits_basic_pravni_savet">Pravni savet</string>
+	<string name="benefits_basic_rezervni_delovi">Rezervni delovi</string>
+	<string name="benefits_basic_procena">Procena (CMV)</string>
+	<string name="benefits_basic_spi">SPI (40km)</string>
+	<string name="benefits_basic_slep">ŠLEP (40km)</string>
+	<string name="benefits_basic_popust">POPUST</string>
+	<string name="benefits_super_spi">SPI (40km)</string>
+	<string name="benefits_super_slep">ŠLEP (100km)</string>
+	<string name="benefits_super_slep_nezgoda">ŠLEP (nezgoda)</string>
+	<string name="benefits_super_ref_hotel">REF. HOTEL</string>
+	<string name="benefits_super_ref_prevoz">REF. PREVOZ</string>
+	<string name="benefits_super_zmija">ZMIJA</string>
+	<string name="benefits_super_ino_slep">INO. ŠLEP (nezgoda)</string>
+	<string name="benefits_super_ino_hotel">INO. HOTEL</string>
+	<string name="benefits_super_ino_pravni_savet">INO. PRAVNI SAVET</string>
+	<string name="benefits_super_ino_kredit">INO. KREDIT</string>
+	<string name="benefits_group_basic">OSNOVNA ČLANSKA KARTICA</string>
+	<string name="benefits_group_super">SUPER ČLANSKI PAKET</string>
+	<string name="benefits_tab_status">STANJE</string>
+	<string name="benefits_tab_history">ISTORIJA</string>
+	<string name="benefits_tab_my_card">MOJA KARTICA</string>
+	<string name="triangle">&#129169;</string>
+	<string name="membership_title">ČLANSTVO</string>
+    
+	<string name="road_condition_1_vremenske_prilike">Vremenske prilike</string>
+	<string name="road_condition_2_radovi_na_putu">Radovi na putu</string>
+	<string name="road_condition_3_obavezna_zimska_oprema">Obavezna zimska oprema</string>
+	<string name="road_condition_4_granicni_prelazi">Granični prelazi</string>
+	<string name="road_condition_5_ogranicenja_za_teretna_vozila">Ograničenja za teretna vozila</string>
+	<string name="road_condition_6_obustave_saobracaja">Obustave saobraćaja</string>
+	<string name="road_condition_7_informacije_o_stanju">Informacije o stanju</string>
+	<string name="road_condition_8_crne_tacke">Crne tačke</string>
+	<string name="road_condition_9_klizav_kolovoz">Klizav kolovoz</string>
+	<string name="road_condition_10_opasnost_od_odrona">Opasnost od odrona</string>
+	<string name="road_condition_11_naizmenicno_propustanje">Naizmenično propuštanje</string>
+	<string name="road_condition_12_jak_vetar">Jak vetar</string>
+	<string name="road_condition_13_opasnost_na_putu">Opasnost na putu</string>	
+	<string name="road_condition_all">Sve kategorije</string>
+    <string name="aktuelno">\nAktuelno\n\n- Zaključite online polisu Putnog zdravstvenog osiguranja i ostvarite 30% popusta
+        \n\n- Osigurajte vaš dom za svega 1.800 RSD\n</string>
+    <string name="kupite_polisu">KUPITE POLISU</string>
+    <string name="title_obavezno"><![CDATA[<b> OBAVEZNO </b> <br/> OSIGURANJE <br/> VOZILA]]></string>
+    <string name="title_kasko"><![CDATA[<b> KASKO </b> <br/> OSIGURANJE]]></string>
+    <string name="title_kasko_light"><![CDATA[<b> KASKO </b> <br/> LIGHT]]></string>
+    <string name="title_putno"><![CDATA[<b> PUTNO ZDRAVSTVENO </b> <br/> OSIGURANJE]]></string>
+    <string name="title_domacinstva"><![CDATA[OSIGURANJE <br/> <b> DOMAĆINSTVA </b>]]></string>
+    <string name="aktuelno2">Osigurajte vaš dom za svega 1.800 RSD</string>
+    <string name="aktuelno1">Zaključite online polisu Putnog zdravstvenog osiguranja i ostvarite 30% popusta</string>
+
+    <string name="info_tag_details_1" formatted="false">
+<b>Elektronska naplata putarine (ENP)</b>, međunarodna skraćenica je ENC, je naplata putarina bez fizičkog kontakta, uz pomoć uređaja za čitanje (TAG). TAG je elektronski uređaj za plaćanje putarine smešten sa unutrašnje strane prednjeg vetrobranskog stakla vozila. Vozila prolaze ENP naplatnom saobraćajnom trakom kroz naplatnu rampu bez zaustavljanja i transakcija se izvodi automatski. ETC (Electronic Toll Collection) je medjunarodna oznaka za elektronsku naplatu putarina.
+
+\n\n<b>Ko može biti korisnik TAG-a?</b>
+\nKorisnik može biti svako pravno ili fizičko lice koje potpiše Ugovor sa JP “Putevi Srbije” ili kod AMSS Agencije kao jednog od distributera. Korisnik potom preuzima ovaj uređaj uz odgovarajuću naknadu, a TAG postaje validan za korišćenje posle uplate početnog iznosa pretplate. TAG uređaj za I kategoriju nema vremensko ograničenje korišćenja i na njemu se nalaze podaci o registarskom broju vozila, kategoriji vozila i obaveštenje o preostalom iznosu plaćenog kredita.
+
+\n\n<b>Cena TAG-a?</b>
+\nCena TAG uređaja iznosi 2.022,00 dinara sa PDV.
+\nTAG uređaje možete kupiti i dopuniti kod ovlašćenog distributera  AMSS Agencija, a za avansnu uplatu na vrednost unetog iznosa Vam omogućava i popust od 4 do 10% na putarinu kroz Srbiju.
+</string>
+
+<string name="info_tag_details_2" formatted="false">
+<b>Koja dokumentacija je potrebna prilikom kupovine TAG uređaja?</b>
+
+\n\n<b>Za pravna lica:</b>
+\n1. Indentifikacioni podaci: Naziv, adresa i PIB
+\n2. Potvrda Poreske uprave o izvršenom evidentiranju za PDV
+\n3. Kopija važeće saobraćajne dozvole za vozila za koje se izdaje i aktivira TAG uređaj
+
+\n\n<b>Za fizička lica:</b>
+\n1. Indentifikacioni podaci: Kopija lične karte
+\n2. Kopija važeće saobraćajne dozvole za vozila za koje se izdaje i aktivira TAG
+
+\n\n<b>Reklamacija:</b>
+\nKorisnik koji ima reklamaciju na ispravnost TAG uređaja, u garantnom roku od dve godine od datuma kupovine, treba da popuni obrazac i da ga zajedno sa neispravnim TAG uređajem dostavi na prodajno mesto 1001 - JP "Putevi Srbije",Ustanička 64/5, Beograd, svim naplatnim rampama ili na naša prodajna mesta, lično ili brzom poštom. Ukoliko je TAG uređaj postavljen i korišćen prema „Uputstvu za postavljanje i korišćenje TAG uređaja” i nije fizički oštećen, JP "Putevi
+</string>
+
+</resources>

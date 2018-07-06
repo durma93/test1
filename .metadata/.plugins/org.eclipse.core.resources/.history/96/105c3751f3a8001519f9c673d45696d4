@@ -1,0 +1,120 @@
+package net.lmggroup.univerexport.v2.shell;
+
+import net.lmggroup.univerexport.v2.R;
+import net.lmggroup.univerexport.v2.adapters.UniverActionGridViewAdapter;
+import net.lmggroup.univerexport.v2.core.Launching;
+import net.lmggroup.univerexport.v2.core.Layout;
+import net.lmggroup.univerexport.v2.core.StaticStrings;
+import net.lmggroup.univerexport.v2.core.Variables;
+import net.lmggroup.utility.ActivityHelper;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
+
+public class UniverexportActivity extends BaseActivity{
+	public static final String TAG = "MainActivity";
+	final Context context = this;	
+
+	public void onCreate(Bundle savedInstanceState) {
+		new ActivityHelper(this);
+		super.onCreate(savedInstanceState);
+        Thread.setDefaultUncaughtExceptionHandler(onRuntimeError);  
+		setContentView(R.layout.univerexport);
+		Layout.mainActivity = this;
+		Launching.mainActivity = this;
+
+		setActionMenu();
+		setUniverHeader();
+
+		if (getIntent().getBooleanExtra("EXIT", false)) {
+			finish();
+		}
+	}
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		setContentView(R.layout.univerexport);
+		Layout.mainActivity = this;
+		Launching.mainActivity = this;
+
+		setActionMenu();
+		setUniverHeader();
+
+		if (getIntent().getBooleanExtra("EXIT", false)) {
+			finish();
+		}
+
+	}
+	private void setActionMenu() {
+		GridView gridview = (GridView) findViewById(R.id.univerGrid);
+		gridview.setAdapter(new UniverActionGridViewAdapter(this));
+		gridview.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				switch (position)
+				{
+				case 0:
+					Launching.performRegionActivity(view);
+					break;
+
+				case 1:
+					launchWebViewIntent(StaticStrings.globalUniverActionsLink);
+					break;
+
+				case 2:
+					launchWebViewIntent(StaticStrings.globalUniverNewsLink);
+					break;
+
+				case 3:
+					new ActivityHelper(UniverexportActivity.this).startActivity(MapActivity.class);
+					break;
+
+				case 4:
+					launchWebViewIntent(StaticStrings.globalUniverBonusCardLink);
+					break;
+
+				case 5:
+					launchWebViewIntent(StaticStrings.globalUniverFacebookLink);
+					break;
+
+				case 6:
+					launchWebViewIntent(StaticStrings.globalUniverBackaLink);
+					break;
+				case 7:
+					if(Variables.client.id==null){
+						Intent i = new Intent(UniverexportActivity.this, RegionActivity.class);
+						i.putExtra("FORBARCODE", true);
+						startActivity(i);
+					}else
+						performBarcodeActivity(view);
+					break;
+				}
+			}
+		});		
+	}
+
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+		if (keyCode == KeyEvent.KEYCODE_BACK)
+		{
+			UniverexportActivity.this.getExitDialog();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	public void launchWebViewIntent(String response) {
+		Intent i = new Intent (this, InfoFromWebLinksActivity.class);
+		i.putExtra("respond", response);
+		startActivity(i);			
+	}
+	public void GoToUniverMenu(View v){
+	}
+
+	
+}

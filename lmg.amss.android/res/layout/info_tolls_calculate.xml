@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+
+    <include layout="@layout/back_button" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/spinnerCityFrom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/spinner_backround"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:prompt="@string/info_tolls_calculate_cityfrom_prompt"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/spinnerCityTo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/spinner_backround"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:prompt="@string/info_tolls_calculate_cityto_prompt"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrow_down" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                style="@style/Button"
+                android:background="@drawable/blue_border_blue_filled"
+                android:onClick="Calculate"
+                android:textSize="18sp"
+                android:text="@string/info_tolls_calculate_button_text" />
+
+            <LinearLayout
+                android:id="@+id/layoutResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_tolls_calculate_results_text"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/gray" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/info_tolls_calculate_category_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_rsd_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_eur_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+                    </TableRow>
+
+                    <View
+                        android:layout_height="5dip"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/gray" />
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:id="@+id/text5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/info_tolls_calculate_categoryI_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIRSDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_rsd_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIEURPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_eur_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:id="@+id/text6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/info_tolls_calculate_categoryII_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIIRSDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_rsd_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIIEURPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_eur_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:id="@+id/text7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/info_tolls_calculate_categoryIII_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIIIRSDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_rsd_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIIIEURPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_eur_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:id="@+id/text8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/info_tolls_calculate_categoryIV_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIVRSDPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_rsd_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textCategoryIVEURPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/info_tolls_calculate_eur_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/gray" />
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/text9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_tolls_calculate_legend_text"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/text10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/info_tolls_calculate_legendI_text"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/text11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/info_tolls_calculate_legendII_text"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/info_tolls_calculate_legendIII_text"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/text13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/info_tolls_calculate_legendIV_text"
+                        android:textColor="@color/gray" />
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

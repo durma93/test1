@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_copy"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/amso_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+      <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:gravity="center|fill_horizontal"
+            tools:ignore="SelectableText" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/kalkulator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/poslovnice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <include layout="@layout/amso_footer" />
+
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BB000000">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="60dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/backbutton_background" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_card_default"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/layoutStep1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/button_hint_card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/textMembershipCardId"
+                        android:layout_alignBottom="@id/textMembershipCardId"
+                        android:src="@drawable/show_hint_off" />
+
+                    <!-- ENTER CARD NUMBER -->
+                    <EditText
+                        android:id="@+id/textMembershipCardId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/button_hint_card_number"
+                        android:background="@drawable/gray_border"
+                        android:gravity="center_vertical"
+                        android:hint="@string/login_membershipcard_text"
+                        android:textColorHint="@color/white"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/button_hint_card_series"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/card_number_layout"
+                        android:layout_alignBottom="@id/card_number_layout"
+                        android:src="@drawable/show_hint_off"  />
+
+                    <!-- CHOOSE CARD SERIES -->
+                    <RelativeLayout
+                        android:id="@+id/card_number_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/button_hint_card_series"
+                        android:layout_marginBottom="10dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerSerials"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_backround"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textColor="#273e66"
+                            android:prompt="@string/login_serials_prompt" />
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/arrow_down" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutStep2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerLoginStep1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/spinner_backround"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="#273e66"
+                        android:prompt="@string/login_step1_prompt" />
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/arrow_down" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutStep3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerLoginStep2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/spinner_backround"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:prompt="@string/login_step2_prompt"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"></Spinner>
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/arrow_down" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray_border_gray_filled"
+                android:onClick="Submit"
+                android:text="@string/login_submit_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#273e66" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

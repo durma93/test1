@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpaper_light_copy"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/amso_header" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/AMSO_kasko_light_choose_amount" />
+
+            <Spinner
+                android:id="@+id/choose_amount_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:prompt="@string/AMSO_kasko_light_choose_amount" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose_amount_spinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/AMSO_kasko_light_choose_period_of_coverage" />
+
+            <Spinner
+                android:id="@+id/choose_period_of_coverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:prompt="@string/AMSO_kasko_light_choose_period_of_coverage" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose_period_of_coverage"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:text="@string/info_tolls_calculate_button_text"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/AMSO_kasko_light_further_questions" />
+
+</LinearLayout>

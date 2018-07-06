@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/amso_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/typeOfVehicle_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_spinner_label_premijska_grupa_vrsta_vozila" />
+
+            <Spinner
+                android:id="@+id/typeOfVehicle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:prompt="@string/amso_kasko_spinner_label_premijska_grupa_vrsta_vozila" />
+
+            <TextView
+                android:id="@+id/vehicleBrands_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_spinner_label_marka_vozila" />
+
+            <Spinner
+                android:id="@+id/vehicleBrands"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_spinner_label_marka_vozila" />
+
+            <TextView
+                android:id="@+id/vehicleTypes_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_spinner_label_type" />
+
+            <Spinner
+                android:id="@+id/vehicleTypes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_spinner_label_type" />
+
+            <EditText
+                android:id="@+id/vehicleModel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_edittext_hint_model_vozila" />
+
+            <EditText
+                android:id="@+id/volume"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_edittext_hint_zapremina_motora_ccm"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/power"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_edittext_hint_snaga_kw"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/doorsNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_edittext_hint_broj_vrata"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/year_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_godina_proizvodnje" />
+
+            <Spinner
+                android:id="@+id/year"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_godina_proizvodnje" />
+
+            <TextView
+                android:id="@+id/formOFBody_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_oblik_i_namena_karoserije" />
+
+            <Spinner
+                android:id="@+id/formOFBody"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_oblik_i_namena_karoserije" />
+
+            <TextView
+                android:id="@+id/lising_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_da_li_se_vozilo_vodi_na_lizing_rent" />
+
+            <Spinner
+                android:id="@+id/lising"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_da_li_se_vozilo_vodi_na_lizing_rent" />
+
+            <TextView
+                android:id="@+id/purpose_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_purpose" />
+
+            <Spinner
+                android:id="@+id/purpose"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_purpose" />
+
+            <TextView
+                android:id="@+id/teritory_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_teritorijalno_pokrice" />
+
+            <Spinner
+                android:id="@+id/teritory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_teritorijalno_pokrice" />
+
+            <CheckBox
+                android:id="@+id/stealingRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/amso_kasko_ukljuciti_i_rizik_kradje" />
+
+            <TextView
+                android:id="@+id/rateForPayment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/amso_kasko_zeljena_dinamika_placanja" />
+
+            <Spinner
+                android:id="@+id/rateForPayment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:prompt="@string/amso_kasko_zeljena_dinamika_placanja" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_ime_i_prezime"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_e_mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/telephone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/amso_kasko_telefon"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/send_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button"
+                android:padding="10dp"
+                android:text="@string/amso_kasko_button_text_poslati_e_mail"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/amso_footer" />
+
+</LinearLayout>

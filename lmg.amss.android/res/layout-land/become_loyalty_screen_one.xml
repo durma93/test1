@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/walpaper_light_land"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/headerbar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/personal"
+            style="@style/Button"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:onClick="GoToIndividualRegistration"
+            android:text="@string/become_loyalty_fizicko_lice_button_text" />
+
+        <Button
+            android:id="@+id/company"
+            style="@style/Button"
+            android:layout_below="@+id/personal"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:onClick="GoToCompanyRegistration"
+            android:text="@string/become_loyalty_pravno_lice_button_text" />
+    </RelativeLayout>
+
+</LinearLayout>

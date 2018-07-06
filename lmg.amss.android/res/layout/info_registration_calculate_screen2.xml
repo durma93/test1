@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+
+    <include layout="@layout/back_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/textPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/gray_border"
+                android:hint="@string/info_registration_calculate_policy_hint"
+                android:paddingLeft="16dp"
+                android:inputType="number"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/textClaim"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/gray_border"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/info_registration_calculate_claim_hint"
+                android:inputType="number"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/calculate"
+                style="@style/Button"
+                android:textColor="@color/heading_text"
+                android:layout_marginTop="10dp"
+                android:onClick="CalculatePrecisely"
+                android:background="@drawable/primary_button"
+                android:text="@string/info_tolls_calculate_result2_button_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

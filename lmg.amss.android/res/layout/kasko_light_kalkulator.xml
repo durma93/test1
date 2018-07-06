@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/subtitlebar" />
+
+    <include layout="@layout/back_button" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#273e66"
+                android:textSize="12sp"
+                android:text="@string/AMSO_kasko_light_choose_amount" />
+
+        <RelativeLayout
+            android:id="@+id/choho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginBottom="10dp">
+
+            <Spinner
+                android:id="@+id/choose_amount_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/spinner_backround"
+                android:minHeight="40dp"
+                android:paddingLeft="16dp"
+                android:prompt="@string/AMSO_kasko_light_choose_amount" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/arrow_down" />
+
+        </RelativeLayout>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#273e66"
+                android:textSize="12sp"
+                android:layout_below="@+id/choho"
+                android:text="@string/AMSO_kasko_light_choose_period_of_coverage" />
+
+        <RelativeLayout
+            android:id="@+id/asdasd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginBottom="10dp">
+            <Spinner
+                android:id="@+id/choose_period_of_coverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/spinner_backround"
+                android:minHeight="40dp"
+                android:paddingLeft="16dp"
+                android:prompt="@string/AMSO_kasko_light_choose_period_of_coverage" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/arrow_down" />
+
+        </RelativeLayout>
+            <TextView
+                android:id="@+id/result"
+                style="@style/Text"
+                android:layout_below="@+id/asdasd" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+
+        <Button
+            android:id="@+id/calculate"
+            style="@style/NewButton"
+            android:textColor="#273e66"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="@string/info_tolls_calculate_button_text" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/AMSO_kasko_light_further_questions"
+        android:textColor="@color/gray" />
+
+</LinearLayout>

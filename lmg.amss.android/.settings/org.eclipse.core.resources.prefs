@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//res/values/strings.xml=UTF-8
+encoding//src/net/lmggroup/amss/core/Variables.java=UTF-8
+encoding//src/net/lmggroup/amss/model/ParkingCity.java=UTF-8
+encoding//src/net/lmggroup/amss/model/TypeOfRate.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/AMSOKaskoActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/AMSONetworkActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/AMSOTravelInsuranceCalculatorActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/CameraActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/CamerasActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/HeaderInfoActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/LoyaltyBecomeScreenFourActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/LoyaltyBecomeScreenTwoActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/MembershipActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/ParkingActivity.java=UTF-8
+encoding//src/net/lmggroup/amss/shell/SafetyActivity2.java=UTF-8
+encoding//src/net/lmggroup/amss/view/ChangeSMSTextDialog.java=UTF-8
