@@ -3,6 +3,7 @@ package rs.org.amss.core;
 import java.util.ArrayList;
 
 import rs.org.amss.model.GetFonts;
+import rs.org.amss.model.ParkingCityNew;
 import rs.org.amss.shell.BaseActivity;
 import rs.org.amss.R;
 import rs.org.amss.view.SendParkingSmsDialog;
@@ -24,12 +25,14 @@ public class ParkingListAdapter extends BaseAdapter{
 	private LayoutInflater inflater;
 	public Context context;
 	String phoneNo, message;
-	ArrayList<String> zones;
+	/*ArrayList<String> zones;
 	String[] numbers;
 	Integer[] ImageIds;
     String[] info;
     String[] price;
     String[] maxTime;
+*/
+    ArrayList<ParkingCityNew> newListParking = new ArrayList<>();
 
     public ParkingListAdapter(Context context) {
     	this.context = context;
@@ -37,7 +40,7 @@ public class ParkingListAdapter extends BaseAdapter{
 
 	}
 
-	public ParkingListAdapter(Context context, ArrayList<String> zones2, String[] numbers, Integer[] images, String[] info, String[] price, String[] maxTime){
+	/*public ParkingListAdapter(Context context, ArrayList<String> zones2, String[] numbers, Integer[] images, String[] info, String[] price, String[] maxTime){
 		this.context = context;
 		this.zones = zones2;
 		this.numbers = numbers;
@@ -55,13 +58,23 @@ public class ParkingListAdapter extends BaseAdapter{
 		this.info = info;
 		this.price = price;
 		this.maxTime = maxTime;
-	}
+	}*/
 
-	@Override
+    public ParkingListAdapter(Context context, ArrayList<ParkingCityNew> newListParking) {
+        this.context = context;
+        this.newListParking = newListParking;
+        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+    }
+
+    public void setData(ArrayList<ParkingCityNew> list ) {
+        newListParking = list;
+    }
+    @Override
 	public int getCount() {
-		if (zones == null)
+		if (newListParking == null)
 			return 0;
-		return zones.size();
+		return newListParking.size();
 	}
 
 	@Override
@@ -92,20 +105,30 @@ public class ParkingListAdapter extends BaseAdapter{
 		else
 			holder = (ParkingHolder)convertView.getTag();
 
-		holder.name.setText(zones.get(position));
-		holder.send.setText(numbers[position]);
+		ParkingCityNew zone = newListParking.get(position);
+		holder.name.setText(zone.getCity());
+		holder.send.setText(zone.getSmsNumber());
 		holder.send.setTypeface(GetFonts.getBoldTypeface(context));
 //		holder.name.setTypeface(GetFonts.getBoldTypeface(context));
 
         String infoText = "";
-		if (!maxTime[position].isEmpty())
-			infoText += maxTime[position] + ". ";
-		infoText += info[position];
-		if(!price[position].isEmpty())
-			infoText += " (" +price[position]+ ")";
+		if (!zone.getMaxTime().isEmpty())
+			infoText += zone.getMaxTime() + ". ";
+		infoText += zone.getFromUntil();
+		if(!zone.getPrice().isEmpty())
+			infoText += " (" +zone.getPrice()+ ")";
 		holder.info.setText(infoText);
 
-		holder.image.setImageResource(ImageIds[position]);
+		if (zone.getIcon().equals("crvena")){
+            holder.image.setImageResource(R.drawable.zona1);
+        }else if (zone.getIcon().equals("zuta")){
+            holder.image.setImageResource(R.drawable.zona2);
+        }else if (zone.getIcon().equals("zelena")){
+            holder.image.setImageResource(R.drawable.zona3);
+        }else if (zone.getIcon().equals("plava")){
+        holder.image.setImageResource(R.drawable.dnevna_karta);
+    }
+		//holder.image.setImageResource(ImageIds[position]);
 		if (position%2 == 1){
 			holder.container.setBackgroundColor(holder.container.getContext().getResources().getColor(R.color.light_gray_v2));
 		}else{

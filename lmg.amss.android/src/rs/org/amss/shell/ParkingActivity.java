@@ -181,48 +181,58 @@ public class ParkingActivity extends BaseActivity implements OnClickListener {
     }
 
     public void getZones() {
-        ParkingCity city = new ParkingCity();
+        ArrayList<ParkingCityNew> cities = new ArrayList<>();
         SharedPreferences prefs = getSharedPreferences(StaticStrings.CACHE_PREFERENCE, MODE_PRIVATE);
+        String naziv;
         try {
             String reponse = WebMethods.getParkingZones(Variables.parking_city_choosed);
-            city = WebResponseParser.getParkingZones(reponse);
-            city.name = Variables.parking_city_choosed;
+            cities = WebResponseParser.getParkingZones(reponse);
+            for (ParkingCityNew city : cities) {
+                naziv = city.getCity();
+                naziv = Variables.parking_city_choosed;
+                cityLabel.setText(city.getCity());
+                // Put zones data into cache
 
-            // Put zones data into cache
+            }
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString(PARKING_ZONES_CACHE_PREFIX + Variables.parking_city_choosed, reponse);
             editor.commit();
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            } catch(Exception e){
+                e.printStackTrace();
 
-            // Try to pull data from cache
-            String cachedZones = prefs.getString(PARKING_ZONES_CACHE_PREFIX + Variables.parking_city_choosed, null);
-            if (cachedZones == null) {
-                int errorResourceId = R.string.Loading_Exception;
-                if (e instanceof ClientProtocolException) {
-                    errorResourceId = R.string.Loading_ClientProtocolException;
-                } else if (e instanceof IOException) {
-                    errorResourceId = R.string.Loading_IOException;
+                // Try to pull data from cache
+                String cachedZones = prefs.getString(PARKING_ZONES_CACHE_PREFIX + Variables.parking_city_choosed, null);
+                if (cachedZones == null) {
+                    int errorResourceId = R.string.Loading_Exception;
+                    if (e instanceof ClientProtocolException) {
+                        errorResourceId = R.string.Loading_ClientProtocolException;
+                    } else if (e instanceof IOException) {
+                        errorResourceId = R.string.Loading_IOException;
+                    }
+                    getLayoutManager().showError(errorResourceId);
+                    return;
                 }
-                getLayoutManager().showError(errorResourceId);
-                return;
+
+            cities = WebResponseParser.getParkingZones(cachedZones);
+            naziv = Variables.parking_city_choosed;
             }
 
-            city = WebResponseParser.getParkingZones(cachedZones);
-            city.name = Variables.parking_city_choosed;
-        }
+            /*numbers = city.brojevi;
+            zones = city.zone;
+            ImageIds = city.icons;
+            cityLabel.setText(city.name);
+            //ListView parking = (ListView) findViewById(R.id.zonesList);
+            //ParkingListAdapter adapter = new ParkingListAdapter(context, zones, numbers, ImageIds, city.info, city.price, city.maxTime);
+            adapter.setData(zones, numbers, ImageIds, city.info, city.price, city.maxTime);
+            adapter.notifyDataSetChanged();
+            //parking.setAdapter(adapter);
+            //parking.setClickable(true);
+        */
+        adapter.setData(cities);
 
-        numbers = city.brojevi;
-        zones = city.zone;
-        ImageIds = city.icons;
-        cityLabel.setText(city.name);
-        //ListView parking = (ListView) findViewById(R.id.zonesList);
-        //ParkingListAdapter adapter = new ParkingListAdapter(context, zones, numbers, ImageIds, city.info, city.price, city.maxTime);
-        adapter.setData(zones, numbers, ImageIds, city.info, city.price, city.maxTime);
         adapter.notifyDataSetChanged();
-        //parking.setAdapter(adapter);
-        //parking.setClickable(true);
+
     }
 
     @Override
