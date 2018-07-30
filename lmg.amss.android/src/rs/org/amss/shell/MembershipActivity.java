@@ -19,7 +19,11 @@ import rs.org.amss.core.WebResponseParser;
 import rs.org.amss.model.GetFonts;
 import rs.org.amss.model.History;
 import rs.org.amss.model.Member;
+import rs.org.amss.model.MemberNew;
 import rs.org.amss.model.Membership;
+import rs.org.amss.model.ServisTest;
+
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -31,17 +35,19 @@ import android.os.Bundle;
 import android.support.v4.content.IntentCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class MembershipActivity extends BaseActivity {
 	private View[] tabTriangles;
 	private List<History> history = null;
-	
+    private static final String TAG = "MembershipActivity";
 	private boolean servicesLoaded = false;
 	private boolean memberLoaded = false;
 	private boolean membershipLoaded = false;
@@ -53,6 +59,7 @@ public class MembershipActivity extends BaseActivity {
         goToHome();
     }
 
+    @SuppressLint("WrongConstant")
     private void goToHome() {
         Intent i = new Intent(this, MainActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
@@ -72,7 +79,7 @@ public class MembershipActivity extends BaseActivity {
 		checkIsLogIn(this);
 		setHomeAction(R.drawable.ic_membership, R.string.membership_title, MainActivity.class);
 		final Context context = this;
-		new GetMemberInfoTask().execute();
+		//new GetMemberInfoTask().execute();
 		new GetServicesInfoTask().execute();
 //		new GetMembershipInfoTask().execute();
 		tabTriangles = new View[] {
@@ -93,8 +100,8 @@ public class MembershipActivity extends BaseActivity {
 		});
 
 
-		
-		progressDialog = ProgressDialog.show(this, getResources().getString(R.string.membership_progress_title), getResources().getString(R.string.MembershipActivity_ProgressBar_Message));
+
+		/*progressDialog = ProgressDialog.show(this, getResources().getString(R.string.membership_progress_title), getResources().getString(R.string.MembershipActivity_ProgressBar_Message));
 		progressDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
 			@Override
 			public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
@@ -106,8 +113,8 @@ public class MembershipActivity extends BaseActivity {
 				return false;
 			}
 		});
-		progressDialog.show();
-		
+		progressDialog.show();*/
+
 		final ViewPager viewPager = (ViewPager) findViewById(R.id.membership_view_pager);
 		viewPager.setAdapter(new PagerAdapter() {
 			@Override
@@ -143,26 +150,26 @@ public class MembershipActivity extends BaseActivity {
 					break;
 				}
 				collection.addView(layout);
-				
+
 				return layout;
 			}
-			
+
 			@Override
 			public boolean isViewFromObject(View view, Object object) {
 				return view == object;
 			}
-			
+
 			@Override
 			public int getCount() {
 				return 3;
 			}
-			
+
 			@Override
 			public void destroyItem(ViewGroup collection, int position, Object view) {
 				collection.removeView((View) view);
 			}
-			
-			
+
+
 		});
 
         findViewById(R.id.benefits_tab_history).setBackgroundColor(0x00000000);
@@ -208,19 +215,19 @@ public class MembershipActivity extends BaseActivity {
 //		});
 
 		viewPager.setOnPageChangeListener( new ViewPager.OnPageChangeListener() {
-			
+
 			@Override
 			public void onPageSelected(int position) {
 				for (int i = 0; i < tabTriangles.length; i++) {
 					tabTriangles[i].setVisibility(View.INVISIBLE);
 				}
 				tabTriangles[position].setVisibility(View.VISIBLE);
-				
+
 				if (position == 0) {
                     findViewById(R.id.benefits_tab_history).setBackgroundColor(0x00000000);
                     findViewById(R.id.benefits_tab_my_card).setBackgroundColor(0x00000000);
                     findViewById(R.id.benefits_tab_status).setBackgroundDrawable(getResources().getDrawable(R.drawable.primary_button));
-					(new GetMemberInfoTask()).execute();
+					//(new GetMemberInfoTask()).execute();
 					(new GetServicesInfoTask()).execute();
 				} else if (position == 1) {
                     findViewById(R.id.benefits_tab_status).setBackgroundColor(0x00000000);
@@ -237,29 +244,29 @@ public class MembershipActivity extends BaseActivity {
 
 					if (broj != null){
 						broj.setTypeface(GetFonts.getBoldTypeface(MembershipActivity.this));
-						broj.setText(Variables.getUser().getMembershipCardSeries() +"-"+ Variables.getUser().getMembershipCardNumber());
+						//broj.setText(Variables.getUser().getMembershipCardSeries() +"-"+ Variables.getUser().getMembershipCardNumber());
 					}
-					if (ime != null) {
+					/*if (ime != null) {
 						ime.setTypeface(GetFonts.getBoldTypeface(MembershipActivity.this));
 						if (Variables.getMember().isIndividual)
     						ime.setText(Variables.getMember().firstName + " " + Variables.getMember().lastName);
 						else
 						    ime.setText(Variables.getMember().companyName);
-					}
+					}*/
 					if (datumIsteka != null)
 						datumIsteka.setTypeface(GetFonts.getBoldTypeface(MembershipActivity.this));
 
 					new GetMembershipInfoTask().execute();
 				}
 			}
-			
+
 			@Override
 			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
-			
+
 			@Override
 			public void onPageScrollStateChanged(int state) { }
 		});
-		
+
 		TextView status = (TextView) findViewById(R.id.benefits_tab_status);
 		status.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -267,7 +274,7 @@ public class MembershipActivity extends BaseActivity {
 				viewPager.setCurrentItem(0);
 			}
 		});
-		
+
 		TextView history = (TextView)findViewById(R.id.benefits_tab_history);
 		history.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -275,7 +282,7 @@ public class MembershipActivity extends BaseActivity {
 				viewPager.setCurrentItem(1);
 			}
 		});
-		
+
 		TextView myCard = (TextView)findViewById(R.id.benefits_tab_my_card);
 		myCard.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -291,12 +298,13 @@ public class MembershipActivity extends BaseActivity {
         v.draw(c);
         return b;
     }
-	
-	private class GetMemberInfoTask extends AsyncTask<Object, Void, Member> {
 
-		protected Member doInBackground(Object... parameters) {
+	private class GetMemberInfoTask extends AsyncTask<Object, Void, MemberNew> {
+
+		protected MemberNew doInBackground(Object... parameters) {
 			int memberId = Variables.getUser().getMembershipId();
-			Member member = Variables.getMember();
+            Log.d(TAG, "doInBackground: "+memberId);
+            MemberNew member = Variables.getMember();
 			if (member == null) {
 				String response;
 				try {
@@ -324,7 +332,7 @@ public class MembershipActivity extends BaseActivity {
 
 		protected void onPostExecute(Member result) {
 			if (result != null) {
-				setHomeAction(R.drawable.ic_membership, Variables.getMember().lastName + " " + Variables.getMember().firstName + " " + Variables.getUser().getMembershipCardSeries().toUpperCase() + " " + Variables.getUser().getMembershipCardNumber(), MainActivity.class);
+				setHomeAction(R.drawable.ic_membership, Variables.getMember().lastName + " " + Variables.getMember().firstName/* + " " + Variables.getUser().getMembershipCardSeries().toUpperCase() + " " + Variables.getUser().getMembershipCardNumber()*/, MainActivity.class);
 				if (Variables.getMember().isIndividual)
 				    Variables.memberName = Variables.getMember().firstName + " " + Variables.getMember().lastName;
 				else
@@ -342,6 +350,7 @@ public class MembershipActivity extends BaseActivity {
 			}
 		}
 	}
+
 	
 	private class GetMembershipInfoTask extends AsyncTask<Object, Void, ArrayList<Membership>> {
 
@@ -352,8 +361,9 @@ public class MembershipActivity extends BaseActivity {
 				String response;
 				try {
 					response = WebMethods.getMembershipInfo(memberId);
+                    Log.d(TAG, "doInBackground: membership response" + response);
 					membership = WebResponseParser.getMembershipInfo(response);
-
+                    Log.d(TAG, "doInBackground: membership parsovan " + membership.toString());
 					Variables.setMembershipInfo(membership);
 
 				} catch (ClientProtocolException e) {
@@ -378,7 +388,7 @@ public class MembershipActivity extends BaseActivity {
 		protected void onPostExecute(ArrayList<Membership> result) {
 			if (result != null) {
 				for (Membership m : result) {
-					if (m.cardNumber != null && Variables.getUser().getMembershipCardSeries().equalsIgnoreCase(m.cardNumber.substring(0, 1)) || Variables.getUser().getMembershipCardSeries().equalsIgnoreCase(m.typeOfMembershipName.substring(0, 1))) {
+					if (m.cardNumber != null/* && Variables.getUser().getMembershipCardSeries().equalsIgnoreCase(m.cardNumber.substring(0, 1)) || Variables.getUser().getMembershipCardSeries().equalsIgnoreCase(m.typeOfMembershipName.substring(0, 1))*/) {
 						SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 						SimpleDateFormat output = new SimpleDateFormat("dd.MM.yyyy");
 						Date validTo = null;
@@ -396,33 +406,33 @@ public class MembershipActivity extends BaseActivity {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						
+
 						info =  "Id člana: " + Variables.getUser().getMembershipId() + '\n';
 						info += "Ime: " + Variables.getMember().firstName + '\n';
 						info += "Prezime: " + Variables.getMember().lastName + '\n';
-						info += "Broj kartice: " + Variables.getUser().getMembershipCardNumber() + '\n';
-						info += "Serija: " + Variables.getUser().getMembershipCardSeries().toUpperCase() + '\n';
+						info += "Broj kartice: " + Variables.getUser().getMembershipCardId() + '\n';
+						//info += "Serija: " + Variables.getUser().getMembershipCardSeries().toUpperCase() + '\n';
 						info += "Broj registracije: " + Variables.getUser().getRegistrationPlate() + '\n';
 						if (validFrom != null)
 							info += "Važi od: " + output.format(validFrom) + '\n';
 						if (validTo != null)
 							info += "Važi do: " + output.format(validTo) + '\n';
 
-						if (Variables.getMember().isIndividual)
+					/*	if (Variables.getMember().isIndividual)
 							((TextView)findViewById(R.id.subtitle)).setText(Variables.getMember().firstName + " " + Variables.getMember().lastName + " " + Variables.getUser().getMembershipCardSeries() + "-" + Variables.getUser().getMembershipCardNumber());
 						else
 							((TextView)findViewById(R.id.subtitle)).setText(Variables.getMember().companyName + " " + Variables.getUser().getMembershipCardSeries() + "-" + Variables.getUser().getMembershipCardNumber());
-					}
+					*/}
 				}
 			}
-			
+
 			membershipLoaded = true;
 			if (memberLoaded == true && servicesLoaded == true && membershipLoaded == true) {
 				progressDialog.cancel();
 			}
 		}
 	}
-	
+
 	private class GetServicesInfoTask extends AsyncTask<Object, Void, Map<String, Integer>> {
 
 		protected Map<String, Integer> doInBackground(Object... parameters) {
@@ -430,7 +440,9 @@ public class MembershipActivity extends BaseActivity {
 			Map<String, Integer> info = null;
 			String response;
 			try {
-				response = WebMethods.getServicesInfo(Variables.getUser().getMembershipCardSeries(), Variables.getUser().getMembershipCardNumber());
+                Log.d("test", "doInBackground: memberId :" +memberId);
+				response = WebMethods.getServicesInfoNew(memberId);
+                Log.d("test", "doInBackground: response :" +response);
 				info = WebResponseParser.getServicesInfo(response);
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();
@@ -465,7 +477,8 @@ public class MembershipActivity extends BaseActivity {
 				}
 			}
 		}
-		
+
+
 		protected void onPostExecute(Map<String, Integer> result) {
 		    if (result != null){
                 for (String key : result.keySet()) {
@@ -512,14 +525,14 @@ public class MembershipActivity extends BaseActivity {
 		        if (membershipBenefitsContainer != null)
 		        	membershipBenefitsContainer.setVisibility(View.GONE);
             }
-			
+
 			servicesLoaded = true;
 			if (memberLoaded == true && servicesLoaded == true && membershipLoaded == true) {
 				progressDialog.cancel();
 			}
 		}
 	}
-	
+
 	private class GetHistoryTask extends AsyncTask<Object, Void, List<History>> {
 
 		protected List<History> doInBackground(Object... parameters) {
@@ -527,7 +540,7 @@ public class MembershipActivity extends BaseActivity {
 			if (MembershipActivity.this.history == null) {
 				String response;
 				try {
-					response = WebMethods.getHistory(Variables.getUser().getMembershipCardSeries(), Variables.getUser().getMembershipCardNumber());
+					response = WebMethods.getHistoryNew(Variables.getUser().getMembershipCardId());
 					history = WebResponseParser.getHistory(response);
 				} catch (ClientProtocolException e) {
 					e.printStackTrace();
@@ -542,7 +555,7 @@ public class MembershipActivity extends BaseActivity {
 			} else {
 				history = MembershipActivity.this.history;
 			}
-			
+
 			return history;
 		}
 
@@ -550,11 +563,11 @@ public class MembershipActivity extends BaseActivity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 		}
-		
+
 		protected void onPostExecute(List<History> result) {
 			MembershipActivity.this.history = result;
 			ListView list = (ListView) findViewById(R.id.benefits_history_list);
-			
+
 			ArrayList<Object> grouped = new ArrayList<Object>();
 			HashMap<String, ArrayList<History>> grouping = new HashMap<String, ArrayList<History>>();
 
@@ -576,10 +589,10 @@ public class MembershipActivity extends BaseActivity {
 					grouped.add(grouping.get(s).get(j));  // Add value
 				}
 			}
-			
-			
+
+
 			BenefitsHistoryAdapter adapter = new BenefitsHistoryAdapter(MembershipActivity.this, result);
-			list.setAdapter(adapter);		
+			list.setAdapter(adapter);
 		}
 
 

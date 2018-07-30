@@ -18,6 +18,7 @@ import rs.org.amss.model.Car;
 import rs.org.amss.model.DamageType;
 import rs.org.amss.model.Fuel;
 import rs.org.amss.model.Member;
+import rs.org.amss.model.MemberNew;
 import rs.org.amss.model.Membership;
 import rs.org.amss.model.Municipality;
 import rs.org.amss.model.News;
@@ -60,7 +61,7 @@ public class Variables {
 	public static RoadCondition singleBorder = new RoadCondition();
 	public static String imageName;
 	private static ArrayList<Camera> cameras;
-	private static Member member;
+	private static MemberNew member;
 
 	public static String memberName;
 	public static String vehicleColor;
@@ -96,10 +97,10 @@ public class Variables {
 		Variables.user = user;
 	}
 	
-	public static Member getMember(){
+	public static MemberNew getMember(){
 		return member;
 	}
-	public static void setMember(Member member) { Variables.member = member; }
+	public static void setMember(MemberNew member) { Variables.member = member; }
 
 	public static ArrayList<Membership> getMembershipInfo() { return membershipInfo; }
 	public static void setMembershipInfo(ArrayList<Membership> membershipInfo) { Variables.membershipInfo = membershipInfo; }

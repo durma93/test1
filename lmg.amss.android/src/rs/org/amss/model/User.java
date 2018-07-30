@@ -47,7 +47,7 @@ public class User {
 		return this.membershipCardId;
 	}
 	
-	public String getMembershipCardSeries() {
+	/*public String getMembershipCardSeries() {
 		return this.membershipCardId.split("_")[1];
 	}
 	
@@ -57,7 +57,7 @@ public class User {
 			id = id.substring(id.length()-6, id.length());
 
 		return id;
-	}
+	}*/
 
 	public String getRegistrationPlate(){
 		return this.registrationPlate;

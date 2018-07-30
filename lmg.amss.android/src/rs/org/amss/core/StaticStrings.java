@@ -64,6 +64,7 @@ public class StaticStrings {
 
 	public static final String kaskoEmail = "kasko@ams.co.rs";
 
-	public static final String noviServis = "https://ams.co.rs/mobileServices/mobileServices.php?WSDL";
+	public static final String baseUrl = "https://ams.co.rs/";
+	public static final String noviServis = baseUrl + "mobileServices/mobileServices.php?WSDL";
 
 }

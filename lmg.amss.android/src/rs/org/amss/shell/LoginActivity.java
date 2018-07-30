@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -37,15 +38,15 @@ public class LoginActivity extends BaseActivity {
 	protected String name;
 	protected String registrationPlate;
 	private int currentStep = 1;
-	private int cardImageId = R.drawable.login_card_default;
+	private int cardImageId = R.drawable.kartica_na_loginu_glavna;
 
-	private Spinner spinnerSerials;
+	//private Spinner spinnerSerials;
 	private EditText textMembershipCardId;
 	private LinearLayout layoutStep2;
 	private LinearLayout layoutStep3;
 	private ProgressDialog progressDialog;
 	private ImageView card;
-
+    FrameLayout v;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -54,11 +55,12 @@ public class LoginActivity extends BaseActivity {
 		card = (ImageView) findViewById(R.id.card);
 		layoutStep2 = (LinearLayout) findViewById(R.id.layoutStep2);
 		layoutStep3 = (LinearLayout) findViewById(R.id.layoutStep3);	
-		spinnerSerials = (Spinner)findViewById(R.id.spinnerSerials);
+		//spinnerSerials = (Spinner)findViewById(R.id.spinnerSerials);
 		textMembershipCardId = (EditText) findViewById(R.id.textMembershipCardId);
 		textMembershipCardId.setTypeface(GetFonts.getTypeface(LoginActivity.this));
+        v = (FrameLayout) findViewById(R.id.highlight);
 
-		findViewById(R.id.button_hint_card_series).setOnClickListener(showHintClickListener);
+		//findViewById(R.id.button_hint_card_series).setOnClickListener(showHintClickListener);
 		findViewById(R.id.button_hint_card_number).setOnClickListener(showHintClickListener);
 
 		Button confirm = (Button)findViewById(R.id.buttonSubmit);
@@ -104,13 +106,13 @@ public class LoginActivity extends BaseActivity {
 
 	protected String getMembershipCardId(){
 
-		String serial = (String)spinnerSerials.getSelectedItem();
+		//String serial = (String)spinnerSerials.getSelectedItem();
 		String id = textMembershipCardId.getText().toString().trim();
-		for (int i = id.length(); i < 8; i++) {
+		/*for (int i = id.length(); i < 8; i++) {
 			id = "0" + id;
-		}
+		}*/
 
-		return String.format("%s_%s", id, serial);
+		return id /*String.format("%s_%s", id, serial)*/;
 	}
 
 	protected String getName(){
@@ -193,8 +195,16 @@ public class LoginActivity extends BaseActivity {
 					return false;
 				}
 			});
-			String membershipCardId = getMembershipCardId();
-			new LoginStep3Task().execute(membershipCardId);
+			/*String membershipCardId = getMembershipCardId();
+			new LoginStep3Task().execute();*/
+
+            Intent intent = new Intent(LoginActivity.this, MembershipActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            LoginActivity.this.startActivity(intent);
+            int id = Integer.parseInt(textMembershipCardId.getText().toString());
+            memoryManager.saveMembershipId(id);
+            finish();
+
 		}
 		else {
 			handleUserNotAuthorized();
@@ -210,21 +220,32 @@ public class LoginActivity extends BaseActivity {
 		layoutStep3.setVisibility(View.GONE);
 	}
 
+	private boolean isButtonClicked = false;
 	private View.OnClickListener showHintClickListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View view) {
 			((ImageView)findViewById(R.id.button_hint_card_number)).setImageResource(R.drawable.show_hint_off);
-			((ImageView)findViewById(R.id.button_hint_card_series)).setImageResource(R.drawable.show_hint_off);
+			//((ImageView)findViewById(R.id.button_hint_card_series)).setImageResource(R.drawable.show_hint_off);
 
 			if (view.getId() == R.id.button_hint_card_number) {
-				if (cardImageId != R.drawable.login_card_number_highlighted) {
+				/*if (cardImageId != R.drawable.login_card_number_highlighted) {
 					cardImageId = R.drawable.login_card_number_highlighted;
 					((ImageView)view).setImageResource(R.drawable.show_hint_on);
 				} else {
 					cardImageId = R.drawable.login_card_default;
 					((ImageView)view).setImageResource(R.drawable.show_hint_off);
+				}*/
+                isButtonClicked = !isButtonClicked;
+				if (view.getId() == R.id.button_hint_card_number){
+				    if (v.getVisibility()!= View.VISIBLE) {
+                        v.setVisibility(View.VISIBLE);
+                        ((ImageView) view).setImageResource(R.drawable.show_hint_on);
+                    }else {
+                        v.setVisibility(View.GONE);
+                        ((ImageView)view).setImageResource(R.drawable.show_hint_off);
+                    }
 				}
-			} else if (view.getId() == R.id.button_hint_card_series) {
+			} /*else if (view.getId() == R.id.button_hint_card_series) {
 				if (cardImageId != R.drawable.login_card_type_highlighted) {
 					cardImageId = R.drawable.login_card_type_highlighted;
 					((ImageView)view).setImageResource(R.drawable.show_hint_on);
@@ -232,7 +253,7 @@ public class LoginActivity extends BaseActivity {
 					cardImageId = R.drawable.login_card_default;
 					((ImageView)view).setImageResource(R.drawable.show_hint_off);
 				}
-			}
+			}*/
 
 			card.setImageResource(cardImageId);
 		}
@@ -243,9 +264,9 @@ public class LoginActivity extends BaseActivity {
 		protected ArrayList<String> doInBackground(String... membershipCardId) {
 			ArrayList<String> items = new ArrayList<String>();
 			String response;
-			try {
-				response = WebMethods.getSerials((membershipCardId[0])); 				
-				items = WebResponseParser.getStringValues(response);
+			/*try {
+				//response = WebMethods.getSerials((membershipCardId[0]));
+				//items = WebResponseParser.getStringValues(response);
 				Collections.reverse(items);
 
 			} catch (ClientProtocolException e) {
@@ -257,7 +278,7 @@ public class LoginActivity extends BaseActivity {
 			} catch (Exception e) {
 				e.printStackTrace();
 				LoginActivity.this.getLayoutManager().showError(R.string.Loading_Exception);
-			}
+			}*/
 			return items;
 		}
 		@Override
@@ -267,16 +288,16 @@ public class LoginActivity extends BaseActivity {
 		}
 		protected void onPostExecute(ArrayList<String> result) {
 
-			if (result != null && result.size() > 0){ 
+			//if (result != null && result.size() > 0){
 
-				ArrayAdapter<String> serialsAdapter = new ArrayAdapter<String>(LoginActivity.this, R.layout.spinner_item, result.toArray(new String[result.size()]));
-				spinnerSerials.setAdapter(serialsAdapter);
+				/*ArrayAdapter<String> serialsAdapter = new ArrayAdapter<String>(LoginActivity.this, R.layout.spinner_item, result.toArray(new String[result.size()]));
+				spinnerSerials.setAdapter(serialsAdapter);*/
 
 				textMembershipCardId.setVisibility(View.VISIBLE);
-			}
-			else{
+
+			/*else{
 				getLayoutManager().showWarning(R.string.error_login_serials);
-			}
+			}*/
 
 			progressDialog.cancel();
 		}
@@ -288,7 +309,7 @@ public class LoginActivity extends BaseActivity {
 			ArrayList<LoginStep1> items = new ArrayList<LoginStep1>();
 			String response;
 			try {
-				response = WebMethods.getLoginStep1(membershipCardId[0]); 				
+				response = WebMethods.loginStep1(membershipCardId[0]);
 				items = WebResponseParser.getLoginStep1List(response);
 
 			} catch (ClientProtocolException e) {
@@ -335,7 +356,7 @@ public class LoginActivity extends BaseActivity {
 			ArrayList<LoginStep2> items = new ArrayList<LoginStep2>();
 			String response;
 			try {
-				response = WebMethods.getLoginStep2(membershipCardId[0]);
+				response = WebMethods.loginStep2(membershipCardId[0]);
 				items = WebResponseParser.getLoginStep2List(response);
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();
@@ -372,7 +393,7 @@ public class LoginActivity extends BaseActivity {
 		}
 	}
 
-	private class LoginStep3Task extends AsyncTask<String, Void, Integer> {			
+	private class LoginStep3Task extends AsyncTask<String, Void, Integer> {
 
 		protected Integer doInBackground(String... membershipCardId) {
 			int membershipId = -1;

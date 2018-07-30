@@ -65,7 +65,7 @@ public class ChangeSMSTextDialog  extends DialogFragment {
 		message = "A " + df.format(Variables.longitude) + "\n";
 		message += df.format(Variables.latitude) + "\n";
 		if (Variables.getUser() != null && Variables.getUser().getMembershipCardId() != null)
-			message += String.valueOf(Variables.getUser().getMembershipCardSeries() + "-" + Variables.getUser().getMembershipCardNumber()) + "\n";
+			//message += String.valueOf(Variables.getUser().getMembershipCardSeries() + "-" + Variables.getUser().getMembershipCardNumber()) + "\n";
 		message += String.valueOf(Variables.sendSmsVehicleVendor) + "\n";
 		message += String.valueOf(Variables.sendSmsVehicleColor) + "\n";
 		message += Variables.sendSmsRegistration + "\n";

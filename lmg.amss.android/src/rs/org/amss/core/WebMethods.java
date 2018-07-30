@@ -114,6 +114,50 @@ public class WebMethods {
 		return ConnectionHelper.callWebService(StaticStrings.globalServiceAddress + query.toString());
 	}
 
+    //TODO loginStep1
+    public static String loginStep1(String membershipNumber) throws ClientProtocolException, IOException {
+        HttpClient client = getHttpClient();
+        HttpPost post = new HttpPost(StaticStrings.noviServis);
+        String body = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "   <soapenv:Header/>\n" +
+                "   <soapenv:Body>\n" +
+                "      <membershipCardIDStep1>"+membershipNumber+"</membershipCardIDStep1>\n" +
+                "   </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        post.setEntity(new StringEntity(body));
+        post.setHeader("content-type", "application/xml");
+
+        Log.d("SOAP", "POST " + StaticStrings.noviServis + "\n" + body);
+
+        HttpResponse response = client.execute(post);
+
+        String result = EntityUtils.toString(response.getEntity());
+        Log.d("SOAP", result);
+        return result;
+    }
+
+    //TODO loginStep2
+    public static String loginStep2(String membershipNumber) throws ClientProtocolException, IOException {
+        HttpClient client = getHttpClient();
+        HttpPost post = new HttpPost(StaticStrings.noviServis);
+        String body = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "   <soapenv:Header/>\n" +
+                "   <soapenv:Body>\n" +
+                "      <membershipCardIDStep2>"+membershipNumber+"</membershipCardIDStep2>\n" +
+                "   </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        post.setEntity(new StringEntity(body));
+        post.setHeader("content-type", "application/xml");
+
+        Log.d("SOAP", "POST " + StaticStrings.noviServis + "\n" + body);
+
+        HttpResponse response = client.execute(post);
+
+        String result = EntityUtils.toString(response.getEntity());
+        Log.d("SOAP", result);
+        return result;
+    }
+
 	public static String getMembershipId(String memebershipCardId)
 			throws ClientProtocolException, IOException {
 		StringBuffer query = new StringBuffer();
@@ -140,7 +184,31 @@ public class WebMethods {
 		query.append(membershipId);
 		return ConnectionHelper.callWebService(StaticStrings.globalServiceAddress + query.toString());
 	}
-	
+
+	//TODO MembershipCard
+    public static String getMembershipCard(String membershipNumber) throws ClientProtocolException, IOException {
+        HttpClient client = getHttpClient();
+        HttpPost post = new HttpPost(StaticStrings.noviServis);
+        String body = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "   <soapenv:Header/>\n" +
+                "   <soapenv:Body>\n" +
+                "      <clanskiBrojCard>"+membershipNumber+"</clanskiBrojCard>\n" +
+                "   </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        post.setEntity(new StringEntity(body));
+        post.setHeader("content-type", "application/xml");
+
+        Log.d("SOAP", "POST " + StaticStrings.noviServis + "\n" + body);
+
+        HttpResponse response = client.execute(post);
+
+        String result = EntityUtils.toString(response.getEntity());
+        Log.d("SOAP", result);
+        return result;
+    }
+
+
+	//TODO MembershipServices
 	public static String getServicesInfo(String membershipSeries, String membershipNumber) throws ClientProtocolException, IOException {
 		HttpClient client = getHttpClient();
 		HttpPost post = new HttpPost(StaticStrings.phpApiUserGetInfo);
@@ -164,6 +232,82 @@ public class WebMethods {
 		Log.d("SOAP", result);
 		return result;
 	}
+    //TODO MembershipServices
+    public static String getServicesInfoNew(int membershipNumber) throws ClientProtocolException, IOException {
+        HttpClient client = getHttpClient();
+        HttpPost post = new HttpPost(StaticStrings.noviServis);
+        String body = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "   <soapenv:Header/>\n" +
+                "   <soapenv:Body>\n" +
+                "      <clanskiBrojServices>"+membershipNumber+"</clanskiBrojServices>\n" +
+                "   </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        post.setEntity(new StringEntity(body));
+        post.setHeader("content-type", "application/xml");
+
+        Log.d("SOAP", "POST " + StaticStrings.noviServis + "\n" + body);
+
+        HttpResponse response = client.execute(post);
+
+        String result = EntityUtils.toString(response.getEntity());
+        Log.d("SOAP", result);
+        return result;
+    }
+
+
+
+    public static String getHistory(String membershipSeries, String membershipNumber) throws ClientProtocolException, IOException {
+		HttpClient client = getHttpClient();
+		HttpPost post = new HttpPost(StaticStrings.phpApiUserGetInfo);
+		String body = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+			          "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">" +
+			          "<soap12:Body>" +
+			              "<getHistory xmlns=\"http://tempuri.org/\">" +
+			                   "<clanska_serija>" + membershipSeries + "</clanska_serija>" +
+			                   "<clanski_broj>" + membershipNumber + "</clanski_broj>" +
+			              "</getHistory>" +
+			          "</soap12:Body>" +
+			          "</soap12:Envelope>";
+		post.setEntity(new StringEntity(body));
+		post.setHeader("content-type", "application/xml");
+		
+		Log.d("SOAP", "POST " + StaticStrings.phpApiUserGetInfo + "\n" + body);
+		
+		HttpResponse response = client.execute(post);
+		
+		String result = EntityUtils.toString(response.getEntity());
+		Log.d("SOAP", result);
+		return result;
+	}
+
+    public static String getHistoryNew(String membershipNumber) throws ClientProtocolException, IOException {
+        HttpClient client = getHttpClient();
+        HttpPost post = new HttpPost(StaticStrings.noviServis);
+        String body = /*"<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+                "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">" +
+                "<soap12:Body>" +
+                "<getHistory xmlns=\"http://tempuri.org/\">" +
+                "<clanska_serija>" + membershipSeries + "</clanska_serija>" +
+                "<clanski_broj>" + membershipNumber + "</clanski_broj>" +
+                "</getHistory>" +
+                "</soap12:Body>" +
+                "</soap12:Envelope>"*/"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "   <soapenv:Header/>\n" +
+                "   <soapenv:Body>\n" +
+                "      <clanskiBrojHistory>"+membershipNumber+"</clanskiBrojHistory>\n" +
+                "   </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        post.setEntity(new StringEntity(body));
+        post.setHeader("content-type", "application/xml");
+
+        Log.d("SOAP", "POST " + StaticStrings.noviServis + "\n" + body);
+
+        HttpResponse response = client.execute(post);
+
+        String result = EntityUtils.toString(response.getEntity());
+        Log.d("SOAP", result);
+        return result;
+    }
 
     public static String getCamera() throws ClientProtocolException, IOException {
         HttpClient client = getHttpClient();
@@ -187,30 +331,6 @@ public class WebMethods {
         Log.d("SOAP", result);
         return result;
     }
-	
-	public static String getHistory(String membershipSeries, String membershipNumber) throws ClientProtocolException, IOException {
-		HttpClient client = getHttpClient();
-		HttpPost post = new HttpPost(StaticStrings.phpApiUserGetInfo);
-		String body = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
-			          "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">" +
-			          "<soap12:Body>" +
-			              "<getHistory xmlns=\"http://tempuri.org/\">" +
-			                   "<clanska_serija>" + membershipSeries + "</clanska_serija>" +
-			                   "<clanski_broj>" + membershipNumber + "</clanski_broj>" +
-			              "</getHistory>" +
-			          "</soap12:Body>" +
-			          "</soap12:Envelope>";
-		post.setEntity(new StringEntity(body));
-		post.setHeader("content-type", "application/xml");
-		
-		Log.d("SOAP", "POST " + StaticStrings.phpApiUserGetInfo + "\n" + body);
-		
-		HttpResponse response = client.execute(post);
-		
-		String result = EntityUtils.toString(response.getEntity());
-		Log.d("SOAP", result);
-		return result;
-	}	
 	public static String getAllSubstationsForMap() 
 			throws ClientProtocolException,	IOException {
 		return ConnectionHelper.callWebService(StaticStrings.globalServiceAddress + StaticStrings.globalGetAllSubstationsForMap);

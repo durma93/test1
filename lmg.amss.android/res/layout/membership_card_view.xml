@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:adjustViewBounds="true"
         android:scaleType="fitStart"
-        android:src="@drawable/kartica" />
+        android:src="@drawable/kartica_ritech" />
 
     <LinearLayout
         android:layout_width="match_parent"

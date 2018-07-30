@@ -56,9 +56,9 @@ public class SendSmsDialog extends DialogFragment {
 			TextView textMemberId = (TextView) dialog.findViewById(R.id.textCallHelpMembershipId);
 
 			String membershipCardId = Variables.getUser().getMembershipCardId();
-			if (!TextUtils.isEmpty(membershipCardId)) {
+			/*if (!TextUtils.isEmpty(membershipCardId)) {
                 membershipCardId = Variables.getUser().getMembershipCardSeries() + "-" + Variables.getUser().getMembershipCardNumber();
-			}
+			}*/
 
 			textMemberId.setText(membershipCardId);
 			textMemberId.setTypeface(GetFonts.getBoldItalicTypeface(activityContext));

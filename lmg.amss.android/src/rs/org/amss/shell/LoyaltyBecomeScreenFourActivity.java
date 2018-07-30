@@ -151,7 +151,7 @@ public class LoyaltyBecomeScreenFourActivity extends BaseActivity{
 					}
 				});
 				new AddNewMemberTask().execute(Variables.getMember());
-				Log.v("Poslednja strana", Variables.getMember().vehicleBrand + " "+Variables.getMember().vehicleType+" "+Variables.getMember().registrationPlate+" "+Variables.getMember().vehicleColor+" "+ 
+				Log.v("Poslednja strana", Variables.getMember().vehicleBrand + " "+Variables.getMember().vehicleType+" "+Variables.getMember().registrationPlate+" "+Variables.getMember().vehicleColor+" "+
 						Variables.getMember().yearOfProduction+" "+Variables.getMember().insuranceCompany+" "+Variables.getMember().isSuperMembership);
 			}
 			else

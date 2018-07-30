@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,16 +20,17 @@ import rs.org.amss.model.History;
 import rs.org.amss.model.LoginStep1;
 import rs.org.amss.model.LoginStep2;
 import rs.org.amss.model.Member;
+import rs.org.amss.model.MemberNew;
 import rs.org.amss.model.Membership;
 import rs.org.amss.model.Monastery;
 import rs.org.amss.model.MonasteryDistance;
 import rs.org.amss.model.Municipality;
 import rs.org.amss.model.News;
-import rs.org.amss.model.ParkingCity;
 import rs.org.amss.model.ParkingCityNew;
 import rs.org.amss.model.PaymentInvoice;
 import rs.org.amss.model.RoadCondition;
 import rs.org.amss.model.RoadConditionVideo;
+import rs.org.amss.model.ServisTest;
 import rs.org.amss.model.Toll;
 import rs.org.amss.model.TollCity;
 import rs.org.amss.model.TypeOfRate;
@@ -42,11 +44,13 @@ import org.json.JSONObject;
 import org.kxml2.io.KXmlParser;
 import org.kxml2.kdom.Document;
 import org.kxml2.kdom.Element;
+import org.kxml2.kdom.Node;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import android.util.Log;
+import android.widget.Toast;
 
 public class WebResponseParser {
 
@@ -73,6 +77,16 @@ public class WebResponseParser {
     private static final String KEY_PRICE = "price";
     private static final String KEY_SMS_NUMBER = "smsNumber";
 
+    private static final String KEY_LOGIN_STEP1 = "LoginStep1";
+    private static final String KEY_FULL_NAME = "FullName";
+    private static final String KEY_COMPANY_NAME = "CompanyName";
+    private static final String KEY_TYPE_OF_MEMBER = "TypeOfMember";
+    private static final String KEY_ISVALID = "IsValid";
+
+    private static final String KEY_LOGIN_STEP2 = "LoginStep2";
+    private static final String KEY_REG_PLATE = "RegistrationPlate";
+
+    private static final String KEY_ISVALID2 = "IsValid";
 
     public static ArrayList<ParkingCityNew> getParkingZones(String response) {
 
@@ -476,7 +490,59 @@ public class WebResponseParser {
 	public static ArrayList<LoginStep1> getLoginStep1List(String response)
 	{
 		ArrayList<LoginStep1> result = new ArrayList<LoginStep1>();
-		if (response != null && response.equals("") == false)
+
+		LoginStep1 step1 = null;
+
+        String curText = "";
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xpp = factory.newPullParser();
+
+            ByteArrayInputStream bin = new ByteArrayInputStream(response.getBytes());
+            InputStreamReader isr = new InputStreamReader( bin );
+
+            xpp.setInput(isr);
+
+            int eventType = xpp.getEventType();
+            while (eventType != XmlPullParser.END_DOCUMENT){
+                String tagName = xpp.getName();
+
+                switch (eventType){
+                    case XmlPullParser.START_TAG:
+                        if (tagName.equalsIgnoreCase(KEY_LOGIN_STEP1)){
+                            step1 = new LoginStep1();
+                        }
+                        break;
+                    case XmlPullParser.TEXT:
+                        curText = xpp.getText();
+                        break;
+
+                    case XmlPullParser.END_TAG:
+                        if (tagName.equalsIgnoreCase(KEY_LOGIN_STEP1)){
+                            result.add(step1);
+
+                        }else if(tagName.equalsIgnoreCase(KEY_FULL_NAME)) {
+                            step1.setFullName(curText);
+                        }else if(tagName.equalsIgnoreCase(KEY_COMPANY_NAME)){
+                            step1.setCompanyName(curText);
+                        }else if(tagName.equalsIgnoreCase(KEY_TYPE_OF_MEMBER)){
+                            step1.setTypeOfMember(curText);
+                        }else if(tagName.equalsIgnoreCase(KEY_ISVALID)){
+                            step1.isValid = curText.toLowerCase().equals("true");
+
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+                eventType = xpp.next();
+            }
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
+		/*if (response != null && response.equals("") == false)
 		{
 			KXmlParser xmlParser = new KXmlParser();
 			Document xmlDoc = new Document();
@@ -506,7 +572,7 @@ public class WebResponseParser {
 							{
 								item.companyName = contentNodes[i].getText(0);
 							}
-							else if (contentNodes[i].getName().equals("TypeOfMemeber") && contentNodes[i].getChildCount() > 0)
+							else if (contentNodes[i].getName().equals("TypeOfMember") && contentNodes[i].getChildCount() > 0)
 							{
 								item.typeOfMember = contentNodes[i].getText(0);
 							}
@@ -538,11 +604,126 @@ public class WebResponseParser {
 			}
 			catch (IOException e) {}
 
-		}
+		}*/
 		return result;
 	}
+    public static ArrayList<LoginStep2> getLoginStep2List(String response)
+    {
+        ArrayList<LoginStep2> result = new ArrayList<>();
 
-	public static ArrayList<LoginStep2> getLoginStep2List(String response)
+        LoginStep2 step2 = null;
+
+        String curText = "";
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xpp = factory.newPullParser();
+
+            ByteArrayInputStream bin = new ByteArrayInputStream(response.getBytes());
+            InputStreamReader isr = new InputStreamReader( bin );
+
+            xpp.setInput(isr);
+
+            int eventType = xpp.getEventType();
+            while (eventType != XmlPullParser.END_DOCUMENT){
+                String tagName = xpp.getName();
+
+                switch (eventType){
+                    case XmlPullParser.START_TAG:
+                        if (tagName.equalsIgnoreCase(KEY_LOGIN_STEP2)){
+                            step2 = new LoginStep2();
+                        }
+                        break;
+                    case XmlPullParser.TEXT:
+                        curText = xpp.getText();
+                        break;
+
+                    case XmlPullParser.END_TAG:
+                        if (tagName.equalsIgnoreCase(KEY_LOGIN_STEP2)){
+                            result.add(step2);
+
+                        }else if(tagName.equalsIgnoreCase(KEY_REG_PLATE)) {
+                            step2.setRegistrationPlate(curText);
+                        }else if(tagName.equalsIgnoreCase(KEY_ISVALID2)){
+                            step2.isValid = curText.toLowerCase().equals("true");
+
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+                eventType = xpp.next();
+            }
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
+		/*if (response != null && response.equals("") == false)
+		{
+			KXmlParser xmlParser = new KXmlParser();
+			Document xmlDoc = new Document();
+
+			ByteArrayInputStream bin = new ByteArrayInputStream(response.getBytes());
+			InputStreamReader isr = new InputStreamReader( bin );
+
+			try
+			{
+				xmlParser.setInput(isr);
+				xmlDoc.parse(xmlParser);
+				Element xmlRoot = xmlDoc.getRootElement();
+				if(xmlRoot != null)
+				{
+					Element[] xmlChild = XmlParser.getChildren(xmlRoot);
+					for ( int index = 0; index < xmlChild.length; ++index )
+					{
+						LoginStep1 item = new LoginStep1();
+						Element[] contentNodes = XmlParser.getChildren(xmlChild[index]);
+						for ( int i = 0; i < contentNodes.length; ++i )
+						{
+							if (contentNodes[i].getName().equals("FullName") && contentNodes[i].getChildCount() > 0)
+							{
+								item.fullName = contentNodes[i].getText(0);
+							}
+							else if (contentNodes[i].getName().equals("CompanyName") && contentNodes[i].getChildCount() > 0)
+							{
+								item.companyName = contentNodes[i].getText(0);
+							}
+							else if (contentNodes[i].getName().equals("TypeOfMember") && contentNodes[i].getChildCount() > 0)
+							{
+								item.typeOfMember = contentNodes[i].getText(0);
+							}
+							else if (contentNodes[i].getName().equals("IsValid") && contentNodes[i].getChildCount() > 0)
+							{
+								Log.d("LoginStep1", "IsValid = " + contentNodes[i].getText(0));
+								// item.isValid = Boolean.getBoolean(contentNodes[i].getText(0));
+								item.isValid = contentNodes[i].getText(0).toLowerCase().equals("true") ? true : false;
+							}
+						}
+						result.add(item);
+					}
+				}
+			}
+			catch (IOException e)
+			{
+				Log.e(TAG, e.getMessage());
+				// Layout.showError(HotActivity.this, e.getMessage());
+			}
+			catch (XmlPullParserException e)
+			{
+				Log.e(TAG, e.getMessage());
+				// Layout.showError(HotActivity.this, e.getMessage());
+			}
+
+			try
+			{
+				isr.close();
+			}
+			catch (IOException e) {}
+
+		}*/
+        return result;
+    }
+	/*public static ArrayList<LoginStep2> getLoginStep2List(String response)
 	{
 		ArrayList<LoginStep2> result = new ArrayList<LoginStep2>();
 		if (response != null && response.equals("") == false)
@@ -600,7 +781,7 @@ public class WebResponseParser {
 
 		}
 		return result;
-	}
+	}*/
 
 	public static int getMembershipId(String response)
 	{
@@ -1140,9 +1321,9 @@ public class WebResponseParser {
 		return result;
 	}
 	
-	public static Member getMemberInfo(String response)
+	public static MemberNew getMemberInfo(String response)
 	{
-		Member result = new Member();
+        MemberNew result = new MemberNew();
 		if (response != null && response.equals("") == false)
 		{
 			KXmlParser xmlParser = new KXmlParser();
@@ -1162,11 +1343,11 @@ public class WebResponseParser {
 					for ( int i = 0; i < contentNodes.length; ++i )
 					{
 						if (contentNodes[i].getName().equals("FirstName") && contentNodes[i].getChildCount() > 0)
-							result.firstName = contentNodes[i].getText(0);
+						    result.setIme(contentNodes[i].getText(0));
 						else if (contentNodes[i].getName().equals("LastName") && contentNodes[i].getChildCount() > 0)
-							result.lastName = contentNodes[i].getText(0);
+							result.setPrezime(contentNodes[i].getText(0));
 						else if (contentNodes[i].getName().equals("PersonalNumber") && contentNodes[i].getChildCount() > 0)
-							result.personalNumber = contentNodes[i].getText(0);
+							result.setClanskiBroj(contentNodes[i].getText(0));
 						else if (contentNodes[i].getName().equals("PIB") && contentNodes[i].getChildCount() > 0)
 							result.pib = contentNodes[i].getText(0);
 						else if (contentNodes[i].getName().equals("CompanyName") && contentNodes[i].getChildCount() > 0)
@@ -1223,13 +1404,13 @@ public class WebResponseParser {
 				if(xmlRoot != null) {
 					Element[] xmlChild = XmlParser.getChildren(xmlRoot);
 					for ( int index = 0; index < xmlChild.length; ++index ) {
-						Membership item = new Membership();
+                        Membership item = new Membership();
 						Element[] contentNodes = XmlParser.getChildren(xmlChild[index]);
 						for ( int i = 0; i < contentNodes.length; ++i ) {
 							if (contentNodes[i].getName().equals("ID") && contentNodes[i].getChildCount() > 0) {
-								item.id = Integer.parseInt(contentNodes[i].getText(0));
+                                item.id = Integer.parseInt(contentNodes[i].getText(0));
 							} else if (contentNodes[i].getName().equals("MembershipID") && contentNodes[i].getChildCount() > 0) {
-								item.membershipId = Integer.parseInt(contentNodes[i].getText(0));
+                                item.membershipId = Integer.parseInt(contentNodes[i].getText(0));
 							} else if (contentNodes[i].getName().equals("CardNumber") && contentNodes[i].getChildCount() > 0) {
 								item.cardNumber = contentNodes[i].getText(0);
 							} else if (contentNodes[i].getName().equals("SocietyID") && contentNodes[i].getChildCount() > 0) {
@@ -1328,11 +1509,122 @@ public class WebResponseParser {
 		return result;
 	}
 	
-	public static Map<String, Integer> getServicesInfo(String response)
-	{
-		Map<String, Integer> result = new HashMap<String, Integer>();
-		
-		if (response != null && response.equals("") == false)
+	public static Map<String, Integer> getServicesInfo(String response) {
+        //Map<ServisTest, Integer> result = new HashMap<ServisTest, Integer>();
+        Map<String, Integer> result = new HashMap<String, Integer>();
+       /* ServisTest servisTest= null;
+
+        String curText = "";
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xpp = factory.newPullParser();
+
+            ByteArrayInputStream bin = new ByteArrayInputStream(response.getBytes());
+            InputStreamReader isr = new InputStreamReader(bin);
+
+            xpp.setInput(isr);
+
+            int eventType = xpp.getEventType();
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String tagName = xpp.getName();
+
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        if (tagName.equalsIgnoreCase("MembershipServices")){
+                            servisTest = new ServisTest();
+                        }
+                        *//*else if (tagName.equalsIgnoreCase("01"));
+                        else if (tagName.equalsIgnoreCase("02"));
+                        else if (tagName.equalsIgnoreCase("03"));
+                        else if (tagName.equalsIgnoreCase("04"));
+                        else if (tagName.equalsIgnoreCase("05"));
+                        else if (tagName.equalsIgnoreCase("06"));
+                        else if (tagName.equalsIgnoreCase("S1"));
+                        else if (tagName.equalsIgnoreCase("S2"));
+                        else if (tagName.equalsIgnoreCase("S3"));
+                        else if (tagName.equalsIgnoreCase("S4"));
+                        else if (tagName.equalsIgnoreCase("S5"));
+                        else if (tagName.equalsIgnoreCase("S6"));
+                        else if (tagName.equalsIgnoreCase("S7"));
+                        else if (tagName.equalsIgnoreCase("S8"));
+                        else if (tagName.equalsIgnoreCase("S9"));
+                        else if (tagName.equalsIgnoreCase("S10"));
+                        else if (tagName.equalsIgnoreCase("S11"));*//*
+
+
+                        break;
+
+                    case XmlPullParser.TEXT:
+                        curText = xpp.getText();
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if (tagName.equalsIgnoreCase("MembershipServices")) {
+                            //String naziv = grad.getNaziv();
+                            result.put(servisTest, Integer.valueOf(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("O1")){
+                            servisTest.setJedan(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("O2")){
+                            servisTest.setDva(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("O3")){
+                            servisTest.setTri(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("O4")){
+                            servisTest.setCetiri(Integer.parseInt(curText));
+
+                        }
+                        else if (tagName.equalsIgnoreCase("O5")){
+                            servisTest.setPet(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("O6")){
+                            servisTest.setSest(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S1")){
+                            servisTest.setS1(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S2")){
+                            servisTest.setS2(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S3")){
+                            servisTest.setS3(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S4")){
+                            servisTest.setS4(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S5")){
+                            servisTest.setS5(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S6")){
+                            servisTest.setS6(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S7")){
+                            servisTest.setS7(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S8")){
+                            servisTest.setS8(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S9")){
+                            servisTest.setS9(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S10")){
+                            servisTest.setS10(Integer.parseInt(curText));
+                        }
+                        else if (tagName.equalsIgnoreCase("S11")){
+                            servisTest.setS11(Integer.parseInt(curText));
+                        }
+                    default:
+                        break;
+                }
+                eventType = xpp.next();
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return result;
+	}*/
+		if (response != null && !response.equals(""))
 		{
 			KXmlParser xmlParser = new KXmlParser();
 			Document xmlDoc = new Document();
@@ -1346,35 +1638,62 @@ public class WebResponseParser {
 				xmlDoc.parse(xmlParser);
 				Element xmlRoot = xmlDoc.getRootElement();
 				if(xmlRoot != null) {
-					Element[] xmlChild = XmlParser.getChildren(xmlRoot);
-					for ( int index = 0; index < xmlChild.length; ++index ) {
-						RoadCondition item = new RoadCondition();
-						Element[] contentNodes = XmlParser.getChildren(xmlChild[index]);
-						if (contentNodes.length > 0) {
-							contentNodes = XmlParser.getChildren(contentNodes[0]);
-							for ( int i = 0; i < contentNodes.length; ++i ) {
-								String name = contentNodes[i].getName();
-								if ("O1".equalsIgnoreCase(name) || "O2".equalsIgnoreCase(name) || "O3".equalsIgnoreCase(name) || "O4".equalsIgnoreCase(name) || "O5".equalsIgnoreCase(name) || "O6".equalsIgnoreCase(name)) {
-									String o = null;
-									try {
-										o = contentNodes[i].getText(0);
-									} catch (Exception e) {
-										o = "-1";
-									}
-									result.put(name, Integer.parseInt(o));
-								} else if ("S1".equalsIgnoreCase(name) || "S2".equalsIgnoreCase(name) || "S3".equalsIgnoreCase(name) || "S4".equalsIgnoreCase(name) || "S5".equalsIgnoreCase(name) || "S6".equalsIgnoreCase(name) || "S7".equalsIgnoreCase(name) || "S8".equalsIgnoreCase(name) || "S9".equalsIgnoreCase(name) || "S10".equalsIgnoreCase(name) || "S11".equalsIgnoreCase(name)) {
-									String s = null;
-									try {
-										s = contentNodes[i].getText(0);
-									} catch (Exception e) {
-										s = "-1";
-									}
-									result.put(name,Integer.parseInt(s));
-								}
-							}
-						}
+                    Element element = xmlRoot.getElement(0);
+                    if (element!=null){
+                        Element element1 = element.getElement(0);
 
-					}
+                        if (element1 != null) {
+                            Log.d(TAG, "getServicesInfo: "+ element1.getName());
+
+                            Element[] xmlChild = XmlParser.getChildren(element1);
+
+                            Log.d(TAG, "getServicesInfo: child " + xmlChild[0].getName());
+                            for ( int index = 0; index < xmlChild.length; ++index ) {
+
+                                Element[] contentNodes = XmlParser.getChildren(xmlChild[index]);
+                                //Log.d(TAG, "getServicesInfo: contentNodes " + contentNodes.);
+                                Log.d(TAG, "getServicesInfo: content nodes" +contentNodes[0].getName());
+                                if (contentNodes.length > 0) {
+                                    contentNodes = XmlParser.getChildren(contentNodes[0]);
+                                    for ( int i = 0; i < contentNodes.length; ++i ) {
+                                        String name = contentNodes[i].getName();
+                                        Log.d(TAG, "getServicesInfo: name " + name);
+                                        if ("O1".equalsIgnoreCase(name) || "O2".equalsIgnoreCase(name) || "O3".equalsIgnoreCase(name) || "O4".equalsIgnoreCase(name) || "O5".equalsIgnoreCase(name) || "O6".equalsIgnoreCase(name)) {
+                                            String o = null;
+                                            try {
+                                                o = contentNodes[i].getText(0);
+                                                if (o.equals(" ")){
+                                                    o = "-1";
+                                                }
+                                                Log.d(TAG, "getServicesInfo: o " + o);
+                                            } catch (Exception e) {
+                                                o = "-1";
+                                                Log.e(TAG, "getServicesInfo: " + e.getMessage() );
+                                            }
+                                            result.put(name, Integer.parseInt(o));
+                                        } else if ("S1".equalsIgnoreCase(name) || "S2".equalsIgnoreCase(name) || "S3".equalsIgnoreCase(name) || "S4".equalsIgnoreCase(name) || "S5".equalsIgnoreCase(name) || "S6".equalsIgnoreCase(name) || "S7".equalsIgnoreCase(name) || "S8".equalsIgnoreCase(name) || "S9".equalsIgnoreCase(name) || "S10".equalsIgnoreCase(name) || "S11".equalsIgnoreCase(name)) {
+                                            String s = null;
+                                            try {
+                                                s = contentNodes[i].getText(0);
+                                                if (s.equals(" ")){
+                                                    s = "-1";
+                                                }
+                                            } catch (Exception e) {
+                                                s = "-1";
+                                                Log.e(TAG, "getServicesInfo: " + e.getMessage() );
+                                            }
+                                            result.put(name,Integer.parseInt(s));
+                                            Log.d(TAG, "getServicesInfo: " + result.toString());
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+
+
 				}
 			}
 			catch (IOException e)
