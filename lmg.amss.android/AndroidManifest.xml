@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rs.org.amss"
     android:installLocation="auto"
-    android:versionCode="4"
-    android:versionName="1.0.3">
+    android:versionCode="5"
+    android:versionName="1.0.5">
 
     <uses-sdk
         android:minSdkVersion="19" />
@@ -318,12 +318,9 @@
             android:name="rs.org.amss.shell.CameraDetails"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden|screenLayout" />
-
-
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyB67-jGDIyfPFvto2wOdLbEcvhi1GoMBuU" />
+            android:value="1fd4d2d592a7882137b8e1e8bbf5c528fa0784aa" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

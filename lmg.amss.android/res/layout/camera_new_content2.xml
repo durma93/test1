@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/textContentIspis2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/crtica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textContentIspis2"
+        android:text="   -   " />
 
     <TextView
         android:id="@+id/textOpisIspis2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textSize="12sp" />
-</LinearLayout>
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/crtica"
+        android:text="TextView" />
+</RelativeLayout>

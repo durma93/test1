@@ -56,32 +56,48 @@ public class ListCameraNewAdapter2 extends BaseAdapter {
         }
         final TextView textContentIspis = (TextView) view.findViewById(R.id.textContentIspis2);
         final TextView textOpis = (TextView)view.findViewById(R.id.textOpisIspis2);
-
+        final TextView crtica = (TextView)view.findViewById(R.id.crtica);
         textContentIspis.setText(listaKateogrija.get(position));
+
         textOpis.setText(listaOpisa.get(position));
+
+        if (listaOpisa.get(position).trim().equals("")){
+            crtica.setVisibility(View.GONE);
+        }
+        /*if (listaOpisa.get(position).trim().equals("")){
+
+        }
+        else {
+            textOpis.setText("  -  " + listaOpisa.get(position));
+        }
+*/
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String getTehnologija = listaTehnologija.get(position);
+
                 if (getTehnologija.equals("JPG")) {
                     CameraActivityNew2 cameraActivityNew = (CameraActivityNew2) context;
                     Intent i = new Intent(cameraActivityNew, CameraActivity.class);
                     i.putExtra("url", textContentIspis.getText());
-                    i.putExtra("opis", textOpis.getText());
+                    i.putExtra("opis", listaOpisa.get(position));
                     Log.e("ispis", "onClick: " + textContentIspis.getText());
                     context.startActivity(i);
+
                 }else if (getTehnologija.equals("HLS")){
+
                     CameraActivityNew2 cameraActivityNew = (CameraActivityNew2) context;
                     Intent i = new Intent(cameraActivityNew, CameraDetails.class);
                     i.putExtra("url", textContentIspis.getText());
                     i.putExtra("opis", textOpis.getText());
-                    Log.e("ispis", "onClick: " + textContentIspis.getText());
+                    Log.e("ispis", "onClick: " + textOpis.getText());
                     context.startActivity(i);
                 }else {
                     Toast.makeText(context, "Ne postoji format za dati stream!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
 
 

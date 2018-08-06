@@ -14,15 +14,20 @@ dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile project(':google-play-services_lib')
     compile project(':actionbar')
-
     compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
         transitive = true;
     }
-
-
 }
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'alias2'
+            keyPassword '123456'
+            storePassword '4pBOPPaaqeIPeRWppZAx'
+            storeFile file('/home/durmapc/Desktop/lmg.keystore')
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     useLibrary 'org.apache.http.legacy'
@@ -50,7 +55,7 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-         multiDexEnabled true
+        multiDexEnabled true
     }
     productFlavors {
     }

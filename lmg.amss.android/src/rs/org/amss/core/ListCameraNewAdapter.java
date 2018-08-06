@@ -54,6 +54,7 @@ public class ListCameraNewAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 CameraActivityNew cameraActivityNew = (CameraActivityNew) context;
                 Intent i = new Intent(cameraActivityNew, CameraActivityNew2.class);
                 i.putExtra("naziv",textContentIspis.getText());

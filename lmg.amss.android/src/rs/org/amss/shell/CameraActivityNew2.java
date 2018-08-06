@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.apache.http.client.ClientProtocolException;
 import org.xmlpull.v1.XmlPullParserException;
@@ -30,12 +31,18 @@ public class CameraActivityNew2 extends BaseActivity{
     private static final String TAG = "CameraActivityNew2";
 
     ListView listView;
+
+    TextView subtitle, title;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera_new2);
         checkIsLogIn(this);
         setHomeAction(R.drawable.ic_cameras, R.string.main_cameras_text, MainActivity.class);
+
+        subtitle = (TextView)findViewById(R.id.subtitle);
+
+        title = (TextView)findViewById(R.id.title);
 
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +67,7 @@ public class CameraActivityNew2 extends BaseActivity{
             for (CameraNew c : getCameras()) {
                 if (c.getGrupa().equals(bundle.getString("naziv"))) {
                     a1.add(c.getNaziv());
+                    subtitle.setText(" / "+c.getGrupa());
                     Log.e("ispis", "Naziv: "+c.getNaziv());
                 }
                 else {
@@ -76,6 +84,7 @@ public class CameraActivityNew2 extends BaseActivity{
         ArrayList<String> a1 = new ArrayList<>();
 
         for (CameraNew c : getCameras()) {
+
             if (c.getGrupa().equals(bundle.getString("naziv"))) {
                 a1.add(c.getOpis());
                 Log.e("ispis", "Naziv: "+c.getNaziv());
@@ -83,6 +92,7 @@ public class CameraActivityNew2 extends BaseActivity{
             else {
                 Log.e("ispis", "prazan je naziv");
             }
+
         }
 
         return a1;

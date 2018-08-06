@@ -21,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -52,7 +53,8 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
-    TextView textView;
+    TextView title, subtitle, subSubtitle ;
+    Double latitude, longetude;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +62,10 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
         checkIsLogIn(this);
         setHomeAction(R.drawable.ic_cameras, R.string.main_cameras_text, MainActivity.class);
 
-        textView = (TextView)findViewById(R.id.nazivKamere);
+        title = (TextView)findViewById(R.id.title);
+        subtitle = (TextView)findViewById(R.id.subtitle);
+
+        subSubtitle = (TextView)findViewById(R.id.subSubtitle);
 
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,24 +83,26 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
         Bundle bundle = getIntent().getExtras();
         videoView = (VideoView) findViewById(R.id.videoView);
 
-        MediaController mc = new MediaController(this);
-
-        videoView.setMediaController(mc);
+        videoView.setMediaController(null);
 
 
         try {
             videoView.setVideoURI(Uri.parse(getUrl()));
             videoView.start();
-            showDialog();
+
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mediaPlayer) {
                     mediaPlayer.start();
 
+                    hideDialog();
+
                     mediaPlayer.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
                         @Override
                         public void onVideoSizeChanged(MediaPlayer mediaPlayer, int i, int i1) {
+
                             hideDialog();
+
                             mediaPlayer.start();
                         }
                     });
@@ -110,14 +117,17 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
         try {
             for (CameraNew c : getCameras()) {
                 if (c.getNaziv().equals(bundle.getString("url")) && c.getOpis().equalsIgnoreCase((bundle.getString("opis")))) {
-                    Double latitude= Double.valueOf(c.getGeografska_duzina());
-                    Double longetude = Double.valueOf(c.getGeografska_sirina());
+                    latitude= Double.valueOf(c.getGeografska_duzina());
+                    longetude = Double.valueOf(c.getGeografska_sirina());
                     latLng = new LatLng(longetude,latitude);
-                    textView.setText(c.getNaziv()+" - "+c.getOpis());
-                    Log.e("ispisUrl-a", "prazan je url");
+                    rotation = Integer.parseInt(c.getUgaoKamere());
+                    subtitle.setText(" / "+c.getGrupa());
+                    subSubtitle.setText(" / "+c.getNaziv());
+                    //Log.e("ispisUrl-a", "prazan je url");
+                    Log.d(TAG, "onCreate: LAT LANG" + latLng);
                 }
                 else {
-                    Log.e("ispisUrl-a", "prazan je url");
+                    Log.e("ispisUrl-aaaa", "prazan je url");
                 }
             }
         } catch (XmlPullParserException e) {
@@ -137,8 +147,7 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
         for (CameraNew c : getCameras()) {
             if (c.getNaziv().equals(bundle.getString("url")) && c.getOpis().equalsIgnoreCase((bundle.getString("opis")))) {
                 url = c.getUrl();
-                rotation = Integer.parseInt(c.getUgaoKamere());
-                Log.e("ispisUrl-a", "prazan je url");
+               // Log.e("ispisUrl-a", "prazan je url");
             }
             else {
                 Log.e("ispisUrl-a", "prazan je url");
@@ -151,13 +160,22 @@ public class CameraDetails extends BaseActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        CameraUpdate center=
+        /*CameraUpdate center=
                 CameraUpdateFactory.newLatLng(latLng);
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+        Log.d(TAG, "onMapReady: LATLANG" + latLng);
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);*/
 
-        mMap.moveCamera(center);
-        mMap.animateCamera(zoom);
+
+        CameraPosition cameraPosition = new CameraPosition.Builder().
+                target(new LatLng(longetude,latitude)).zoom(15).build();
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
         drawMarker();
+
+        /*mMap.moveCamera(center);
+        mMap.animateCamera(zoom);*/
+
+
     }
 
     public void drawMarker() {
