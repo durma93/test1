@@ -36,7 +36,6 @@ import rs.org.amss.core.StaticStrings;
 import rs.org.amss.core.Variables;
 import rs.org.amss.core.WebMethods;
 import rs.org.amss.core.WebResponseParser;
-import rs.org.amss.model.Camera;
 import rs.org.amss.model.CameraNew;
 
 public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
