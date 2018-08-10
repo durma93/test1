@@ -6,14 +6,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.security.ProviderInstaller;
+
 import org.apache.http.client.ClientProtocolException;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLEngine;
 
 import rs.org.amss.R;
 import rs.org.amss.core.ListCameraNewAdapter;
@@ -37,6 +46,7 @@ public class CameraActivityNew extends BaseActivity{
         checkIsLogIn(this);
         setHomeAction(R.drawable.ic_cameras, R.string.main_cameras_text, MainActivity.class);
 
+
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,12 +68,11 @@ public class CameraActivityNew extends BaseActivity{
 
         for (CameraNew c : getCameras()){
             a1.add(c.getGrupa());
-            Set<String> hs = new HashSet<>();
-            hs.addAll(a1);
+            Set<String> hs = new HashSet<>(a1);
             a1.clear();
             a1.addAll(hs);
         }
-        Log.d(TAG, "getKategorija: " + a1.get(0));
+        //Log.d(TAG, "getKategorija: " + a1.get(0));
         return a1;
 
     }

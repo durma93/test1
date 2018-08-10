@@ -2,6 +2,9 @@ package rs.org.amss.shell;
 
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.core.CrashlyticsCore;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.security.ProviderInstaller;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -14,6 +17,12 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.AdapterView.OnItemClickListener;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLEngine;
+
 public class MainActivity extends BaseActivity {
 	public static final String TAG = "MainActivity";
 
@@ -25,6 +34,22 @@ public class MainActivity extends BaseActivity {
 		setActionMenu();
 		memoryManager.loadVariables();
 		checkIsLogIn(MainActivity.this);
+
+        try {
+            ProviderInstaller.installIfNeeded(getApplicationContext());
+            SSLContext sslContext = SSLContext.getInstance("TLSv1.2");
+            sslContext.init(null, null, null);
+            SSLEngine engine = sslContext.createSSLEngine();
+
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
 
 	}
 
