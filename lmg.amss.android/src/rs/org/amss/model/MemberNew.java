@@ -2,7 +2,13 @@ package rs.org.amss.model;
 
 public class MemberNew {
 
-    private String datumOd, datumDo, ime, prezime, registracija, serija, clanskiBroj;
+    private String datumOd,
+            datumDo,
+            ime,
+            prezime,
+            registracija,
+            serija,
+            clanskiBroj;
 
     public MemberNew() {
     }

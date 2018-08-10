@@ -160,25 +160,6 @@ public class MainActivity extends BaseActivity {
 	public void showMain(View v){
 
 	}
-	/* Old menu items
-
-	public void showTv(View view) {
-		activityManager.startActivity(TvActivity.class);
-	}
-
-	public void showCalculator(View view) {
-		activityManager.startActivity(CalculatorActivity.class);
-	}
-
-	public void showMap(View view) {
-		activityManager.startActivity(MapsActivity.class);
-	}
-
-	public void showAbout(View view) {
-	}
-
-	 */
-	
 	public void showCameras(View view) {
 		activityManager.startActivity(CameraActivityNew.class);
 	}
