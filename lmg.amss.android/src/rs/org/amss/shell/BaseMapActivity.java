@@ -498,6 +498,7 @@ public class BaseMapActivity extends FragmentActivity implements LocationListene
 						mMap.setOnCameraChangeListener(getCameraChangeListener());
 					}
 				}
+
 				if (mMap != null){
 					mMap.setOnCameraChangeListener(getCameraChangeListener());
 					setUpLocationManager();

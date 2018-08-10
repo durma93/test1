@@ -14,15 +14,20 @@ dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile project(':google-play-services_lib')
     compile project(':actionbar')
-
     compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
         transitive = true;
     }
-
-
 }
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'amsskeystorealias'
+            keyPassword 'sj.v&<E~D:qjv7?p'
+            storeFile file('/home/durmapc/Work/AMSS/rev4 - sa kamerom parkingom i pravim keystore-om/amss.jks')
+            storePassword 'sj.v&<E~D:qjv7?p'
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     useLibrary 'org.apache.http.legacy'
@@ -50,9 +55,19 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-         multiDexEnabled true
+        multiDexEnabled true
+        versionCode 3
+        versionName "1.2"
     }
     productFlavors {
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            signingConfig signingConfigs.config
+        }
     }
 }
 

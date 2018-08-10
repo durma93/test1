@@ -19,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -35,7 +36,6 @@ import rs.org.amss.core.StaticStrings;
 import rs.org.amss.core.Variables;
 import rs.org.amss.core.WebMethods;
 import rs.org.amss.core.WebResponseParser;
-import rs.org.amss.model.Camera;
 import rs.org.amss.model.CameraNew;
 
 public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
@@ -53,9 +53,10 @@ public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
-    TextView textView, subtitle;
+    TextView title, subtitle, subSubtitle;
     ImageView cameraImageView;
 
+    Double latitude, longetude;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +64,14 @@ public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
         checkIsLogIn(this);
         Bundle data = getIntent().getExtras();
 
-        textView = (TextView)findViewById(R.id.nazivKamere);
+        title = (TextView)findViewById(R.id.title);
+
+
+
         subtitle = (TextView)findViewById(R.id.subtitle);
+
+        subSubtitle = (TextView)findViewById(R.id.subSubtitle);
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         Bundle bundle = getIntent().getExtras();
@@ -84,15 +91,18 @@ public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
         try {
             for (CameraNew c : getCameras()) {
                 if (c.getNaziv().equals(bundle.getString("url")) && c.getOpis().equalsIgnoreCase((bundle.getString("opis")))) {
-                    Double latitude= Double.valueOf(c.getGeografska_duzina());
-                    Double longetude = Double.valueOf(c.getGeografska_sirina());
+                    latitude= Double.valueOf(c.getGeografska_duzina());
+                    longetude = Double.valueOf(c.getGeografska_sirina());
                     latLng = new LatLng(longetude,latitude);
 
-                    textView.setText(c.getNaziv());
-                    subtitle.setText(c.getNaziv());
+
+                    subtitle.setText(" / "+c.getGrupa());
+                    subSubtitle.setText(c.getNaziv());
                     rotation = Integer.parseInt(c.getUgaoKamere());
                     imageStreamingTask.execute(c.getUrl());
                     hideDialog();
+
+
                     Log.d(TAG, "onCreate: URL " +c.getUrl());
 
                     Log.d(TAG, "onCreate: LAT LANG" + latLng);
@@ -116,14 +126,17 @@ public class CameraActivity extends BaseActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        CameraUpdate center=
-                CameraUpdateFactory.newLatLng(latLng);
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+        CameraPosition cameraPosition = new CameraPosition.Builder().
+                target(new LatLng(longetude,latitude)).zoom(15).build();
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-        mMap.moveCamera(center);
-        mMap.animateCamera(zoom);
         drawMarker();
+
+
+        /*mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));*/
     }
+
 
     public void drawMarker() {
         Drawable circleDrawable = getResources().getDrawable(R.drawable.camera_new);
